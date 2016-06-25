@@ -53,14 +53,6 @@ body{
 		.second{
 			padding-right:100px;
 		}
-
-		p{
-			display:none;
-		}
-
-		span{
-			visibility: hidden;
-		}
 	}
 
 	.img-wrapper{
@@ -90,6 +82,7 @@ body{
 		.saint;
 		font-size:55px;
 		display:inline-block;
+		visibility: hidden;
 
 		&.smaller{
 			font-size:40px;
@@ -97,6 +90,7 @@ body{
 	}
 
 	p{
+		display:none;
 		margin:0;
 		padding:0;
 		margin-bottom:-10px;
@@ -212,18 +206,34 @@ body{
 	.pad{
 		padding-bottom:10px;
 	}
+	.pad-top{
+		margin-top:20px;
+	}
 
 	.subheader{
 		.griffos;
 		font-size:22px;
+
+		& + .right{
+			padding-top:5px;
+		}
+	}
+
+	.title{
 		margin-top:20px;
+		border-bottom:1px solid #516B8C;
+		width:100%;
+		float:left;
+		clear:both;
+
+		text-transform:uppercase;
+		font-size:20px;
 	}
 }
 
 #footer{
 	width:100%;
 	max-height:600px;
-	margin-top:-100px;
 	overflow:hidden;
 	position:relative;
 	.img-wrapper{
