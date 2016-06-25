@@ -1,0 +1,107 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="mxRH-jX1pR5MjoxIjXJOxnDElPR-loQvW49hc6LMh6w" />
+	
+	<link rel="stylesheet" href="{% static "css/flexboxgrid.css" %}">
+	<link rel="stylesheet" href="{% static "css/animate.css" %}">
+	<link rel="stylesheet" href="{% static "css/hover.css" %}">
+	<link rel="stylesheet" href="{% static "css/base.css" %}">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{% static "js/jquery.onscreen.min.js" %}"></script>
+    <script src="{% static "js/base.js" %}"></script>
+</head>
+<body>
+	<div id="header">
+		<div class="img-wrapper">
+			<img src="/static/images/pexels-photo.jpg"/>
+		</div>
+
+		<div class="foreground">
+			<p class="first"><span>&</span> only as you gasp your <span>dying</span> breath</p>
+			<p class="second">shall you understand, your <span>life</span></p>
+			<p class="third">amounted to no more than <span>one</span> drop in a <span>limitless</span> ocean</p>
+			<p class="fourth"><span>...yet</span>, what is any <span>ocean</span> but a multitude of <span>drops?</span></p>
+			<p class="fourth">-David Mitchell, <span>Cloud Atlas</span>
+		</div>
+	</div>
+	<div id="title">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					Ivy H. Jeong
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<ul>
+						<li>
+							<a class="hvr-sweep-to-bottom" href="/code">Code Samples</a>
+						</li>
+						<li>
+							<a class="hvr-sweep-to-bottom" href="/projects">Projects</a>
+						</li>
+						<li>
+							<a class="hvr-sweep-to-bottom" href="/hobbies">Hobbies</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="main">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-7 col-xs-12">
+					<div class="header hvr-ripple-out">
+						Experience
+					</div>
+
+					<div class="details">
+						<p class="subheader">
+							National<strong>Journal</strong>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-5 col-sm-5 col-xs-12">
+					<div class="header hvr-ripple-out">
+						Education
+					</div>
+
+					<div class="details">
+						<p class="subheader">
+							Virginia Polytechnic Institute and State University
+						</p>
+						<p class="pad"><span class="left">Blacksburg, VA</span> <span class="right">2009-'13</span></p>
+						<p>
+							Bachelor of Science (BS), <stong>Computer Science</strong>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="img-wrapper">
+			<img src="/static/images/pexels-photo-29793.jpg"/>
+		</div>
+		<div class="foreground">
+			<p class="f_1">That's the <span>funny</span> thing about <span>arriving</span> somewhere...</p>
+			<p class="f_2">Once you're there,</p>
+			<p class="f_3 more">the <span>only</span> thing you can really <span>do...</span></p>
+			<p class="f_4">...is <span>leave</span> again.</p>
+			<p class="f_5">-Brandon Sanderson, <span class="smaller">The Final Empire</span></p>
+		</div>
+	</div>
+</body>
+</html>

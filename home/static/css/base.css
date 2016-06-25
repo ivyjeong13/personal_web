@@ -1,0 +1,259 @@
+@font-face {
+  font-family: 'Saint Andrews';
+  src: url('../fonts/Saint-Andrews Queen.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GlacialInd';
+  src: url('../fonts/GlacialIndifference-Regular.otf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Griffos';
+  src: url('../fonts/GriffosFont.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+.glacial {
+  font-family: 'GlacialInd', serif;
+}
+.saint {
+  font-family: 'Saint Andrews', sans-serif;
+}
+.griffos {
+  font-family: 'Griffos', serif;
+}
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'GlacialInd', serif;
+  font-size: 15px;
+}
+.container {
+  width: 1120px;
+  margin: 0 auto;
+}
+.row {
+  width: 100%;
+}
+#header {
+  max-height: 500px;
+  overflow: hidden;
+}
+#header img {
+  width: 100%;
+  z-index: -1;
+  position: relative;
+}
+#header .foreground {
+  color: #ffffff;
+  right: 0;
+  padding-right: 100px;
+  text-align: right;
+}
+#header .foreground .second {
+  padding-right: 100px;
+}
+#header .foreground p {
+  display: none;
+}
+#header .foreground span {
+  visibility: hidden;
+}
+#header .img-wrapper {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+39,0.65+100 */
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 39%, rgba(0, 0, 0, 0.65) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 39%, rgba(0, 0, 0, 0.65) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 39%, rgba(0, 0, 0, 0.65) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=1);
+  /* IE6-9 */
+  width: 100%;
+  height: 100%;
+}
+#header .img-wrapper img {
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+}
+.foreground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 40px;
+}
+.foreground span {
+  font-family: 'Saint Andrews', sans-serif;
+  font-size: 55px;
+  display: inline-block;
+}
+.foreground span.smaller {
+  font-size: 40px;
+}
+.foreground p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: -10px;
+}
+.foreground p.more {
+  margin-bottom: -25px;
+}
+#title {
+  font-size: 125px;
+  font-weight: bold;
+  font-family: 'Saint Andrews', sans-serif;
+  margin-top: -100px;
+  color: #000;
+  text-shadow: 1px 1px 1px #fff;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+58&0+0,1+55 */
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 55%, #ffffff 58%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 55%, #ffffff 58%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 55%, #ffffff 58%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+  /* IE6-9 */
+}
+#nav {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+  clear: both;
+  float: left;
+  position: relative;
+  z-index: 2;
+}
+#nav .col-xs-12 {
+  border-top: 1px solid #516B8C;
+}
+#nav ul {
+  float: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#nav li {
+  float: left;
+}
+#nav a {
+  text-decoration: none;
+  color: #516B8C;
+  cursor: pointer;
+  padding: 5px 20px;
+}
+#nav a:hover {
+  color: #fff;
+}
+#nav a.hvr-sweep-to-bottom:before {
+  background: #516B8C;
+}
+.gray {
+  -webkit-filter: grayscale(70%);
+  -moz-filter: grayscale(70%);
+  -o-filter: grayscale(70%);
+}
+#main {
+  width: 100%;
+  float: left;
+  clear: both;
+  margin-top: 30px;
+}
+#main .header {
+  width: 100%;
+  clear: both;
+  padding: 5px 5px;
+  background: #516B8C;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+#main .header.hvr-ripple-out:before {
+  border-color: #516B8C;
+}
+#main p {
+  margin: 0;
+  width: 100%;
+  clear: both;
+  float: left;
+}
+#main .text-right {
+  text-align: right;
+}
+#main .left,
+#main .right {
+  display: inline-block;
+  width: 50%;
+}
+#main .left {
+  float: left;
+}
+#main .right {
+  float: right;
+  text-align: right;
+}
+#main .pad {
+  padding-bottom: 10px;
+}
+#main .subheader {
+  font-family: 'Griffos', serif;
+  font-size: 22px;
+  margin-top: 20px;
+}
+#footer {
+  width: 100%;
+  max-height: 600px;
+  margin-top: -100px;
+  overflow: hidden;
+  position: relative;
+}
+#footer .img-wrapper {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+17,ffffff+100&1+19,0+100 */
+  background: -moz-linear-gradient(top, #ffffff 17%, #ffffff 19%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 17%, #ffffff 19%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 17%, #ffffff 19%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+  /* IE6-9 */
+  width: 100%;
+  height: 100%;
+}
+#footer img {
+  width: 100%;
+  z-index: -1;
+  position: relative;
+}
+#footer .foreground {
+  left: 40px;
+  top: 185px;
+}
+#footer .foreground .f_1 {
+  margin-left: 50px;
+}
+#footer .foreground .f_3 {
+  margin-left: 70px;
+}
+#footer .foreground .f_4 {
+  margin-left: 180px;
+}
+@media only screen and (max-width: 1120px) {
+  .container {
+    width: 740px;
+  }
+}
+@media only screen and (max-width: 740px) {
+  .container {
+    width: 100%;
+  }
+}
