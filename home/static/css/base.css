@@ -42,6 +42,13 @@ body {
 .row {
   width: 100%;
 }
+.nav-wrapper {
+  min-height: 63px;
+  padding-bottom: 30px;
+  width: 100%;
+  clear: both;
+  float: left;
+}
 #header {
   max-height: 500px;
   overflow: hidden;
@@ -120,6 +127,7 @@ body {
   /* IE6-9 */
 }
 #nav {
+  transition: all ease-in 0.15s;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 600;
@@ -128,6 +136,42 @@ body {
   float: left;
   position: relative;
   z-index: 2;
+  bottom: -1px;
+  background: #fff;
+}
+#nav.fixed {
+  position: fixed;
+  background: #516B8C;
+  padding: 0;
+  top: 0;
+  left: 0;
+  height: 35px;
+  z-index: 9999;
+}
+#nav.fixed a {
+  color: #fff;
+  border-left: 1px solid #fff;
+}
+#nav.fixed a:last-child {
+  border-right: 1px solid #fff;
+}
+#nav.fixed a:hover {
+  color: #516B8C;
+}
+#nav.fixed a.hvr-sweep-to-bottom:before {
+  background: #fff;
+}
+#nav.fixed .left {
+  color: #fff;
+  font-family: 'Saint Andrews', sans-serif;
+  text-transform: none;
+  float: left;
+  font-size: 32px;
+  font-weight: 500;
+  text-shadow: -1px -1px 0 #516b8c, 1px -1px 0 #516b8c, -1px 1px 0 #516b8c, 1px 1px 0 #516b8c;
+}
+#nav .left {
+  display: none;
 }
 #nav .col-xs-12 {
   border-top: 1px solid #516B8C;
@@ -162,7 +206,13 @@ body {
   width: 100%;
   float: left;
   clear: both;
-  margin-top: 30px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -125px;
+  padding-bottom: 40px;
+  padding-top: 10px;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0px 10px 30px #ccc;
 }
 #main .header {
   width: 100%;
@@ -203,6 +253,9 @@ body {
 #main .pad-top {
   margin-top: 20px;
 }
+#main .pad-top-large {
+  margin-top: 75px;
+}
 #main .subheader {
   font-family: 'Griffos', serif;
   font-size: 22px;
@@ -218,6 +271,14 @@ body {
   clear: both;
   text-transform: uppercase;
   font-size: 20px;
+}
+#main .title.border-top {
+  border-top: 1px dashed #ccc;
+  padding-top: 30px;
+}
+#main .details.list ul {
+  padding-left: 20px;
+  margin-bottom: 0;
 }
 #footer {
   width: 100%;
@@ -255,6 +316,359 @@ body {
 }
 #footer .foreground .f_4 {
   margin-left: 180px;
+}
+#hobbyHeader {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  font-family: 'Saint Andrews', sans-serif;
+  font-size: 120px;
+  border-bottom: 1px dashed #fff;
+}
+#hobbyHeader .abs_center {
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+#hobbyHeader ul {
+  list-style: none;
+  margin: 20px auto 0 auto;
+  width: 174px;
+  padding: 0;
+}
+#hobbyHeader ul li {
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  font-size: 20px;
+  float: left;
+  padding: 4px 10px;
+  margin-right: 15px;
+}
+#hobbyHeader ul li:last-child {
+  margin-right: 0;
+}
+#hobbyHeader ul li:hover {
+  background: #fff;
+  color: #000;
+}
+#hobbyHeader .answer {
+  font-size: 20px;
+  width: 100%;
+  clear: both;
+  float: left;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Griffos', serif;
+  min-height: 26.88px;
+  min-width: 1px;
+}
+#clayModel {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px dashed #fff;
+  background: #000;
+}
+#clayModel:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+14,000000+14&1+0,0+19 */
+  background: -moz-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=0);
+  /* IE6-9 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#clayModel .bg-wrapper {
+  background: #000;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#clayModel .bg-wrapper .img-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+#clayModel .bg-wrapper .img-container:first-child {
+  display: block;
+}
+#clayModel .bg-wrapper .img-container:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+40&1+0,0+44,0+44 */
+  background: -moz-linear-gradient(left, #000000 0%, rgba(0, 0, 0, 0.09) 40%, rgba(0, 0, 0, 0) 44%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #000000 0%, rgba(0, 0, 0, 0.09) 40%, rgba(0, 0, 0, 0) 44%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #000000 0%, rgba(0, 0, 0, 0.09) 40%, rgba(0, 0, 0, 0) 44%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=1);
+  /* IE6-9 */
+  position: absolute;
+  z-index: 1;
+  content: '';
+  width: 100%;
+  height: 100%;
+}
+#clayModel .bg-wrapper img {
+  height: 100vh;
+}
+#clayModel .text-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  color: #fff;
+  left: 50px;
+}
+#clayModel .text-container .header {
+  width: 100%;
+}
+#clayModel .text-container p {
+  width: 33.333%;
+  margin: 0;
+}
+#clayModel .text-container p:not(.header) {
+  margin-bottom: 15px;
+}
+.text-container {
+  display: none;
+}
+.text-container .header {
+  width: 100%;
+  font-size: 100px;
+  font-family: 'Saint Andrews', sans-serif;
+}
+.text-container p {
+  margin: 0;
+}
+#muayThai {
+  position: relative;
+  z-index: -1;
+  min-height: 100vh;
+  width: 100%;
+  background: #000;
+  border-bottom: 1px dashed #fff;
+}
+#muayThai:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+14,000000+14&1+0,0+19 */
+  background: -moz-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=0);
+  /* IE6-9 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#muayThai .bg-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  opacity: .75;
+}
+#muayThai .bg-wrapper img {
+  visibility: hidden;
+  width: 100%;
+}
+#muayThai .text-container {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  background: rgba(255, 255, 255, 0.75);
+  color: #000;
+  border-radius: 25px;
+  width: 60%;
+  padding: 20px;
+}
+#videoGaming {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+  border-bottom: 1px dashed #fff;
+}
+#videoGaming .bg-wrapper {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+#videoGaming .bg-wrapper img {
+  width: 100%;
+  visibility: hidden;
+}
+#videoGaming .bg-wrapper .gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: 1;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#606c88+0,3f4c6b+100;Grey+3D+%232 */
+  background: #606c88;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #606c88 0%, #3f4c6b 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #606c88 0%, #3f4c6b 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #606c88 0%, #3f4c6b 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#606c88', endColorstr='#3f4c6b', GradientType=0);
+  /* IE6-9 */
+}
+#videoGaming .text-container {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  color: #fff;
+  z-index: 5;
+  display: block;
+}
+#videoGaming .games {
+  position: relative;
+  display: inline-block;
+  padding: 10px 0;
+}
+#videoGaming .games:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  width: 99999px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 1px 1px 25px rgba(255, 255, 255, 0.85);
+}
+#videoGaming .games img {
+  float: left;
+  margin-right: 15px;
+  max-height: 70px;
+}
+#videoGaming .list_sp_games {
+  position: relative;
+}
+#videoGaming .list_sp_games .btn {
+  display: inline-block;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: 'GlacialInd', serif;
+  width: 200px;
+  padding: 5px 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: transparent;
+}
+#videoGaming .list_sp_games .btn:hover:before {
+  background: #516B8C;
+}
+#videoGaming .list_sp_games .lightbox {
+  display: none;
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  width: 250px;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #000;
+  color: #000;
+  padding: 0 20px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
+#videoGaming .list_sp_games .lightbox ul {
+  list-style: none;
+  padding: 0;
+}
+#videoGaming .list_sp_games .lightbox ul .divide {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+#guitar {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#guitar .bg-wrapper {
+  position: relative;
+}
+#guitar .bg-wrapper:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+  background: -moz-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+  /* IE6-9 */
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#guitar .bg-wrapper img {
+  width: 100%;
+  visibility: hidden;
+}
+#guitar .video {
+  width: 640px;
+  height: 435px;
+  background: #000;
+  overflow: hidden;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  left: 50px;
+  position: absolute;
+  z-index: 2;
+  box-shadow: 0px 2px 40px #000;
+}
+#guitar .text-container {
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  display: block;
+  right: 40px;
+  position: absolute;
+  z-index: 2;
+  background: #fff;
+  border: 1px solid black;
+  width: 400px;
+  padding: 0 20px 20px 20px;
 }
 @media only screen and (max-width: 1120px) {
   .container {

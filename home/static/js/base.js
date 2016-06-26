@@ -25,6 +25,15 @@ $(document).ready(function(){
 		}, 550);
 	},1000);
 
+	$(window).scroll(function(){
+		var scrollTop = $(this).scrollTop();
+		if(scrollTop > $('.nav-wrapper').offset().top + $('.nav-wrapper').height()){
+			$('#nav').addClass('fixed');
+		}else{
+			$('#nav').removeClass("fixed");
+		}
+	});
+
 	$('.first').onScreen({
 		doIn:function(){
 			$('#header img').removeClass("gray");
