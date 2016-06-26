@@ -77,7 +77,7 @@ $(document).ready(function(){
 	});
 
 	$('#guitar').onScreen({
-		tolerance:100,
+		tolerance:300,
 		doIn:function(){
 			$(this).find('img').removeClass('animated slideOutDown').css('visibility', 'visible').addClass('animated slideInDown');
 		},
@@ -89,6 +89,19 @@ $(document).ready(function(){
 			},500);
 		}
 	});
+
+	$('#drawing').onScreen({
+		tolerance:300,
+		doIn:function(){
+			$(this).find('.bg-wrapper').addClass('clean');
+			$(this).find('.text-container').fadeIn(1000);
+		},
+		doOut:function(){
+			$(this).find('.bg-wrapper').removeClass('clean');
+			$(this).find('.text-container').fadeOut(1000);
+		}
+	});
+
 
 	$(window).scroll(function(){
 		var scrollTop = $(this).scrollTop();

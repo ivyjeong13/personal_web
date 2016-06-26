@@ -339,11 +339,11 @@ body {
 #hobbyHeader .hobby-header-wrapper {
   min-height: 40px;
   margin: 20px auto 0 auto;
-  width: 174px;
+  width: 218px;
 }
 #hobbyHeader ul {
   list-style: none;
-  width: 174px;
+  width: 218px;
   padding: 0;
   margin: 0;
 }
@@ -648,7 +648,7 @@ body {
   visibility: hidden;
 }
 #guitar .video {
-  width: 640px;
+  width: 580px;
   height: 435px;
   background: #000;
   overflow: hidden;
@@ -673,8 +673,47 @@ body {
   z-index: 2;
   background: #fff;
   border: 1px solid black;
-  width: 400px;
+  width: 500px;
   padding: 0 20px 20px 20px;
+}
+#drawing {
+  border-top: 1px dashed #000;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+#drawing .bg-wrapper {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  filter: blur(10px);
+  -ms-filter: blur(10px);
+  -webkit-filter: blur(10px);
+  transition: ease-in all 0.35s;
+  -ms-transition: ease-in all 0.35s;
+  -webkit-transition: ease-in all 0.35s;
+}
+#drawing .bg-wrapper.clean {
+  filter: blur(0);
+  -ms-filter: blur(0);
+  -webkit-filter: blur(0);
+}
+#drawing .bg-wrapper img {
+  width: 100%;
+}
+#drawing .text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width: 50%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-bottom: 30px;
 }
 #projectBody {
   background: #000;
