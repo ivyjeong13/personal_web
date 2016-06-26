@@ -1,1 +1,72 @@
-Project page
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="mxRH-jX1pR5MjoxIjXJOxnDElPR-loQvW49hc6LMh6w" />
+	
+	<link rel="stylesheet" href="{% static "css/flexboxgrid.css" %}">
+	<link rel="stylesheet" href="{% static "css/animate.css" %}">
+	<link rel="stylesheet" href="{% static "css/hover.css" %}">
+	<link rel="stylesheet" href="{% static "css/base.css" %}">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{% static "js/jquery.onscreen.min.js" %}"></script>
+    <script src="{% static "js/projects.js" %}"></script>
+</head>
+<body>
+	<div id="nav" class="fixed">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div class="left">
+						Ivy Jeong
+					</div>
+					<ul>
+						<li>
+							<a class="hvr-sweep-to-bottom" href="/">Home</a>
+						</li>
+						<li>
+							<a class="hvr-sweep-to-bottom" href="/projects">Projects</a>
+						</li>
+						<li>
+							<a class="hvr-sweep-to-bottom" href="/hobbies">Hobbies</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="projectBody">
+		<a href="/dotaseeker" class="project">>
+			<img src="/static/images/bloodseeker-dota-2-wallpaper-hd-4.png"/>
+			<div class="text">
+				<div class="headline">DotASeeker</div>
+				<div class="subheadline">An idea for helping DotA players find other players.</div>
+			</div>
+		</a>
+		<a class="project disabled">
+			<div class="text">
+				<div class="headline">Pending</div>
+				<div class="subheadline">A short description about the project.</div>
+			</div>
+		</a>
+		
+		<a class="project disabled">
+			<div class="text">
+				<div class="headline">Pending</div>
+				<div class="subheadline">A short description about the project.</div>
+			</div>
+		</a>
+		
+		<a class="project disabled">
+			<div class="text">
+				<div class="headline">Pending</div>
+				<div class="subheadline">A short description about the project.</div>
+			</div>
+		</a>
+	</div>
+</body>
+</html>

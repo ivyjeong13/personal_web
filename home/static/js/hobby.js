@@ -89,6 +89,15 @@ $(document).ready(function(){
 			},500);
 		}
 	});
+
+	$(window).scroll(function(){
+		var scrollTop = $(this).scrollTop();
+		if(scrollTop > $('.hobby-header-wrapper').offset().top + $('.hobby-header-wrapper').height()){
+			$('.hobby-header-wrapper ul').addClass('fixed');
+		}else{
+			$('.hobby-header-wrapper ul').removeClass('fixed');
+		}
+	});
 });
 
 $(document).on('click', '.list_sp_games .btn', function(){

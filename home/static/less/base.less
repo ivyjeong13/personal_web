@@ -145,6 +145,7 @@ body{
 		left:0;
 		height:35px;
 		z-index:9999;
+		box-shadow:0px 1px 20px #000;
 		a{
 			color:#fff;
 			border-left:1px solid #fff;
@@ -361,11 +362,17 @@ body{
 		left:50%;
 	}
 
-	ul{
-		list-style:none;
+	.hobby-header-wrapper{
+		min-height:40px;
 		margin:20px auto 0 auto;
 		width:174px;
+	}
+
+	ul{
+		list-style:none;
+		width:174px;
 		padding:0;
+		margin:0;
 		li{
 			cursor:pointer;
 			border:1px solid #fff;
@@ -643,7 +650,7 @@ body{
 }
 
 #guitar{
-	min-height:100vh;
+	height:100vh;
 	width:100%;
 	overflow:hidden;
 	position:relative;
@@ -699,6 +706,85 @@ body{
 		border:1px solid black;
 		width:400px;
 		padding:0 20px 20px 20px;	
+	}
+}
+
+#projectBody{
+	background:#000;
+	height:100vh;
+	width:100%;
+	overflow:hidden;
+	.project{
+		display:block;
+		width:25%;
+		height:100%;
+		float:left;
+		position:relative;
+		overflow:hidden;
+		z-index:0;
+		border-right:1px dashed #fff;
+		filter:grayscale(100%);
+		-ms-filter:grayscale(100%);
+		-webkit-filter:grayscale(100%);
+		transition:ease-in all 0.25s;
+		-ms-transition:ease-in all 0.25s;
+		-webkit-transition:ease-in all 0.25s;
+		cursor:pointer;
+		text-decoration:none;
+		&.disabled{
+			cursor:default;
+		}
+		&:hover{
+			filter:grayscale(0%);
+			-ms-filter:grayscale(0%);
+			-webkit-filter:grayscale(0%);
+		}
+		&:first-child{
+			&:before{
+				/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ad2800+0,ffffff+100&1+0,0+100 */
+				background: -moz-linear-gradient(left,  rgba(173,40,0,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(left,  rgba(173,40,0,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to right,  rgba(173,40,0,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ad2800', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+				content:'';
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				z-index:1;
+				position:absolute;
+				opacity:0.65;
+			}
+		}
+		&:last-child{
+			border-right:0;
+		}
+		img{
+			height:100%;
+			position:relative;
+			z-index:-1;
+		}
+		.text{
+			position:absolute;
+			top:50%;
+			transform:translate(-50%,-50%);
+			-ms-transform:translate(-50%,-50%);
+			-webkit-transform:translate(-50%,-50%);
+			left:50%;
+			color:#fff;
+			width:100%;
+			text-align:center;
+			z-index:5;
+
+			.headline{
+				font-size:50px;
+				.griffos;
+			}
+			.subheadline{
+				font-size:15px;
+				.glacial;
+			}
+		}
 	}
 }
 @media only screen and (max-width: @desktopW){ @import 'tablet'; }
