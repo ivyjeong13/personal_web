@@ -2,12 +2,13 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.views.generic import View
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate
+from project.models import Player
+from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect
 from django.core.context_processors import csrf
 from social.apps.django_app.default.models import UserSocialAuth
 import dota2api
-from conf.settings import STEAM_API_KEY
+from django.conf import settings
 
 # Create your views here.
 class ProjectView(TemplateView):
@@ -60,18 +61,46 @@ class DSDashboardView(TemplateView):
 		if username:
 			try:
 				user = User.objects.get(username=username)
-				try:
-					steam_info = UserSocialAuth.objects.get(user=user, provider='steam')
-					print(steam_info.uid)
-					api = dota2api.Initialise(STEAM_API_KEY)
-					data = api.get_player_summaries(steamids=[steam_info.uid])
-					print(data)
-				except:
-					steam_info = None
-				self.steam_info = steam_info
+				profile = Player.objects.get(user=user)
+				self.linked_steam = False
 			except:
 				response = HttpResponseRedirect('/dotaseeker/login?e=true')
 				return response
+
+			try:
+				steam_info = UserSocialAuth.objects.get(user=user, provider='steam')
+			except:
+				steam_info = None
+
+			if steam_info:
+				if steam_info.extra_data.get('info'):
+					self.linked_steam = True
+				else:
+					api = dota2api.Initialise(settings.STEAM_API_KEY)
+					data = api.get_player_summaries(steamids=[int(steam_info.uid)])['players'][0]
+					steam_info.extra_data = {'info': data}
+					steam_info.save()
+
+					#also link with Player Profile
+					if data.get('realname'):
+						profile.real_name = data['realname']
+					if data.get('personaname'):
+						profile.steam_name = data['personaname']
+					if data.get('avatarfull'):
+						profile.picture = data['avatarfull']
+					if data.get('loccountrycode'):
+						profile.location = data['loccountrycode']
+
+					profile.save()
+					self.linked_steam = True
+
+			self.realname = profile.real_name
+			self.personaname = profile.steam_name
+			self.picture = profile.picture
+			self.location = profile.location
+		else:
+			response = HttpResponseRedirect('/dotaseeker/login?e=true')
+			return response 
 
 		return super(DSDashboardView, self).dispatch(request, *args, **kwargs)
 
@@ -81,6 +110,11 @@ class DSDashboardView(TemplateView):
 
 	def get_context_data(self, **kwargs):
 		context = super(DSDashboardView, self).get_context_data(**kwargs)
+		context['realname'] = self.realname
+		context['personaname'] = self.personaname
+		context['picture'] = self.picture
+		context['location'] = self.location
+		context['linked_steam'] = self.linked_steam
 		return context
 
 class DSSigninView(View):
@@ -92,7 +126,8 @@ class DSSigninView(View):
 		if user is not None:
 			if user.is_active:
 				response = HttpResponseRedirect('/dotaseeker/dashboard')
-				response.set_cookie('ds_usr', value=player.username)
+				response.set_cookie('ds_usr', value=user.username)
+				login(request,user)
 				return response
 			else:
 				return HttpResponseRedirect('/dotaseeker/login?a=false')
@@ -109,9 +144,15 @@ class DSRegisterView(View):
 			return HttpResponseRedirect('/dotaseeker/login?u=true')
 		else: 
 			#doesn't exist
-			player = User.objects.create_user(username, None, password)
-			player.save()
+			user = User.objects.create_user(username, None, password)
+			user.save()
+
+			profile = Player.objects.create(user=user)
+			profile.save()
+
 			response = HttpResponseRedirect('/dotaseeker/dashboard')
-			response.set_cookie('ds_usr', value=player.username)
-			return HttpResponseRedirect('/dotaseeker/dashboard')
+			response.set_cookie('ds_usr', value=user.username)
+			n_usr = authenticate(username=username, password=password)
+			login(request, n_usr)
+			return response
 

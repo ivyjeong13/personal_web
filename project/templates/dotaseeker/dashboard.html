@@ -38,14 +38,17 @@
 			<div class="row">
 				<div class="col-md-4">	
 					<div class="picture">	
-						<img src="/static/images/PersonPlaceholder-01.png"/>
+						<img src="{{ picture }}"/>
 						<div class="mmr">3880</div>
 					</div>
 				</div>
 				<div class="col-md-8">
 					<div class="row name">
-						<div class="col-md-12">Ivy Jeong<br><br>
-							<a href="{% url 'social:begin' 'steam' %}?next={{ request.path }}">Login with Steam</a></div>
+						<div class="col-md-12">{{ realname }}<br>							{{ location }}<br>
+							{{ personaname }}<br>
+							{% if not linked_steam %}
+								<a class="steam-login" href="{% url 'social:begin' 'steam' %}?next={{ request.path }}"><img src="/static/images/sits_01.png"/></a></div>
+							{% endif %}
 					</div>
 					<div class="row pos">
 						<div class="col-md-6">Preferred Position:</div>

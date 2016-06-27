@@ -1275,4 +1275,9 @@ body {
 .dotaseeker img {
   width: 100%;
 }
+/* line 313, dotaseeker.less */
+.dotaseeker .steam-login img {
+  width: 180px;
+  height: 35px;
+}
 /*# sourceMappingURL=dotaseeker.css.map */
