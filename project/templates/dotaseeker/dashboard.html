@@ -38,14 +38,14 @@
 			<div class="row">
 				<div class="col-md-4">	
 					<div class="picture">	
-						<img src="/static/images/Dota_2_Logo_only.png"/>
+						<img src="/static/images/PersonPlaceholder-01.png"/>
 						<div class="mmr">3880</div>
 					</div>
 				</div>
 				<div class="col-md-8">
 					<div class="row name">
-						<div class="col-md-12">Ivy Jeong</div>
-						<div>
+						<div class="col-md-12">Ivy Jeong<br><br>
+							<a href="{% url 'social:begin' 'steam' %}?next={{ request.path }}">Login with Steam</a></div>
 					</div>
 					<div class="row pos">
 						<div class="col-md-6">Preferred Position:</div>

@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social.apps.django_app.default',
     'project',
 )
 
@@ -77,6 +78,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
   'django.core.context_processors.request',
   'django.core.context_processors.static',
   'django.core.context_processors.media',
+  'social.apps.django_app.context_processors.backends',
+  'social.apps.django_app.context_processors.login_redirect',
   # ...
 )
 
@@ -122,3 +125,16 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "home/static"),
     os.path.join(BASE_DIR, "project/static"),
 )
+
+AUTHENTICATION_BACKENDS = (
+    'social.backends.steam.SteamOpenId',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+#########################
+# IMPORT LOCAL SETTINGS #
+#########################
+if os.path.isfile(os.path.join(BASE_DIR, 'my_website/local_settings.py')):
+    from .local_settings import *
