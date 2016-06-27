@@ -36,7 +36,13 @@ class DotaseekerView(TemplateView):
 
 class DSLoginView(TemplateView):
 	def dispatch(self, request, *args, **kwargs):
-		self.introduction = 'Hello There!'
+		if request.GET.get('u'):
+			self.error = 'Sorry, this user isn\'t in our database. Please try again.'
+		elif request.GET.get('p'):
+			self.error = 'Sorry, your password was incorrect. Please try again.'
+		else:
+			self.error = None
+
 		return super(DSLoginView, self).dispatch(request, *args, **kwargs)
 
 	def get(self, request, *args, **kwargs):
@@ -45,6 +51,20 @@ class DSLoginView(TemplateView):
 
 	def get_context_data(self, **kwargs):
 		context = super(DSLoginView, self).get_context_data(**kwargs)
+		context['error'] = self.error
+		return context
+
+class DSDashboardView(TemplateView):
+	def dispatch(self, request, *args, **kwargs):
+		self.introduction = 'Hello There!'
+		return super(DSDashboardView, self).dispatch(request, *args, **kwargs)
+
+	def get(self, request, *args, **kwargs):
+		context = self.get_context_data()
+		return render(request, 'dotaseeker/dashboard.html', context)
+
+	def get_context_data(self, **kwargs):
+		context = super(DSDashboardView, self).get_context_data(**kwargs)
 		context['introduction'] = 'Hello There!'
 		return context
 

@@ -967,6 +967,28 @@ body {
   position: absolute;
 }
 /* line 32, dotaseeker.less */
+.dotaseeker .top .tv-wrapper {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+/* line 38, dotaseeker.less */
+.dotaseeker .top .tv-wrapper .tv {
+  width: 100%;
+  height: 100%;
+}
+/* line 42, dotaseeker.less */
+.dotaseeker .top .tv-wrapper .tv .screen {
+  opacity: 0;
+  transition: opacity .5s;
+}
+/* line 46, dotaseeker.less */
+.dotaseeker .top .tv-wrapper .tv .screen.active {
+  opacity: 1;
+}
+/* line 52, dotaseeker.less */
 .dotaseeker .top h1 {
   position: absolute;
   top: 0;
@@ -976,11 +998,11 @@ body {
   text-shadow: 2px 2px 10px #000;
   text-transform: uppercase;
   font-family: 'Griffos', serif;
-  z-index: 2;
+  z-index: 1000;
   font-weight: 100;
   margin: 0;
 }
-/* line 45, dotaseeker.less */
+/* line 65, dotaseeker.less */
 .dotaseeker .top h1 span {
   font-family: 'GlacialInd', serif;
   font-size: 14px;
@@ -988,18 +1010,21 @@ body {
   font-weight: 100;
   text-align: right;
 }
-/* line 55, dotaseeker.less */
+/* line 75, dotaseeker.less */
 .dotaseeker .middle {
   position: absolute;
   top: 0;
   right: 0;
-  background: #000;
   width: 45%;
   color: #fff;
   height: 100%;
 }
-/* line 63, dotaseeker.less */
-.dotaseeker .middle:before {
+/* line 82, dotaseeker.less */
+.dotaseeker .middle:not(.playing) {
+  background: #000;
+}
+/* line 84, dotaseeker.less */
+.dotaseeker .middle:not(.playing):before {
   content: '';
   position: absolute;
   left: -55%;
@@ -1016,7 +1041,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=1);
   /* IE6-9 */
 }
-/* line 78, dotaseeker.less */
+/* line 100, dotaseeker.less */
 .dotaseeker .middle > p {
   text-align: center;
   text-transform: uppercase;
@@ -1027,12 +1052,16 @@ body {
   position: relative;
   z-index: 2;
 }
-/* line 88, dotaseeker.less */
+/* line 110, dotaseeker.less */
 .dotaseeker .middle > p.thin {
   font-weight: 100;
   text-transform: none;
 }
-/* line 94, dotaseeker.less */
+/* line 117, dotaseeker.less */
+.dotaseeker .middle.playing .overlay {
+  background: rgba(255, 255, 255, 0.55);
+}
+/* line 121, dotaseeker.less */
 .dotaseeker .middle .overlay {
   margin-right: 40px;
   background: #fff;
@@ -1042,17 +1071,27 @@ body {
   padding: 25px;
   border-radius: 8px;
   box-shadow: 1px 1px 10px #fff;
+  transition: ease-in all 0.25s;
+  -ms-transition: ease-in all 0.25s;
+  -webkit-transition: ease-in all 0.25s;
 }
-/* line 95, dotaseeker.less */
+/* line 122, dotaseeker.less */
 .dotaseeker .middle .overlay:first-child {
   margin-top: 180px;
 }
-/* line 107, dotaseeker.less */
+/* line 137, dotaseeker.less */
 .dotaseeker .middle .overlay span {
   display: inline-block;
   font-size: 20px;
 }
-/* line 114, dotaseeker.less */
+/* line 141, dotaseeker.less */
+.dotaseeker .middle .overlay span.error {
+  margin-top: 10px;
+  display: block;
+  font-size: 14px;
+  color: red;
+}
+/* line 150, dotaseeker.less */
 .dotaseeker .middle .overlay form input {
   border: 1px solid #ccc;
   padding: 5px 10px;
@@ -1062,7 +1101,7 @@ body {
   border-radius: 4px;
   margin-top: 10px;
 }
-/* line 124, dotaseeker.less */
+/* line 160, dotaseeker.less */
 .dotaseeker .middle .overlay form .btn-submit {
   margin-top: 20px;
   width: 100%;
@@ -1076,11 +1115,11 @@ body {
   cursor: pointer;
   border: 1px solid #000;
 }
-/* line 136, dotaseeker.less */
+/* line 172, dotaseeker.less */
 .dotaseeker .middle .overlay form .btn-submit:before {
   background: #fff;
 }
-/* line 139, dotaseeker.less */
+/* line 175, dotaseeker.less */
 .dotaseeker .middle .overlay form .btn-submit:hover {
   background: #000;
   color: #fff;
