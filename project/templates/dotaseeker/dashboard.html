@@ -1,1 +1,123 @@
-Dashboard View
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="mxRH-jX1pR5MjoxIjXJOxnDElPR-loQvW49hc6LMh6w" />
+	
+	<link rel="stylesheet" href="{% static "css/flexboxgrid.css" %}">
+	<link rel="stylesheet" href="{% static "css/animate.css" %}">
+	<link rel="stylesheet" href="{% static "css/hover.css" %}">
+	<link rel="stylesheet" href="{% static "css/elegant-icons.css" %}">
+	<link rel="stylesheet" href="{% static "css/base.css" %}">
+	<link rel="stylesheet" href="{% static "css/dotaseeker.css" %}">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{% static "js/jquery.onscreen.min.js" %}"></script>
+    <script src="{% static "js/ds.js" %}"></script>
+</head>
+<body class="dotaseeker dashboard">
+	<div class="fixed ds-nav">
+		<div class="nav-title">
+			<img src="/static/images/Dota_2_Logo_only.png"/>
+			<span>
+				Dotaseeker
+			</span>
+		</div>
+		<ul>
+			<li>
+				<div class="icon_search"></div>
+				<input type="text" name="q"/>
+			</li>
+		</ul>
+	</div>
+	<div class="content-wrapper container">
+		<div class="main-info">
+			<div class="row">
+				<div class="col-md-4">	
+					<div class="picture">	
+						<img src="/static/images/Dota_2_Logo_only.png"/>
+						<div class="mmr">3880</div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="row name">
+						<div class="col-md-12">Ivy Jeong</div>
+						<div>
+					</div>
+					<div class="row pos">
+						<div class="col-md-6">Preferred Position:</div>
+						<div class="col-md-6">Support</div>
+					</div>
+					<div class="row other-pos">
+						<div class="col-md-6">Other Position(s):</div>
+						<div class="col-md-6">Offlane</div>
+					</div>
+					<div class="row region">
+						<div class="col-md-6">Preferred Region:</div>
+						<div class="col-md-6">North America</div>
+					</div>
+					<div class="row fav-heroes">
+						<div class="col-md-6">Favorite Heroes:</div>
+						<div class="col-md-6">Omniknight, Silencer, Enigma</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main-team">
+			<div class="row">
+				<div class="col-md-12">
+					Your Main Team
+				</div>
+			</div>
+			<div class="row adjust">
+				<div class="col-md-2">
+					Carry
+				</div>
+				<div class="col-md-2">
+					Mid
+				</div>
+				<div class="col-md-2">
+					Offlane
+				</div>
+				<div class="col-md-2">
+					Support
+				</div>
+				<div class="col-md-2">
+					Support
+				</div>
+			</div>
+		</div>
+		<div class="other-carry">
+			<div class="row">
+				<div class="col-md-12 pos">
+					Carry
+				</div>
+			</div>
+		</div>
+		<div class="other-mid">
+			<div class="row">
+				<div class="col-md-12 pos">
+					MidLaner
+				</div>
+			</div>
+		</div>
+		<div class="other-support">
+			<div class="row">
+				<div class="col-md-12 pos">
+					Support
+				</div>
+			</div>
+		</div>
+		<div class="other-offlane">
+			<div class="row">
+				<div class="col-md-12 pos">
+					Offlane
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
