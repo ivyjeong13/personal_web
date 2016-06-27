@@ -1,5 +1,9 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.views.generic import View
+from project.models import Player
+from django.http import HttpResponseRedirect
+from django.core.context_processors import csrf
 
 # Create your views here.
 class ProjectView(TemplateView):
@@ -29,3 +33,44 @@ class DotaseekerView(TemplateView):
 		context = super(DotaseekerView, self).get_context_data(**kwargs)
 		context['introduction'] = 'Hello There!'
 		return context
+
+class DSLoginView(TemplateView):
+	def dispatch(self, request, *args, **kwargs):
+		self.introduction = 'Hello There!'
+		return super(DSLoginView, self).dispatch(request, *args, **kwargs)
+
+	def get(self, request, *args, **kwargs):
+		context = self.get_context_data()
+		return render(request, 'dotaseeker/login.html', context)
+
+	def get_context_data(self, **kwargs):
+		context = super(DSLoginView, self).get_context_data(**kwargs)
+		context['introduction'] = 'Hello There!'
+		return context
+
+class DSSigninView(View):
+	def post(self, request, *args, **kwargs):
+		username = request.POST.get('username')
+		password = request.POST.get('password')
+
+		try:
+			player = Player.objects.get(username=username)
+			if player.password == password:
+				return HttpResponseRedirect('/dotaseeker/dashboard')
+			return HttpResponseRedirect('/dotaseeker/login?p=false')
+		except:
+			return HttpResponseRedirect('/dotaseeker/login?u=false')
+
+class DSRegisterView(View):
+	def post(self, request, *args, **kwargs):
+		username = request.POST.get('username')
+		password = request.POST.get('password')
+
+		try:
+			player = Player.objects.get(username=username)
+			return HttpResponseRedirect('/dotaseeker/login?u=true')
+		except: 
+			#doesn't exist
+			Player.objects.create(username=username, password=password).save()
+			return HttpResponseRedirect('/dotaseeker/dashboard')
+

@@ -1,0 +1,1089 @@
+@font-face {
+  font-family: 'Saint Andrews';
+  src: url('../fonts/Saint-Andrews Queen.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GlacialInd';
+  src: url('../fonts/GlacialIndifference-Regular.otf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Griffos';
+  src: url('../fonts/GriffosFont.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+/* line 3, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.glacial {
+  font-family: 'GlacialInd', serif;
+}
+/* line 6, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.saint {
+  font-family: 'Saint Andrews', sans-serif;
+}
+/* line 9, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.griffos {
+  font-family: 'Griffos', serif;
+}
+/* line 18, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* line 24, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+body {
+  margin: 0;
+  font-family: 'GlacialInd', serif;
+  font-size: 15px;
+}
+/* line 30, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.container {
+  width: 1120px;
+  margin: 0 auto;
+}
+/* line 35, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.row {
+  width: 100%;
+}
+/* line 39, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.nav-wrapper {
+  min-height: 63px;
+  padding-bottom: 30px;
+  width: 100%;
+  clear: both;
+  float: left;
+}
+/* line 47, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#header {
+  max-height: 500px;
+  overflow: hidden;
+}
+/* line 50, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#header img {
+  width: 100%;
+  z-index: -1;
+  position: relative;
+}
+/* line 56, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#header .foreground {
+  color: #ffffff;
+  right: 0;
+  padding-right: 100px;
+  text-align: right;
+}
+/* line 61, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#header .foreground .second {
+  padding-right: 100px;
+}
+/* line 66, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#header .img-wrapper {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+39,0.65+100 */
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 39%, rgba(0, 0, 0, 0.65) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 39%, rgba(0, 0, 0, 0.65) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 39%, rgba(0, 0, 0, 0.65) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=1);
+  /* IE6-9 */
+  width: 100%;
+  height: 100%;
+}
+/* line 75, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#header .img-wrapper img {
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+}
+/* line 83, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.foreground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 40px;
+}
+/* line 89, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.foreground span {
+  font-family: 'Saint Andrews', sans-serif;
+  font-size: 55px;
+  display: inline-block;
+  visibility: hidden;
+}
+/* line 95, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.foreground span.smaller {
+  font-size: 40px;
+}
+/* line 100, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.foreground p {
+  display: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -10px;
+}
+/* line 106, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.foreground p.more {
+  margin-bottom: -25px;
+}
+/* line 112, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#title {
+  font-size: 125px;
+  font-weight: bold;
+  font-family: 'Saint Andrews', sans-serif;
+  margin-top: -100px;
+  color: #000;
+  text-shadow: 1px 1px 1px #fff;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+58&0+0,1+55 */
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 55%, #ffffff 58%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 55%, #ffffff 58%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 55%, #ffffff 58%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+  /* IE6-9 */
+}
+/* line 127, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav {
+  transition: all ease-in 0.15s;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+  clear: both;
+  float: left;
+  position: relative;
+  z-index: 2;
+  bottom: -1px;
+  background: #fff;
+}
+/* line 140, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav.fixed {
+  position: fixed;
+  background: #516B8C;
+  padding: 0;
+  top: 0;
+  left: 0;
+  height: 35px;
+  z-index: 9999;
+  box-shadow: 0px 1px 20px #000;
+}
+/* line 149, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav.fixed a {
+  color: #fff;
+  border-left: 1px solid #fff;
+}
+/* line 152, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav.fixed a:last-child {
+  border-right: 1px solid #fff;
+}
+/* line 155, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav.fixed a:hover {
+  color: #516B8C;
+}
+/* line 159, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav.fixed a.hvr-sweep-to-bottom:before {
+  background: #fff;
+}
+/* line 164, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav.fixed .left {
+  color: #fff;
+  font-family: 'Saint Andrews', sans-serif;
+  text-transform: none;
+  float: left;
+  font-size: 32px;
+  font-weight: 500;
+  text-shadow: -1px -1px 0 #516b8c, 1px -1px 0 #516b8c, -1px 1px 0 #516b8c, 1px 1px 0 #516b8c;
+}
+/* line 179, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav .left {
+  display: none;
+}
+/* line 183, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav .col-xs-12 {
+  border-top: 1px solid #516B8C;
+}
+/* line 186, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav ul {
+  float: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* line 192, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav li {
+  float: left;
+}
+/* line 196, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav a {
+  text-decoration: none;
+  color: #516B8C;
+  cursor: pointer;
+  padding: 5px 20px;
+}
+/* line 201, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav a:hover {
+  color: #fff;
+}
+/* line 205, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav a.hvr-sweep-to-bottom:before {
+  background: #516B8C;
+}
+/* line 212, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.gray {
+  -webkit-filter: grayscale(70%);
+  -moz-filter: grayscale(70%);
+  -o-filter: grayscale(70%);
+}
+/* line 218, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main {
+  width: 100%;
+  float: left;
+  clear: both;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -125px;
+  padding-bottom: 40px;
+  padding-top: 10px;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0px 10px 30px #ccc;
+}
+/* line 229, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .header {
+  width: 100%;
+  clear: both;
+  padding: 5px 5px;
+  background: #516B8C;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* line 239, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .header.hvr-ripple-out:before {
+  border-color: #516B8C;
+}
+/* line 245, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main p {
+  margin: 0;
+  width: 100%;
+  clear: both;
+  float: left;
+}
+/* line 251, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .text-right {
+  text-align: right;
+}
+/* line 255, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .left,
+#main .right {
+  display: inline-block;
+  width: 50%;
+}
+/* line 259, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .left {
+  float: left;
+}
+/* line 262, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .right {
+  float: right;
+  text-align: right;
+}
+/* line 266, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .pad {
+  padding-bottom: 10px;
+}
+/* line 269, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .pad-top {
+  margin-top: 20px;
+}
+/* line 272, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .pad-top-large {
+  margin-top: 75px;
+}
+/* line 276, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .subheader {
+  font-family: 'Griffos', serif;
+  font-size: 22px;
+}
+/* line 280, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .subheader + .right {
+  padding-top: 5px;
+}
+/* line 285, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .title {
+  margin-top: 20px;
+  border-bottom: 1px solid #516B8C;
+  width: 100%;
+  float: left;
+  clear: both;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+/* line 295, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .title.border-top {
+  border-top: 1px dashed #ccc;
+  padding-top: 30px;
+}
+/* line 303, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .details.list ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+/* line 311, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#footer {
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 316, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#footer .img-wrapper {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+17,ffffff+100&1+19,0+100 */
+  background: -moz-linear-gradient(top, #ffffff 17%, #ffffff 19%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 17%, #ffffff 19%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 17%, #ffffff 19%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+  /* IE6-9 */
+  width: 100%;
+  height: 100%;
+}
+/* line 325, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#footer img {
+  width: 100%;
+  z-index: -1;
+  position: relative;
+}
+/* line 331, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#footer .foreground {
+  left: 40px;
+  top: 185px;
+}
+/* line 335, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#footer .foreground .f_1 {
+  margin-left: 50px;
+}
+/* line 338, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#footer .foreground .f_3 {
+  margin-left: 70px;
+}
+/* line 341, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#footer .foreground .f_4 {
+  margin-left: 180px;
+}
+/* line 347, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#hobbyHeader {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  font-family: 'Saint Andrews', sans-serif;
+  font-size: 120px;
+  border-bottom: 1px dashed #fff;
+}
+/* line 356, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#hobbyHeader .abs_center {
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+/* line 365, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#hobbyHeader .hobby-header-wrapper {
+  min-height: 40px;
+  margin: 20px auto 0 auto;
+  width: 218px;
+}
+/* line 371, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#hobbyHeader ul {
+  list-style: none;
+  width: 218px;
+  padding: 0;
+  margin: 0;
+}
+/* line 376, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#hobbyHeader ul li {
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  font-size: 20px;
+  float: left;
+  padding: 4px 10px;
+  margin-right: 15px;
+}
+/* line 384, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#hobbyHeader ul li:last-child {
+  margin-right: 0;
+}
+/* line 387, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#hobbyHeader ul li:hover {
+  background: #fff;
+  color: #000;
+}
+/* line 394, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#hobbyHeader .answer {
+  font-size: 20px;
+  width: 100%;
+  clear: both;
+  float: left;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Griffos', serif;
+  min-height: 26.88px;
+  min-width: 1px;
+}
+/* line 407, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px dashed #fff;
+  background: #000;
+}
+/* line 414, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+14,000000+14&1+0,0+19 */
+  background: -moz-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=0);
+  /* IE6-9 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/* line 428, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .bg-wrapper {
+  background: #000;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+/* line 433, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .bg-wrapper .img-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+/* line 438, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .bg-wrapper .img-container:first-child {
+  display: block;
+}
+/* line 441, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .bg-wrapper .img-container:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+40&1+0,0+44,0+44 */
+  background: -moz-linear-gradient(left, #000000 0%, rgba(0, 0, 0, 0.09) 40%, rgba(0, 0, 0, 0) 44%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #000000 0%, rgba(0, 0, 0, 0.09) 40%, rgba(0, 0, 0, 0) 44%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #000000 0%, rgba(0, 0, 0, 0.09) 40%, rgba(0, 0, 0, 0) 44%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=1);
+  /* IE6-9 */
+  position: absolute;
+  z-index: 1;
+  content: '';
+  width: 100%;
+  height: 100%;
+}
+/* line 454, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .bg-wrapper img {
+  height: 100vh;
+}
+/* line 459, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .text-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  color: #fff;
+  left: 50px;
+}
+/* line 468, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .text-container .header {
+  width: 100%;
+}
+/* line 472, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .text-container p {
+  width: 33.333%;
+  margin: 0;
+}
+/* line 475, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .text-container p:not(.header) {
+  margin-bottom: 15px;
+}
+/* line 482, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.text-container {
+  display: none;
+}
+/* line 485, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.text-container .header {
+  width: 100%;
+  font-size: 100px;
+  font-family: 'Saint Andrews', sans-serif;
+}
+/* line 491, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.text-container p {
+  margin: 0;
+}
+/* line 496, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#muayThai {
+  position: relative;
+  z-index: -1;
+  min-height: 100vh;
+  width: 100%;
+  background: #000;
+  border-bottom: 1px dashed #fff;
+}
+/* line 503, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#muayThai:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+14,000000+14&1+0,0+19 */
+  background: -moz-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=0);
+  /* IE6-9 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/* line 518, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#muayThai .bg-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  opacity: .75;
+}
+/* line 522, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#muayThai .bg-wrapper img {
+  visibility: hidden;
+  width: 100%;
+}
+/* line 528, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#muayThai .text-container {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  background: rgba(255, 255, 255, 0.75);
+  color: #000;
+  border-radius: 25px;
+  width: 60%;
+  padding: 20px;
+}
+/* line 540, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+  border-bottom: 1px dashed #fff;
+}
+/* line 545, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .bg-wrapper {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+/* line 550, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .bg-wrapper img {
+  width: 100%;
+  visibility: hidden;
+}
+/* line 555, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .bg-wrapper .gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: 1;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#606c88+0,3f4c6b+100;Grey+3D+%232 */
+  background: #606c88;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #606c88 0%, #3f4c6b 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #606c88 0%, #3f4c6b 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #606c88 0%, #3f4c6b 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#606c88', endColorstr='#3f4c6b', GradientType=0);
+  /* IE6-9 */
+}
+/* line 572, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .text-container {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  color: #fff;
+  z-index: 5;
+  display: block;
+}
+/* line 581, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .games {
+  position: relative;
+  display: inline-block;
+  padding: 10px 0;
+}
+/* line 585, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .games:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  width: 99999px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 1px 1px 25px rgba(255, 255, 255, 0.85);
+}
+/* line 595, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .games img {
+  float: left;
+  margin-right: 15px;
+  max-height: 70px;
+}
+/* line 602, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .list_sp_games {
+  position: relative;
+}
+/* line 604, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .list_sp_games .btn {
+  display: inline-block;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: 'GlacialInd', serif;
+  width: 200px;
+  padding: 5px 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: transparent;
+}
+/* line 619, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .list_sp_games .btn:hover:before {
+  background: #516B8C;
+}
+/* line 624, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .list_sp_games .lightbox {
+  display: none;
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  width: 250px;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #000;
+  color: #000;
+  padding: 0 20px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
+/* line 638, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .list_sp_games .lightbox ul {
+  list-style: none;
+  padding: 0;
+}
+/* line 642, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .list_sp_games .lightbox ul .divide {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+/* line 652, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#guitar {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+/* line 657, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#guitar .bg-wrapper {
+  position: relative;
+}
+/* line 659, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#guitar .bg-wrapper:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+  background: -moz-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+  /* IE6-9 */
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 673, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#guitar .bg-wrapper img {
+  width: 100%;
+  visibility: hidden;
+}
+/* line 678, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#guitar .video {
+  width: 580px;
+  height: 435px;
+  background: #000;
+  overflow: hidden;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  left: 50px;
+  position: absolute;
+  z-index: 2;
+  box-shadow: 0px 2px 40px #000;
+}
+/* line 695, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#guitar .text-container {
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  display: block;
+  right: 40px;
+  position: absolute;
+  z-index: 2;
+  background: #fff;
+  border: 1px solid black;
+  width: 500px;
+  padding: 0 20px 20px 20px;
+}
+/* line 712, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#drawing {
+  border-top: 1px dashed #000;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+/* line 717, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#drawing .bg-wrapper {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  filter: blur(10px);
+  -ms-filter: blur(10px);
+  -webkit-filter: blur(10px);
+  transition: ease-in all 0.35s;
+  -ms-transition: ease-in all 0.35s;
+  -webkit-transition: ease-in all 0.35s;
+}
+/* line 728, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#drawing .bg-wrapper.clean {
+  filter: blur(0);
+  -ms-filter: blur(0);
+  -webkit-filter: blur(0);
+}
+/* line 733, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#drawing .bg-wrapper img {
+  width: 100%;
+}
+/* line 738, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#drawing .text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width: 50%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-bottom: 30px;
+}
+/* line 755, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody {
+  background: #000;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 760, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project {
+  display: block;
+  width: 25%;
+  height: 100%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  border-right: 1px dashed #fff;
+  filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  transition: ease-in all 0.25s;
+  -ms-transition: ease-in all 0.25s;
+  -webkit-transition: ease-in all 0.25s;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* line 777, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project.disabled {
+  cursor: default;
+}
+/* line 780, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project:hover {
+  filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
+/* line 786, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project:first-child:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ad2800+0,ffffff+100&1+0,0+100 */
+  background: -moz-linear-gradient(left, #ad2800 0%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ad2800 0%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ad2800 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ad2800', endColorstr='#00ffffff', GradientType=1);
+  /* IE6-9 */
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  opacity: 0.65;
+}
+/* line 802, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project:last-child {
+  border-right: 0;
+}
+/* line 805, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project img {
+  height: 100%;
+  position: relative;
+  z-index: -1;
+}
+/* line 810, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project .text {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  left: 50%;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+}
+/* line 822, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project .text .headline {
+  font-size: 50px;
+  font-family: 'Griffos', serif;
+}
+/* line 826, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project .text .subheadline {
+  font-size: 15px;
+  font-family: 'GlacialInd', serif;
+}
+@media only screen and (max-width: 1120px) {
+  /* line 1, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/tablet.less */
+  .container {
+    width: 740px;
+  }
+}
+@media only screen and (max-width: 740px) {
+  /* line 1, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  .container {
+    width: 100%;
+  }
+}
+/* line 3, dotaseeker.less */
+.dotaseeker {
+  position: relative;
+  background: #000;
+  min-height: 100vh;
+  width: 100%;
+}
+/* line 8, dotaseeker.less */
+.dotaseeker .top {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* line 13, dotaseeker.less */
+.dotaseeker .top img {
+  width: 100%;
+}
+/* line 16, dotaseeker.less */
+.dotaseeker .top .img-wrapper {
+  position: relative;
+}
+/* line 18, dotaseeker.less */
+.dotaseeker .top .img-wrapper:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+49,000000+100&0+92,1+100 */
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 92%, #000000 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 92%, #000000 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 92%, #000000 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0);
+  /* IE6-9 */
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+/* line 32, dotaseeker.less */
+.dotaseeker .top h1 {
+  position: absolute;
+  top: 0;
+  right: 40px;
+  color: #fff;
+  font-size: 100px;
+  text-shadow: 2px 2px 10px #000;
+  text-transform: uppercase;
+  font-family: 'Griffos', serif;
+  z-index: 2;
+  font-weight: 100;
+  margin: 0;
+}
+/* line 45, dotaseeker.less */
+.dotaseeker .top h1 span {
+  font-family: 'GlacialInd', serif;
+  font-size: 14px;
+  display: block;
+  font-weight: 100;
+  text-align: right;
+}
+/* line 55, dotaseeker.less */
+.dotaseeker .middle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #000;
+  width: 45%;
+  color: #fff;
+  height: 100%;
+}
+/* line 63, dotaseeker.less */
+.dotaseeker .middle:before {
+  content: '';
+  position: absolute;
+  left: -55%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100 */
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=1);
+  /* IE6-9 */
+}
+/* line 78, dotaseeker.less */
+.dotaseeker .middle > p {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  margin: 10px 40px 10px 0;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+}
+/* line 88, dotaseeker.less */
+.dotaseeker .middle > p.thin {
+  font-weight: 100;
+  text-transform: none;
+}
+/* line 94, dotaseeker.less */
+.dotaseeker .middle .overlay {
+  margin-right: 40px;
+  background: #fff;
+  color: #000;
+  position: relative;
+  z-index: 2;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px #fff;
+}
+/* line 95, dotaseeker.less */
+.dotaseeker .middle .overlay:first-child {
+  margin-top: 180px;
+}
+/* line 107, dotaseeker.less */
+.dotaseeker .middle .overlay span {
+  display: inline-block;
+  font-size: 20px;
+}
+/* line 114, dotaseeker.less */
+.dotaseeker .middle .overlay form input {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-family: 'GlacialInd', serif;
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+/* line 124, dotaseeker.less */
+.dotaseeker .middle .overlay form .btn-submit {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #000;
+}
+/* line 136, dotaseeker.less */
+.dotaseeker .middle .overlay form .btn-submit:before {
+  background: #fff;
+}
+/* line 139, dotaseeker.less */
+.dotaseeker .middle .overlay form .btn-submit:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+/*# sourceMappingURL=dotaseeker.css.map */
