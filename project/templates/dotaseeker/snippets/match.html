@@ -1,0 +1,49 @@
+{% load tt_base %}
+{% load staticfiles %}
+<div class="match">
+	<div class="header">
+		<span><strong>ID</strong>: {{ match.match_id }}</span><span>{{ match.start_time|age }}</span>
+	</div>
+	{% with match|player_details:st_id as player %}
+	<div class="hero">
+		<img src="{{ player.hero_id|get_hero_img:"large" }}">
+		<div class="hero-name">{{ player.hero_name }}</div>
+		{% with match.radiant_win as rwin %}
+			{% if player|find_match_result:rwin %}
+				<div class="status win">Win</div>
+			{% else %}
+				<div class="status lose">Loss</div>
+			{% endif %}
+		{% endwith %}
+	</div>
+	<div class="stats">
+		<div class="kda">
+			<div><span>K</span><span>{{ player.kills }}<span></div>
+			<div><span>D</span><span>{{ player.deaths }}</span></div>
+			<div><span>A</span><span>{{ player.assists }}</span></div>
+		</div>
+		<div class="items">
+			<ul>
+				<li {% if player.item_0_name %}data-name="{{ player.item_0_name}}" {% endif %}>
+					{{ player.item_0|get_item_img|safe }}
+				</li>
+				<li {% if player.item_1_name %}data-name="{{ player.item_1_name}}" {% endif %}>
+					{{ player.item_1|get_item_img|safe }}
+				</li>
+				<li {% if player.item_2_name %}data-name="{{ player.item_2_name}}" {% endif %}>
+					{{ player.item_2|get_item_img|safe }}
+				</li>
+				<li {% if player.item_3_name %}data-name="{{ player.item_3_name}}" {% endif %}>
+					{{ player.item_3|get_item_img|safe }}
+				</li>
+				<li {% if player.item_4_name %}data-name="{{ player.item_4_name}}" {% endif %}>
+					{{ player.item_4|get_item_img|safe }}
+				</li>
+				<li {% if player.item_5_name %}data-name="{{ player.item_5_name}}" {% endif %}>
+					{{ player.item_5|get_item_img|safe }}
+				</li>
+			</ul>
+		</div>
+	</div>
+	{% endwith %}
+</div>

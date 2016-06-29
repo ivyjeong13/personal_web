@@ -35,6 +35,30 @@ class DotaseekerView(TemplateView):
 		context = super(DotaseekerView, self).get_context_data(**kwargs)
 		return context
 
+class DSEditView(TemplateView):
+	def dispatch(self, request, *args, **kwargs):
+		return super(DSEditView, self).dispatch(request, *args, **kwargs)
+
+	def get(self, request, *args, **kwargs):
+		context = self.get_context_data()
+		return render(request, 'dotaseeker/edit.html', context)
+
+	def get_context_data(self, **kwargs):
+		context = super(DSEditView, self).get_context_data(**kwargs)
+		return context
+
+class DSSearchView(TemplateView):
+	def dispatch(self, request, *args, **kwargs):
+		return super(DSSearchView, self).dispatch(request, *args, **kwargs)
+
+	def get(self, request, *args, **kwargs):
+		context = self.get_context_data()
+		return render(request, 'dotaseeker/search.html', context)
+
+	def get_context_data(self, **kwargs):
+		context = super(DSSearchView, self).get_context_data(**kwargs)
+		return context
+
 class DSLoginView(TemplateView):
 	def dispatch(self, request, *args, **kwargs):
 		if request.GET.get('u'):
@@ -63,6 +87,7 @@ class DSDashboardView(TemplateView):
 				user = User.objects.get(username=username)
 				profile = Player.objects.get(user=user)
 				self.linked_steam = False
+				self.matches = None
 			except:
 				response = HttpResponseRedirect('/dotaseeker/login?e=true')
 				return response
@@ -73,10 +98,11 @@ class DSDashboardView(TemplateView):
 				steam_info = None
 
 			if steam_info:
+				api = dota2api.Initialise(settings.STEAM_API_KEY)
+
 				if steam_info.extra_data.get('info'):
 					self.linked_steam = True
 				else:
-					api = dota2api.Initialise(settings.STEAM_API_KEY)
 					data = api.get_player_summaries(steamids=[int(steam_info.uid)])['players'][0]
 					steam_info.extra_data = {'info': data}
 					steam_info.save()
@@ -90,14 +116,67 @@ class DSDashboardView(TemplateView):
 						profile.picture = data['avatarfull']
 					if data.get('loccountrycode'):
 						profile.location = data['loccountrycode']
+					if data.get('timecreated'):
+						profile.st_time_created = data['timecreated']
 
 					profile.save()
 					self.linked_steam = True
+
+				#always grab most recent 10 matches if a steam id is linked
+				self.st_id = int(steam_info.uid)
+				contGetHistory = True
+				if steam_info.extra_data['info'].get('last_match_time') and steam_info.extra_data.get('last_10'):
+					last_match_time = steam_info.extra_data['info']['last_match_time']
+					last_10 = steam_info.extra_data['last_10']
+					if last_match_time == last_10[0]['start_time']:
+						self.matches = last_10
+						contGetHistory = False
+						
+				if contGetHistory:
+					try:
+						matches = api.get_match_history(matches_requested=10, account_id=int(steam_info.uid))['matches']
+						self.matches = []
+						for m in matches:
+							m_data = api.get_match_details(match_id=m['match_id'])
+							for p in m_data['players']:
+								p_slot = '{0:08b}'.format(p['player_slot'])
+								if p_slot[0] == '1':
+									p['player_side'] = 'dire'
+								else:
+									p['player_side'] = 'radiant'
+							self.matches.append(m_data)
+							steam_info.extra_data['last_10'] = self.matches
+							steam_info.save()
+					except:
+						#add case to pull in old data if Steam API call fails
+						if steam_info.extra_data.get('last_10'):
+							self.matches=steam_info.extra_data['last_10']
+						else:
+							self.matches=None
 
 			self.realname = profile.real_name
 			self.personaname = profile.steam_name
 			self.picture = profile.picture
 			self.location = profile.location
+			self.mmr = profile.mmr
+			self.pref_position = profile.pref_position
+			if profile.other_positions:
+				self.other_positions = profile.other_positions.split(",")
+			else:
+				self.other_positions = None
+			self.pref_region = profile.pref_region
+			self.carries = profile.carries
+			self.supports = profile.supports
+			self.offlaners = profile.offlaners
+			self.mids = profile.mids
+
+			self.s_carry = profile.selected_carry
+			self.s_mid = profile.selected_mid
+			self.s_offlaner = profile.selected_offlaner
+			self.s_support = profile.selected_support
+			self.s_support2 = profile.selected_support2
+
+			self.top_played = profile.top_played.split(",")
 		else:
 			response = HttpResponseRedirect('/dotaseeker/login?e=true')
 			return response 
@@ -115,6 +194,25 @@ class DSDashboardView(TemplateView):
 		context['picture'] = self.picture
 		context['location'] = self.location
 		context['linked_steam'] = self.linked_steam
+		context['matches'] = self.matches
+		context['st_id'] = self.st_id
+		context['mmr'] = self.mmr
+		context['pref_region'] = self.pref_region
+		context['pref_position'] = self.pref_position
+		context['other_positions'] = self.other_positions
+		context['carries'] = self.carries
+		context['supports'] = self.supports
+		context['offlaners'] = self.offlaners
+		context['mids'] = self.mids
+
+		context['s_carry'] = self.s_carry
+		context['s_mid'] = self.s_mid
+		context['s_offlaner'] = self.s_offlaner
+		context['s_support'] = self.s_support
+		context['s_support2'] = self.s_support2
+
+		context['top_played'] = self.top_played
+
 		return context
 
 class DSSigninView(View):

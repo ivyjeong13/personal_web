@@ -11,6 +11,18 @@
   font-style: normal;
 }
 @font-face {
+  font-family: 'GlacialInd';
+  src: url('../fonts/GlacialIndifference-Bold.otf');
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: 'GlacialInd';
+  src: url('../fonts/GlacialIndifference-Italic.otf');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
   font-family: 'Griffos';
   src: url('../fonts/GriffosFont.ttf');
   font-weight: 500;
@@ -933,29 +945,61 @@ body {
     width: 100%;
   }
 }
-/* line 3, dotaseeker.less */
+/* line 2, dotaseeker.less */
+.fullWidth {
+  clear: both;
+  width: 100%;
+  float: left;
+}
+/* line 7, dotaseeker.less */
 .dotaseeker {
   position: relative;
   background: #000;
   min-height: 100vh;
+  clear: both;
   width: 100%;
+  float: left;
 }
-/* line 8, dotaseeker.less */
+/* line 13, dotaseeker.less */
+.dotaseeker .border-right {
+  border-right: 1px solid #999;
+}
+/* line 16, dotaseeker.less */
+.dotaseeker .content {
+  clear: both;
+  width: 100%;
+  float: left;
+}
+/* line 19, dotaseeker.less */
+.dotaseeker .left-div {
+  float: left;
+  width: 63.666%;
+  margin-right: 3%;
+}
+/* line 24, dotaseeker.less */
+.dotaseeker .right-div {
+  float: left;
+  width: 33.333%;
+}
+/* line 28, dotaseeker.less */
 .dotaseeker .top {
   overflow: hidden;
   width: 100%;
   height: 100%;
   position: relative;
 }
-/* line 13, dotaseeker.less */
+/* line 33, dotaseeker.less */
 .dotaseeker .top img {
   width: 100%;
 }
-/* line 16, dotaseeker.less */
+/* line 36, dotaseeker.less */
 .dotaseeker .top .img-wrapper {
   position: relative;
+  clear: both;
+  width: 100%;
+  float: left;
 }
-/* line 18, dotaseeker.less */
+/* line 39, dotaseeker.less */
 .dotaseeker .top .img-wrapper:before {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+49,000000+100&0+92,1+100 */
   background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 92%, #000000 100%);
@@ -973,7 +1017,7 @@ body {
   height: 100%;
   position: absolute;
 }
-/* line 32, dotaseeker.less */
+/* line 53, dotaseeker.less */
 .dotaseeker .top .tv-wrapper {
   display: none;
   width: 100%;
@@ -981,21 +1025,21 @@ body {
   position: relative;
   overflow: hidden;
 }
-/* line 38, dotaseeker.less */
+/* line 59, dotaseeker.less */
 .dotaseeker .top .tv-wrapper .tv {
   width: 100%;
   height: 100%;
 }
-/* line 42, dotaseeker.less */
+/* line 63, dotaseeker.less */
 .dotaseeker .top .tv-wrapper .tv .screen {
   opacity: 0;
   transition: opacity .5s;
 }
-/* line 46, dotaseeker.less */
+/* line 67, dotaseeker.less */
 .dotaseeker .top .tv-wrapper .tv .screen.active {
   opacity: 1;
 }
-/* line 51, dotaseeker.less */
+/* line 72, dotaseeker.less */
 .dotaseeker .top .tv-wrapper .icon {
   position: absolute;
   bottom: 40px;
@@ -1004,10 +1048,10 @@ body {
   font-size: 25px;
   cursor: pointer;
 }
-/* line 60, dotaseeker.less */
+/* line 81, dotaseeker.less */
 .dotaseeker .top h1 {
   position: absolute;
-  top: 0;
+  top: -10px;
   right: 40px;
   color: #fff;
   font-size: 100px;
@@ -1018,7 +1062,7 @@ body {
   font-weight: 100;
   margin: 0;
 }
-/* line 73, dotaseeker.less */
+/* line 94, dotaseeker.less */
 .dotaseeker .top h1 span {
   font-family: 'GlacialInd', serif;
   font-size: 14px;
@@ -1026,20 +1070,20 @@ body {
   font-weight: 100;
   text-align: right;
 }
-/* line 83, dotaseeker.less */
+/* line 104, dotaseeker.less */
 .dotaseeker .middle {
   position: absolute;
   top: 0;
   right: 0;
   width: 45%;
+  padding-bottom: 20px;
   color: #fff;
-  height: 100%;
 }
-/* line 90, dotaseeker.less */
+/* line 111, dotaseeker.less */
 .dotaseeker .middle:not(.playing) {
   background: #000;
 }
-/* line 92, dotaseeker.less */
+/* line 113, dotaseeker.less */
 .dotaseeker .middle:not(.playing):before {
   content: '';
   position: absolute;
@@ -1057,7 +1101,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=1);
   /* IE6-9 */
 }
-/* line 108, dotaseeker.less */
+/* line 129, dotaseeker.less */
 .dotaseeker .middle > p {
   text-align: center;
   text-transform: uppercase;
@@ -1068,16 +1112,16 @@ body {
   position: relative;
   z-index: 2;
 }
-/* line 118, dotaseeker.less */
+/* line 139, dotaseeker.less */
 .dotaseeker .middle > p.thin {
   font-weight: 100;
   text-transform: none;
 }
-/* line 125, dotaseeker.less */
+/* line 146, dotaseeker.less */
 .dotaseeker .middle.playing .overlay {
   background: rgba(255, 255, 255, 0.55);
 }
-/* line 129, dotaseeker.less */
+/* line 150, dotaseeker.less */
 .dotaseeker .middle .overlay {
   margin-right: 40px;
   background: #fff;
@@ -1091,23 +1135,23 @@ body {
   -ms-transition: ease-in all 0.25s;
   -webkit-transition: ease-in all 0.25s;
 }
-/* line 130, dotaseeker.less */
+/* line 151, dotaseeker.less */
 .dotaseeker .middle .overlay:first-child {
-  margin-top: 180px;
+  margin-top: 160px;
 }
-/* line 145, dotaseeker.less */
+/* line 166, dotaseeker.less */
 .dotaseeker .middle .overlay span {
   display: inline-block;
   font-size: 20px;
 }
-/* line 149, dotaseeker.less */
+/* line 170, dotaseeker.less */
 .dotaseeker .middle .overlay span.error {
   margin-top: 10px;
   display: block;
   font-size: 14px;
   color: red;
 }
-/* line 158, dotaseeker.less */
+/* line 179, dotaseeker.less */
 .dotaseeker .middle .overlay form input {
   border: 1px solid #ccc;
   padding: 5px 10px;
@@ -1117,7 +1161,7 @@ body {
   border-radius: 4px;
   margin-top: 10px;
 }
-/* line 168, dotaseeker.less */
+/* line 189, dotaseeker.less */
 .dotaseeker .middle .overlay form .btn-submit {
   margin-top: 20px;
   width: 100%;
@@ -1131,43 +1175,46 @@ body {
   cursor: pointer;
   border: 1px solid #000;
 }
-/* line 180, dotaseeker.less */
+/* line 201, dotaseeker.less */
 .dotaseeker .middle .overlay form .btn-submit:before {
   background: #fff;
 }
-/* line 183, dotaseeker.less */
+/* line 204, dotaseeker.less */
 .dotaseeker .middle .overlay form .btn-submit:hover {
   background: #000;
   color: #fff;
   border: 1px solid #000;
 }
-/* line 193, dotaseeker.less */
+/* line 214, dotaseeker.less */
 .dotaseeker.dashboard {
-  background: #fff;
-  background-image: url(/static/images/bloodseeker-dota-2-wallpaper-hd-1.jpg);
-  background-size: 100% auto;
-  background-repeat: none;
+  background: #000;
   margin-top: 40px;
 }
-/* line 199, dotaseeker.less */
-.dotaseeker.dashboard:after {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+49,000000+100&0+92,1+100 */
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 92%, #000000 100%);
+/* line 215, dotaseeker.less */
+.dotaseeker.dashboard .bg-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 219, dotaseeker.less */
+.dotaseeker.dashboard .bg-item:after {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100 */
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 92%, #000000 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 92%, #000000 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0);
   /* IE6-9 */
   content: '';
-  bottom: 0;
+  bottom: -20%;
   left: 0;
   width: 100%;
   height: 100%;
   position: absolute;
 }
-/* line 214, dotaseeker.less */
+/* line 237, dotaseeker.less */
 .dotaseeker .ds-nav {
   z-index: 9999;
   position: fixed;
@@ -1179,22 +1226,21 @@ body {
   box-shadow: 1px 1px 10px #000;
   color: #fff;
 }
-/* line 224, dotaseeker.less */
+/* line 247, dotaseeker.less */
 .dotaseeker .ds-nav .nav-title {
   float: left;
 }
-/* line 226, dotaseeker.less */
+/* line 249, dotaseeker.less */
 .dotaseeker .ds-nav .nav-title > * {
   float: left;
 }
-/* line 229, dotaseeker.less */
+/* line 252, dotaseeker.less */
 .dotaseeker .ds-nav .nav-title img {
   margin-top: 8px;
   height: 25px;
   width: 25px;
-  margin-left: 20px;
 }
-/* line 235, dotaseeker.less */
+/* line 257, dotaseeker.less */
 .dotaseeker .ds-nav .nav-title span {
   display: inline-block;
   padding: 12px 0;
@@ -1202,24 +1248,24 @@ body {
   font-family: 'Griffos', serif;
   margin-left: 10px;
 }
-/* line 244, dotaseeker.less */
+/* line 266, dotaseeker.less */
 .dotaseeker .ds-nav ul {
   float: right;
   list-style: none;
-  padding: 8px 20px 8px 0;
+  padding: 8px 0px;
   margin: 0;
 }
-/* line 249, dotaseeker.less */
+/* line 271, dotaseeker.less */
 .dotaseeker .ds-nav ul li {
   float: left;
 }
-/* line 251, dotaseeker.less */
+/* line 273, dotaseeker.less */
 .dotaseeker .ds-nav ul li div,
 .dotaseeker .ds-nav ul li input {
   display: inline-block;
   float: left;
 }
-/* line 255, dotaseeker.less */
+/* line 277, dotaseeker.less */
 .dotaseeker .ds-nav ul li div {
   border: 1px solid #fff;
   font-weight: bold;
@@ -1228,56 +1274,511 @@ body {
   border-bottom-left-radius: 2px;
   border-top-left-radius: 2px;
   cursor: pointer;
+  background: #fff;
+  color: #000;
 }
-/* line 264, dotaseeker.less */
+/* line 287, dotaseeker.less */
+.dotaseeker .ds-nav ul li div:hover {
+  background: #000;
+  color: #fff;
+}
+/* line 292, dotaseeker.less */
 .dotaseeker .ds-nav ul li input {
   width: 150px;
-  border-top: 1px solid #999;
-  border-right: 1px solid #999;
-  border-bottom: 1px solid #999;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
   border-left: 0;
   background: #fff;
   color: #000;
   font-size: 16px;
   padding: 1px 5px 2px 5px;
 }
-/* line 279, dotaseeker.less */
+/* line 307, dotaseeker.less */
 .dotaseeker .content-wrapper {
   position: relative;
-  background: rgba(255, 255, 255, 0.75);
+  background: #ffffff;
   min-height: 100vh;
   z-index: 1;
   box-shadow: 2px 0px 50px #fff;
-}
-/* line 287, dotaseeker.less */
-.dotaseeker .main-info {
   padding: 40px;
-  margin-right: 25%;
-  width: 75%;
+  clear: both;
+  overflow: hidden;
 }
-/* line 293, dotaseeker.less */
-.dotaseeker .picture {
-  position: relative;
-}
-/* line 295, dotaseeker.less */
-.dotaseeker .picture .mmr {
-  position: absolute;
+/* line 318, dotaseeker.less */
+.dotaseeker .main-info {
+  clear: both;
   width: 100%;
-  background: rgba(0, 0, 0, 0.75);
-  color: #fff;
+  float: left;
+}
+/* line 321, dotaseeker.less */
+.dotaseeker .main-info .username {
+  font-size: 30px;
   font-weight: bold;
-  text-align: center;
-  bottom: 0;
-  left: 0;
-  padding: 10px 0;
+  font-family: 'Griffos', serif;
+  margin-bottom: 20px;
 }
-/* line 308, dotaseeker.less */
-.dotaseeker img {
+/* line 329, dotaseeker.less */
+.dotaseeker .picture {
+  border: 1px solid #ccc;
+  position: relative;
+  clear: both;
   width: 100%;
+  float: left;
 }
-/* line 313, dotaseeker.less */
+/* line 334, dotaseeker.less */
+.dotaseeker .picture img {
+  clear: both;
+  width: 100%;
+  float: left;
+}
+/* line 337, dotaseeker.less */
+.dotaseeker .picture .mmr,
+.dotaseeker .picture .pos-type {
+  clear: both;
+  width: 100%;
+  float: left;
+  color: #fff;
+  text-align: center;
+  padding: 6px 0;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+/* line 345, dotaseeker.less */
+.dotaseeker .picture .pos-type {
+  background: #000;
+}
+/* line 348, dotaseeker.less */
+.dotaseeker .picture .mmr {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f1f1f1+50,e1e1e1+51,f6f6f6+100;White+Gloss+%231 */
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6', GradientType=0);
+  /* IE6-9 */
+  color: #000;
+}
+/* line 359, dotaseeker.less */
+.dotaseeker img {
+  clear: both;
+  width: 100%;
+  float: left;
+}
+/* line 364, dotaseeker.less */
 .dotaseeker .steam-login img {
   width: 180px;
   height: 35px;
+  display: block;
+  margin: 10px auto;
+}
+/* line 372, dotaseeker.less */
+.dotaseeker .name,
+.dotaseeker .pos,
+.dotaseeker .other-pos,
+.dotaseeker .region {
+  margin-bottom: 5px;
+}
+/* line 374, dotaseeker.less */
+.dotaseeker .name .col-md-6,
+.dotaseeker .pos .col-md-6,
+.dotaseeker .other-pos .col-md-6,
+.dotaseeker .region .col-md-6 {
+  font-weight: 500;
+}
+/* line 376, dotaseeker.less */
+.dotaseeker .name .col-md-6:first-child,
+.dotaseeker .pos .col-md-6:first-child,
+.dotaseeker .other-pos .col-md-6:first-child,
+.dotaseeker .region .col-md-6:first-child {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 14px;
+}
+/* line 385, dotaseeker.less */
+.dotaseeker .divider {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-top: 40px;
+}
+/* line 388, dotaseeker.less */
+.dotaseeker .divider.main-team {
+  margin-top: 60px;
+}
+/* line 391, dotaseeker.less */
+.dotaseeker .divider .title {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* line 400, dotaseeker.less */
+.dotaseeker .pos .bg-title {
+  font-size: 16px;
+}
+/* line 405, dotaseeker.less */
+.dotaseeker .bg-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #000;
+  color: #fff;
+  padding: 5px;
+  clear: both;
+  width: 100%;
+  float: left;
+}
+/* line 414, dotaseeker.less */
+.dotaseeker .fav-heroes {
+  margin-top: 10px;
+}
+/* line 416, dotaseeker.less */
+.dotaseeker .fav-heroes .row {
+  margin: 0;
+}
+/* line 418, dotaseeker.less */
+.dotaseeker .fav-heroes .row .col-md-12 {
+  padding: 0;
+}
+/* line 422, dotaseeker.less */
+.dotaseeker .fav-heroes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 1px solid #000;
+  clear: both;
+  width: 100%;
+  float: left;
+}
+/* line 429, dotaseeker.less */
+.dotaseeker .fav-heroes ul li {
+  width: 20%;
+  float: left;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+/* line 434, dotaseeker.less */
+.dotaseeker .fav-heroes ul li img {
+  float: left;
+  clear: both;
+}
+/* line 439, dotaseeker.less */
+.dotaseeker .fav-heroes ul li .x {
+  height: 45px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+0,0e0e0e+100;Black+3D */
+  background: #7d7e7d;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #7d7e7d 0%, #0e0e0e 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d7e7d', endColorstr='#0e0e0e', GradientType=0);
+  /* IE6-9 */
+  color: #fff;
+  text-align: center;
+}
+/* line 448, dotaseeker.less */
+.dotaseeker .fav-heroes ul li .x .icon_blocked {
+  font-size: 25px;
+  padding: 10px 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+/* line 458, dotaseeker.less */
+.dotaseeker .matches {
+  clear: both;
+  width: 100%;
+  float: left;
+}
+/* line 460, dotaseeker.less */
+.dotaseeker .matches .match {
+  clear: both;
+  width: 100%;
+  float: left;
+  border-top: 1px solid #fff;
+  margin-top: 15px;
+}
+/* line 464, dotaseeker.less */
+.dotaseeker .matches .match:first-child {
+  margin-top: 0;
+}
+/* line 467, dotaseeker.less */
+.dotaseeker .matches .match .header {
+  clear: both;
+  width: 100%;
+  float: left;
+  text-transform: uppercase;
+  font-size: 10px;
+  background: #000;
+  color: #fff;
+  padding: 2px 5px;
+}
+/* line 474, dotaseeker.less */
+.dotaseeker .matches .match .header span {
+  display: inline-block;
+  float: right;
+}
+/* line 476, dotaseeker.less */
+.dotaseeker .matches .match .header span:first-child {
+  float: left;
+}
+/* line 482, dotaseeker.less */
+.dotaseeker .matches .match .hero {
+  overflow: hidden;
+  width: 40%;
+  float: left;
+  border: 1px solid #000;
+  border-top: 2px solid #000;
+}
+/* line 489, dotaseeker.less */
+.dotaseeker .matches .match .hero .hero-name {
+  background: #000;
+  color: #fff;
+}
+/* line 494, dotaseeker.less */
+.dotaseeker .matches .match .hero .hero-name,
+.dotaseeker .matches .match .hero .status {
+  clear: both;
+  width: 100%;
+  float: left;
+  padding: 4px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+/* line 503, dotaseeker.less */
+.dotaseeker .matches .match .hero .status.win {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,004900+96 */
+  background: #006e2e;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #006e2e 0%, #004900 96%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #006e2e 0%, #004900 96%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #006e2e 0%, #004900 96%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#006e2e', endColorstr='#004900', GradientType=0);
+  /* IE6-9 */
+  color: #fff;
+}
+/* line 512, dotaseeker.less */
+.dotaseeker .matches .match .hero .status.lose {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
+  background: #a90329;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #a90329 0%, #8f0222 44%, #6d0019 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a90329', endColorstr='#6d0019', GradientType=0);
+  /* IE6-9 */
+  color: #fff;
+}
+/* line 523, dotaseeker.less */
+.dotaseeker .matches .match .stats {
+  width: 60%;
+  float: left;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+/* line 530, dotaseeker.less */
+.dotaseeker .matches .match .kda {
+  clear: both;
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid #000;
+}
+/* line 534, dotaseeker.less */
+.dotaseeker .matches .match .kda > div {
+  width: 33.333%;
+  float: left;
+}
+/* line 537, dotaseeker.less */
+.dotaseeker .matches .match .kda > div:last-child {
+  margin-right: 0;
+}
+/* line 540, dotaseeker.less */
+.dotaseeker .matches .match .kda > div > span {
+  font-size: 10px;
+  display: inline-block;
+  height: 17px;
+  float: left;
+  text-align: center;
+  width: 60%;
+  padding: 2px 0;
+  background: #000;
+  color: #000;
+  border: 1px solid #999;
+  border-left: 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f3f3f3+50,ededed+51,ffffff+100;White+Gloss+%232 */
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
+  /* IE6-9 */
+}
+/* line 559, dotaseeker.less */
+.dotaseeker .matches .match .kda > div > span:first-child {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c4c4c+0,595959+12,666666+25,474747+39,2c2c2c+50,000000+51,111111+60,2b2b2b+76,1c1c1c+91,131313+100;Black+Gloss+%231 */
+  background: #4c4c4c;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0);
+  /* IE6-9 */
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 40%;
+  color: #fff;
+  border: 0;
+  border-right: 1px solid #999;
+}
+/* line 576, dotaseeker.less */
+.dotaseeker .matches .match .items {
+  clear: both;
+  width: 100%;
+  float: left;
+}
+/* line 578, dotaseeker.less */
+.dotaseeker .matches .match .items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 583, dotaseeker.less */
+.dotaseeker .matches .match .items ul li {
+  width: 33.333%;
+  float: left;
+  height: 51.5px;
+  background: #000;
+}
+/* line 588, dotaseeker.less */
+.dotaseeker .matches .match .items ul li .x {
+  width: 100%;
+  height: 51.5px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#696c75+0,212121+29,000000+53,212121+72,696c75+99 */
+  background: #696c75;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #696c75 0%, #212121 29%, #000000 53%, #212121 72%, #696c75 99%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #696c75 0%, #212121 29%, #000000 53%, #212121 72%, #696c75 99%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #696c75 0%, #212121 29%, #000000 53%, #212121 72%, #696c75 99%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#696c75', endColorstr='#696c75', GradientType=0);
+  /* IE6-9 */
+  border: 1px solid #000;
+}
+/* line 598, dotaseeker.less */
+.dotaseeker .matches .match .items ul li .x .icon_blocked {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 17px 0;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+/* line 613, dotaseeker.less */
+.dotaseeker .player {
+  clear: both;
+  width: 100%;
+  float: left;
+  border: 1px solid #ccc;
+}
+/* line 616, dotaseeker.less */
+.dotaseeker .player.starred {
+  border: 2px solid #FFD900;
+}
+/* line 619, dotaseeker.less */
+.dotaseeker .player.starred .player-wrapper .icon_star {
+  display: block;
+}
+/* line 624, dotaseeker.less */
+.dotaseeker .player .player-wrapper {
+  position: relative;
+  clear: both;
+  width: 100%;
+  float: left;
+}
+/* line 627, dotaseeker.less */
+.dotaseeker .player .player-wrapper .icon_star {
+  display: none;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-size: 20px;
+  color: #FFD900;
+  text-shadow: 1px 1px 10px #000;
+}
+/* line 638, dotaseeker.less */
+.dotaseeker .player .mmr,
+.dotaseeker .player .name {
+  clear: both;
+  width: 100%;
+  float: left;
+  background: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 6px 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+/* line 648, dotaseeker.less */
+.dotaseeker .player .mmr {
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6', GradientType=0);
+  /* IE6-9 */
+  color: #000;
+}
+/* line 658, dotaseeker.less */
+.dotaseeker .list-players {
+  margin-top: 10px;
+}
+/* line 662, dotaseeker.less */
+.dotaseeker #ds-footer {
+  clear: both;
+  width: 100%;
+  float: left;
+  background: #000;
+  border-top: 1px solid #fff;
+  color: #fff;
+  position: relative;
+  z-index: 5;
+}
+/* line 669, dotaseeker.less */
+.dotaseeker #ds-footer .container {
+  margin: 10px auto;
+}
+/* line 672, dotaseeker.less */
+.dotaseeker #ds-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 /*# sourceMappingURL=dotaseeker.css.map */

@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load tt_base %}
 <!doctype html>
 <html>
 <head>
@@ -11,6 +12,7 @@
 	<link rel="stylesheet" href="{% static "css/animate.css" %}">
 	<link rel="stylesheet" href="{% static "css/hover.css" %}">
 	<link rel="stylesheet" href="{% static "css/elegant-icons.css" %}">
+	<link rel="stylesheet" href="{% static "css/dotaminimapheroes.css" %}">
 	<link rel="stylesheet" href="{% static "css/base.css" %}">
 	<link rel="stylesheet" href="{% static "css/dotaseeker.css" %}">
 
@@ -19,108 +21,164 @@
     <script src="{% static "js/ds.js" %}"></script>
 </head>
 <body class="dotaseeker dashboard">
-	<div class="fixed ds-nav">
-		<div class="nav-title">
-			<img src="/static/images/Dota_2_Logo_only.png"/>
-			<span>
-				Dotaseeker
-			</span>
-		</div>
-		<ul>
-			<li>
-				<div class="icon_search"></div>
-				<input type="text" name="q"/>
-			</li>
-		</ul>
+	<div class="bg-item">
+		<img src="/static/images/bloodseeker-dota-2-wallpaper-hd-1.jpg">
 	</div>
+	{% include "dotaseeker/header.html" %}
 	<div class="content-wrapper container">
-		<div class="main-info">
-			<div class="row">
-				<div class="col-md-4">	
-					<div class="picture">	
-						<img src="{{ picture }}"/>
-						<div class="mmr">3880</div>
-					</div>
-				</div>
-				<div class="col-md-8">
-					<div class="row name">
-						<div class="col-md-12">{{ realname }}<br>							{{ location }}<br>
-							{{ personaname }}<br>
+		<div class="content">
+			<div class="left-div border-right">
+				<div class="main-info">
+					<div class="row">
+						<div class="col-md-4">	
+							<div class="picture">	
+								<img src="{{ picture }}"/>
+								<div class="pos-type">{{ pref_position }}</div>
+								<div class="mmr">{{ mmr }}</div>
+							</div>
 							{% if not linked_steam %}
-								<a class="steam-login" href="{% url 'social:begin' 'steam' %}?next={{ request.path }}"><img src="/static/images/sits_01.png"/></a></div>
+								<a class="steam-login" href="{% url 'social:begin' 'steam' %}?next={{ request.path }}"><img src="/static/images/sits_01.png"/></a>
 							{% endif %}
+						</div>
+						<div class="col-md-8">
+							<div class="info-wrapper">
+								<div class="row username">
+									<div class="col-md-12">
+										{{ personaname }}
+									</div>
+								</div>
+								<div class="row name">
+									<div class="col-md-6">Name:</div>
+									<div class="col-md-6">{{realname}}</div>
+								</div>
+								<div class="row region">
+									<div class="col-md-6">Preferred Region:</div>
+									<div class="col-md-6">
+										{% if pref_region %}
+											{{ pref_region }}
+										{% else %}
+											{{ location }}
+										{% endif %}
+									</div>
+								</div>
+								<div class="row other-pos">
+									<div class="col-md-6">Other Playable Position(s):</div>
+									<div class="col-md-6">{{ other_positions|joinby:", "}}</div>
+								</div>
+							</div>
+							<div class="fav-heroes">
+								<div class="row">
+									<div class="col-md-12">
+										<div class="bg-title">
+											Top Played Heroes
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<ul>
+											{% for t in top_played %}
+											<li>
+												<img src="{{ t|get_hero_img:"large" }}"/>
+											</li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="row pos">
-						<div class="col-md-6">Preferred Position:</div>
-						<div class="col-md-6">Support</div>
-					</div>
-					<div class="row other-pos">
-						<div class="col-md-6">Other Position(s):</div>
-						<div class="col-md-6">Offlane</div>
-					</div>
-					<div class="row region">
-						<div class="col-md-6">Preferred Region:</div>
-						<div class="col-md-6">North America</div>
-					</div>
-					<div class="row fav-heroes">
-						<div class="col-md-6">Favorite Heroes:</div>
-						<div class="col-md-6">Omniknight, Silencer, Enigma</div>
+				</div>
+				<div class="main-info-options">
+				</div>
+				<div class="main-team divider">
+					<div class="row">
+						<div class="col-md-12 title">
+							Added Teammates
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="main-team">
-			<div class="row">
-				<div class="col-md-12">
-					Your Main Team
+				<div class="other-carry">
+					<div class="row">
+						<div class="col-md-12 pos">
+							<div class="bg-title">
+								Carry
+							</div>
+						</div>
+					</div>
+					<div class="row list-players">
+						{% for p in carries.all %}
+							<div class="col-md-3">
+								{% include "dotaseeker/snippets/player.html"%}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="other-mid divider pos">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="bg-title">
+								MidLaner
+							</div>
+						</div>
+					</div>
+					<div class="row list-players">
+						{% for p in mids.all %}
+							<div class="col-md-3">
+								{% include "dotaseeker/snippets/player.html"%}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="other-support divider pos">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="bg-title">
+								Support
+							</div>
+						</div>
+					</div>
+					<div class="row list-players">
+						{% for p in supports.all %}
+							<div class="col-md-3">
+								{% include "dotaseeker/snippets/player.html"%}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="other-offlane divider pos">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="bg-title">
+								Offlane
+							</div>
+						</div>
+					</div>
+					<div class="row list-players">
+						{% for p in offlaners.all %}
+							<div class="col-md-3">
+								{% include "dotaseeker/snippets/player.html"%}
+							</div>
+						{% endfor %}
+					</div>
 				</div>
 			</div>
-			<div class="row adjust">
-				<div class="col-md-2">
-					Carry
-				</div>
-				<div class="col-md-2">
-					Mid
-				</div>
-				<div class="col-md-2">
-					Offlane
-				</div>
-				<div class="col-md-2">
-					Support
-				</div>
-				<div class="col-md-2">
-					Support
-				</div>
-			</div>
-		</div>
-		<div class="other-carry">
-			<div class="row">
-				<div class="col-md-12 pos">
-					Carry
-				</div>
-			</div>
-		</div>
-		<div class="other-mid">
-			<div class="row">
-				<div class="col-md-12 pos">
-					MidLaner
-				</div>
-			</div>
-		</div>
-		<div class="other-support">
-			<div class="row">
-				<div class="col-md-12 pos">
-					Support
-				</div>
-			</div>
-		</div>
-		<div class="other-offlane">
-			<div class="row">
-				<div class="col-md-12 pos">
-					Offlane
+			<div class="right-div">
+				<div class="bg-title">Last 10 Matches</div>
+				<div class="matches">
+					{% if matches %} 
+						{% for match in matches %}
+							{% include "dotaseeker/snippets/match.html" %}
+						{% endfor %}
+					{% else %}
+					<div style="margin-top:10px">
+						Match data could not be retrieved. (User did not link their Steam account.)
+					</div>
+					{% endif %}
 				</div>
 			</div>
 		</div>
 	</div>
+	{% include "dotaseeker/footer.html" %}
 </body>
 </html>

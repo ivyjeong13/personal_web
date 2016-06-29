@@ -1,0 +1,20 @@
+<div class="player {% if selected == p.id %}starred{% endif %}">
+	<div class="player-wrapper">
+		{% if p.picture %}
+			<img src="{{ p.picture }}">
+		{% else %}
+			<img src="/static/images/PersonPlaceholder-01.png">
+		{% endif %}
+		<div class="icon_star"></div>
+	</div>
+	<div class="name">
+		{% if p.real_name %}
+			{{ p.real_name|safe }}
+		{% elif p.steam_name %}
+			{{ p.steam_name|safe }}
+		{% endif %}
+	</div>
+	{% if p.mmr %}
+		<div class="mmr">{{ p.mmr }}</div>
+	{% endif %}
+</div>

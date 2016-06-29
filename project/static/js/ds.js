@@ -26,9 +26,9 @@ function onYouTubePlayerAPIReady(){
 }
 
 function onPlayerReady(){
+	var height = $('.img-wrapper').height();
+	var width = $('.img-wrapper').width();
 	setTimeout(function(){
-		var height = $('.img-wrapper').height();
-		var width = $('.img-wrapper').width();
 		$('.img-wrapper').fadeOut(1000);
 		$('.middle').addClass('playing');
 		setTimeout(function(){
