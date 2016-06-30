@@ -1799,10 +1799,10 @@ body {
 /* line 691, dotaseeker.less */
 .dotaseeker .edit-form input[type="text"],
 .dotaseeker .edit-form select {
-  width: 50%;
   clear: both;
   width: 100%;
   float: left;
+  width: 50%;
   border: 1px solid #999;
   border-radius: 2px;
   font-size: 16px;
