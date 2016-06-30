@@ -675,6 +675,196 @@
 			padding:0;
 		}
 	}
+
+	.edit-form{
+		.edit-container{
+			&+.edit-container{
+				margin-top:0;
+			}
+			margin-top:20px;
+			font-size:16px;
+			text-transform: uppercase;
+			font-weight:bold;
+			.fullWidth;
+			width:50%;
+		}
+		input[type="text"], select{
+			width:50%;
+			.fullWidth;
+			border:1px solid #999;
+			border-radius:2px;
+			font-size:16px;
+			padding:4px;
+			font-weight:500;
+		}
+
+		select{
+			height:32px;
+		}
+
+		.multi-select{
+			padding:4px 10px;
+			border:1px solid #c2c2c2;
+			width:50%;
+			span{
+				&:first-child{
+					margin-left:0;
+				}
+				&:last-child{
+					input{
+						margin-right:4px;
+					}
+				}
+				margin-left:20px;
+				float:left;
+				text-transform:none;
+				font-weight:500;
+			}
+			input{
+				margin-right:5px;
+			}
+		}
+
+		.edit-ds-heroes{
+			.fullWidth;
+			margin-top:40px;
+			.edit-container, .ds-heroes{
+				margin-top:0;
+			}
+		}
+
+		.ds-heroes{
+			clear:both;
+			float:left;
+		}
+	}
+
+	.h1{
+		font-size:40px;
+		font-weight:500;
+	}
+
+	.btn{
+		margin-top:50px;
+		width:100px;
+		float:left;
+		border:1px solid #000;
+		padding:5px;
+		color:#000;
+		background:#fff;
+		box-shadow:1px 1px 10px #999;
+		text-transform:uppercase;
+		font-size:12px;
+		text-align:center;
+		font-weight:900;
+		cursor:pointer;
+
+		&:hover{
+			background:#000;
+			color:#fff;
+		}
+
+		&+.btn{
+			margin-left:25px;
+		}
+	}
+	.bg-container{
+		position:relative;
+		overflow:hidden;
+	}
+
+	.ds-search-filters{
+		.fullWidth;
+	}
+
+	.filter-title{
+		font-size:16px;
+		text-transform:uppercase;
+
+		.hero-name-display{
+			font-weight:bold;
+			float:right;
+			display:inline-block;
+		}
+	}
+
+	.ds-heroes{
+		margin-top:20px;
+		width:590px;
+		.hero-container{
+			width:488px;
+			float:left;
+			ul{
+				list-style:none;
+				margin:0;
+				padding:0;
+
+				li{
+					float:left;
+					cursor:pointer;
+					filter:grayscale(0);
+					-ms-filter:grayscale(0);
+					-webkit-filter:grayscale(0);
+					/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#535353+0,090909+100 */
+					background: rgb(83,83,83); /* Old browsers */
+					background: -moz-radial-gradient(center, ellipse cover,  rgba(83,83,83,1) 0%, rgba(9,9,9,1) 100%); /* FF3.6-15 */
+					background: -webkit-radial-gradient(center, ellipse cover,  rgba(83,83,83,1) 0%,rgba(9,9,9,1) 100%); /* Chrome10-25,Safari5.1-6 */
+					background: radial-gradient(ellipse at center,  rgba(83,83,83,1) 0%,rgba(9,9,9,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#535353', endColorstr='#090909',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+					img{
+						border:1px solid #000;
+					}
+					&.hide{
+						img{
+							position:relative;
+							visibility: hidden;
+						}
+					}
+
+					&:nth-child(8n+1){
+						clear:left;
+					}
+
+					&:hover, &.selected{
+						img{
+							border:1px solid #FFD000;
+						}
+					}
+				}
+			}
+		}
+		.hero-refine{
+			font-size:12px;
+			margin-left:2px;
+			width:100px;
+			border:1px solid #000;
+			background:#fff;
+			color:#000;
+			float:left;
+			text-align:center;
+			ul{
+				list-style:none;
+				padding:0;
+				margin:0;
+				li{
+					padding:4px 0;
+					&:not(.option){
+						background:#000;
+						color:#fff;
+						text-transform:uppercase;
+					}
+
+					&.option{
+						cursor:pointer;
+						&.selected{
+							background:#c2c2c2;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (max-width: @desktopW){ @import 'tablet'; }

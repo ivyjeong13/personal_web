@@ -1,0 +1,82 @@
+{% load staticfiles %}
+{% load tt_base %}
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="mxRH-jX1pR5MjoxIjXJOxnDElPR-loQvW49hc6LMh6w" />
+	
+	<link rel="stylesheet" href="{% static "css/flexboxgrid.css" %}">
+	<link rel="stylesheet" href="{% static "css/animate.css" %}">
+	<link rel="stylesheet" href="{% static "css/hover.css" %}">
+	<link rel="stylesheet" href="{% static "css/elegant-icons.css" %}">
+	<link rel="stylesheet" href="{% static "css/dotaminimapheroes.css" %}">
+	<link rel="stylesheet" href="{% static "css/base.css" %}">
+	<link rel="stylesheet" href="{% static "css/dotaseeker.css" %}">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{% static "js/jquery.onscreen.min.js" %}"></script>
+    <script src="{% static "js/ds.js" %}"></script>
+    <script src="{% static "js/ds-heroes-filter.js" %}"></script>
+    <script src="{% static "js/ds-edit.js" %}"></script>
+</head>
+<body class="dotaseeker dashboard">
+	{% include "dotaseeker/header.html" %}
+	<div class="bg-container">
+		<div class="bg-item">
+			<img src="/static/images/bloodseeker-dota-2-wallpaper-hd-1.jpg">
+		</div>
+		<div class="content-wrapper container">
+			<div class="content">
+				<div class="h1">Edit Settings</div>
+				<form class="edit-form" action="/dotaseeker/settings/edit" method="post">
+					<div class="edit-container">Name</div>
+					<input type="text" name="name">
+					<div class="edit-container">MMR</div>
+					<input type="text" name="mmr">
+					<div class="edit-container">Preferred Region</div>
+					<input type="text" name="pref_region">
+					<div class="edit-container">Preferred Position</div>
+					<select type="radio" name="pref_pos">
+						<option value="Carry">Carry</option>
+						<option value="Mid">Mid</option>
+						<option value="Offlaner">Offlaner</option>
+						<option value="Support">Support</option>
+					</select>
+					<div class="edit-container">Other Positions</div>
+					<div class="multi-select edit-container">
+						<span>
+							<input name="other_pos" type="radio" value="Carry"> Carry
+						</span>
+						<span>
+							<input name="other_pos" type="radio" value="Mid"> Mid 
+						</span>
+						<span>
+							<input name="other_pos" type="radio" value="Offlaner"> Offlaner
+						</span>
+						<span>
+							<input name="other_pos" type="radio" value="Support"> 
+							Support
+						</span>
+					</div>
+					<div class="edit-ds-heroes">
+						<div class="edit-container">Select Preferred Heroes</div>
+						{% include "dotaseeker/snippets/hero_filter.html" %}
+					</div>
+
+					<input type="hidden" name="star_carry">
+					<input type="hidden" name="star_support">
+					<input type="hidden" name="star_support2">
+					<input type="hidden" name="star_off">
+
+					<div class="save btn">Save</div>
+					<div class="cancel btn">Cancel</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	{% include "dotaseeker/footer.html" %}
+</body>
+</html>

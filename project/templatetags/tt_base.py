@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 from django import template
 from django.utils.timesince import timesince
 from project.models import Hero, Item
+from project.helper import HERO_ROLES
 import re
 
 register = template.Library()
@@ -46,6 +47,11 @@ def get_hero_img(h_id, t):
 		return '/static/images/dota2/heroes/256x144/'+hero+'_full.png'
 
 @register.filter
+def remove_term(value, term):
+	new_str = re.sub(term, '', value)
+	return new_str
+
+@register.filter
 def get_item_img(i_id):
 	if i_id:
 		loc_name = Item.objects.get(item_id=i_id).name
@@ -57,3 +63,7 @@ def get_item_img(i_id):
 @register.filter
 def joinby(value, arg):
     return arg.join(value)
+
+@register.filter
+def return_roles(name):
+	return " ".join(HERO_ROLES[name])

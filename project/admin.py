@@ -8,7 +8,7 @@ class PlayerAdmin(admin.ModelAdmin):
 
 class HeroAdmin(admin.ModelAdmin):
     fields = ('hero_id', 'name', 'localized_name')
-    list_display = ('hero_id', 'localized_name')
+    list_display = ('hero_id', 'localized_name', 'name')
 
 class ItemAdmin(admin.ModelAdmin):
     fields = ('item_id', 'name', 'localized_name')

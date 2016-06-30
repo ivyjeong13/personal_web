@@ -25,6 +25,7 @@ class Player(models.Model):
 	selected_mid = models.IntegerField(null=True, blank=True)
 
 	top_played = models.CharField(max_length=255,null=True, blank=True)
+	pref_heroes = models.CharField(max_length=255,null=True,blank=True)
 
 	def __str__(self):
 		if self.real_name:

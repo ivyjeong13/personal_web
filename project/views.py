@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.views.generic import View
 from django.contrib.auth.models import User
-from project.models import Player
+from project.models import Player, Hero
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect
 from django.core.context_processors import csrf
@@ -37,6 +37,7 @@ class DotaseekerView(TemplateView):
 
 class DSEditView(TemplateView):
 	def dispatch(self, request, *args, **kwargs):
+		self.heroes = Hero.objects.all()
 		return super(DSEditView, self).dispatch(request, *args, **kwargs)
 
 	def get(self, request, *args, **kwargs):
@@ -45,10 +46,24 @@ class DSEditView(TemplateView):
 
 	def get_context_data(self, **kwargs):
 		context = super(DSEditView, self).get_context_data(**kwargs)
+		context['heroes'] = self.heroes
+		return context
+
+class DSSettingsView(TemplateView):
+	def dispatch(self, request, *args, **kwargs):
+		return super(DSSettingsView, self).dispatch(request, *args, **kwargs)
+
+	def post(self, request, *args, **kwargs):
+		context = self.get_context_data()
+		return HttpResponseRedirect('/dotaseeker/dashboard/edit')
+
+	def get_context_data(self, **kwargs):
+		context = super(DSSettingsView, self).get_context_data(**kwargs)
 		return context
 
 class DSSearchView(TemplateView):
 	def dispatch(self, request, *args, **kwargs):
+		self.heroes = Hero.objects.all()
 		return super(DSSearchView, self).dispatch(request, *args, **kwargs)
 
 	def get(self, request, *args, **kwargs):
@@ -57,6 +72,7 @@ class DSSearchView(TemplateView):
 
 	def get_context_data(self, **kwargs):
 		context = super(DSSearchView, self).get_context_data(**kwargs)
+		context['heroes'] = self.heroes
 		return context
 
 class DSLoginView(TemplateView):

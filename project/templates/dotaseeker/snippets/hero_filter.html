@@ -1,0 +1,79 @@
+{% load tt_base %}
+<div class="ds-heroes">
+	<div class="filter-title">
+		Filter by heroes <span class="hero-name-display">Antimage</span>
+	</div>
+	<div class="hero-container">
+		<ul>
+		{% for h in heroes %}
+			<li data-id="{{ h.hero_id }}" class="{{ h.name|return_roles }}" data-name="{{ h.localized_name }}">
+				<img src="/static/images/dota2/heroes/59x33/{{ h.name|remove_term:'npc_dota_hero_' }}_sb.png">
+			</li>
+		{% endfor %}
+		</ul>
+	</div>
+	<div class="hero-refine">
+		<ul>
+			<li>
+				Attack
+			</li>
+			<li class="option" data-value="melee">
+				Melee
+			</li>
+			<li class="option" data-value="ranged">
+				Ranged
+			</li>
+
+			<li>
+				Role
+			</li>
+			<li class="option" data-value="carry">
+				Carry
+			</li>
+			<li class="option" data-value="jungler">
+				Jungler
+			</li>
+			<li class="option" data-value="offlaner">
+				Offlaner
+			</li>
+			<li class="option" data-value="support">
+				Support
+			</li>
+
+			<li>
+				Ability
+			</li>
+			<li class="option" data-value="amplify">
+				Amplify
+			</li>
+			<li class="option" data-value="disarm">
+				Disarm
+			</li>
+			<li class="option" data-value="durable">
+				Durable
+			</li>
+			<li class="option" data-value="escape">
+				Escape
+			</li>
+			<li class="option" data-value="healer">
+				Healer
+			</li>
+			<li class="option" data-value="initiator">
+				Initiator
+			</li>
+			<li class="option" data-value="nuker">
+				Nuker
+			</li>
+			<li class="option" data-value="silence">
+				Silence
+			</li>
+			<li class="option" data-value="slow">
+				Slow
+			</li>
+			<li class="option" data-value="lockdown">
+				Lockdown
+			</li>
+		</ul>
+	</div>
+	<input type="hidden" id="sel_heroes" name="sel_heroes" value="">
+</div>
