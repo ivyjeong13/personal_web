@@ -14,7 +14,6 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -120,6 +119,7 @@ MEDIA_URL = '/media/'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, "Static_Root")
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "home/static"),
@@ -132,6 +132,11 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+# Update database configuration with $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 #########################
 # IMPORT LOCAL SETTINGS #
