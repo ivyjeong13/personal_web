@@ -2,6 +2,7 @@ from django.core.management.base import BaseCommand
 import dota2api
 from django.conf import settings
 from project.models import Hero, Item
+import time
 
 class Command(BaseCommand):
 	help = "Get Dota2 Heroes into database."
@@ -9,6 +10,7 @@ class Command(BaseCommand):
 	def handle(self, *args, **options):
 		api = dota2api.Initialise(settings.STEAM_API_KEY)
 		heroes = api.get_heroes()
+		time.sleep(1)
 		for h in heroes['heroes']:
 			obj = Hero.objects.create(hero_id=h['id'], name=h['name'], localized_name=h['localized_name'])
 			obj.save()
