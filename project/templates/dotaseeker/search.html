@@ -19,7 +19,6 @@
 
 	<script src="{% static "js/jquery.min.js" %}"></script>
     <script src="{% static "js/jquery.onscreen.min.js" %}"></script>
-    <script src="{% static "js/ds.js" %}"></script>
     <script src="{% static "js/ds-heroes-filter.js" %}"></script>
     <script src="{% static "js/ds-search.js" %}"></script>
 </head>
@@ -32,36 +31,37 @@
 		<div class="content-wrapper container">
 			<div class="content">
 				<div class="h1">Search</div>
-				
-				<div class="ds-search-filters">
-					{% include "dotaseeker/snippets/hero_filter.html" %}
+				<form action="/dotaseeker/search" method="post">
+					<div class="ds-search-filters">
+						{% include "dotaseeker/snippets/hero_filter.html" %}
 
-					<div class="player-filter">
-						<select name="pref_role">
-							<option value="">Select preferred role</option>
-							<option value="Carry">Carry</option>
-							<option value="Jungler">Jungler</option>
-							<option value="Mid">Mid</option>
-							<option value="Offlaner">Offlaner</option>
-							<option value="Support">Support</option>
-						</select>
-						<select name="pref_region">
-							<option value="">Select preferred region</option>
-							<option value="US East">US East</option>
-							<option value="US West">US West</option>
-							<option value="Europe East">Europe East</option>
-							<option value="Europe West">Europe West</option>
-						</select>
-						<select name="mmr_range">
-							<option value="">Select MMR Range</option>
-							<option value="0-2000"><=2000</option>
-							<option value="2000-3000">2000 - 3000</option>
-							<option value="3000-4000">3000 - 4000</option>
-							<option value="4000-5000">4000 - 5000</option>
-							<option value="5000">5000+</option>
-						</select>
+						<div class="player-filter">
+							<select name="pref_role">
+								<option value="">Select preferred role</option>
+								<option value="Carry">Carry</option>
+								<option value="Jungler">Jungler</option>
+								<option value="Mid">Mid</option>
+								<option value="Offlaner">Offlaner</option>
+								<option value="Support">Support</option>
+							</select>
+							<select name="pref_region">
+								<option value="">Select preferred region</option>
+								<option value="US East">US East</option>
+								<option value="US West">US West</option>
+								<option value="Europe East">Europe East</option>
+								<option value="Europe West">Europe West</option>
+							</select>
+							<select name="mmr_range">
+								<option value="">Select MMR Range</option>
+								<option value="0-2000"><=2000</option>
+								<option value="2000-3000">2000 - 3000</option>
+								<option value="3000-4000">3000 - 4000</option>
+								<option value="4000-5000">4000 - 5000</option>
+								<option value="5000">5000+</option>
+							</select>
+						</div>
 					</div>
-				</div>
+				</form>
 			</div>
 		</div>
 	</div>

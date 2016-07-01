@@ -27,6 +27,13 @@
 	</div>
 	{% include "dotaseeker/header.html" %}
 	<div class="content-wrapper container">
+		<div class="h1">
+			My Dashboard
+			<a href="/dotaseeker/dashboard/edit" class="btn no-margin inline hvr-sweep-to-bottom">Edit</a>
+		</div>
+
+		{% include "dotaseeker/snippets/searchbar.html" %}
+
 		<div class="content">
 			<div class="left-div border-right">
 				<div class="main-info">
@@ -34,12 +41,16 @@
 						<div class="col-md-4">	
 							<div class="picture">	
 								{% if picture %}
-								<img src="{{ picture }}"/>
+									<img src="{{ picture }}"/>
 								{% else %}
-								<img src="/static/images/PersonPlaceholder-01.png">
+									<img src="/static/images/PersonPlaceholder-01.png">
 								{% endif %}
-								<div class="pos-type">{{ pref_position }}</div>
-								<div class="mmr">{{ mmr }}</div>
+								{% if pref_position %}
+									<div class="pos-type">{{ pref_position }}</div>
+								{% endif %}
+								{% if mmr %}
+									<div class="mmr">{{ mmr }}</div>
+								{% endif %}
 							</div>
 							{% if not linked_steam %}
 								<a class="steam-login" href="{% url 'social:begin' 'steam' %}?next={{ request.path }}"><img src="/static/images/sits_01.png"/></a>
