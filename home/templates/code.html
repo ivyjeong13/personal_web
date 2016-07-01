@@ -1,1 +1,72 @@
-code page
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="mxRH-jX1pR5MjoxIjXJOxnDElPR-loQvW49hc6LMh6w" />
+	
+	<link rel="stylesheet" href="{% static "css/flexboxgrid.css" %}">
+	<link rel="stylesheet" href="{% static "css/animate.css" %}">
+	<link rel="stylesheet" href="{% static "css/hover.css" %}">
+	<link rel="stylesheet" href="{% static "css/prism.css" %}">
+	<link rel="stylesheet" href="{% static "css/base.css" %}">
+	
+	<script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "js/jquery.onscreen.min.js" %}"></script>
+    <script src="{% static "js/code.js" %}"></script>
+    <script src="{% static "js/prism.js" %}"></script>
+</head>
+<body>
+	<div id="nav" class="fixed">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div class="left">
+						Ivy Jeong
+					</div>
+					<ul>
+						<li>
+							<a class="hvr-sweep-to-bottom" href="/">Home</a>
+						</li>
+						<li>
+							<a class="hvr-sweep-to-bottom" href="/projects">Projects</a>
+						</li>
+						<li>
+							<a class="hvr-sweep-to-bottom" href="/hobbies">Hobbies</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container code-body">
+		<h1>Code Samples</h1>
+	</div>
+	<div class="snp-banner hvr-underline-from-left">
+		<div class="container">
+			<a href="https://github.com/ivyjeong13" target="_blank">Github <span>&laquo; Click Anywhere To Open</a>
+		</div>
+	</div>
+	<div class="container code-body">
+		<p class="exp">I'll be throwing in a few samples on this page with explanations and reasonings, especially for things that I may want to remember and apply later on in another project/task.</p>
+	</div>
+
+	<div class="snp-banner full">
+		<div class="container">
+			<div class="snp-title">
+				ElasticSearch
+			</div>
+		</div>
+	</div>
+	<div class="scroll">
+		<div class="container code-body">
+			{% include "code_snippets/elastic.html" %}
+		</div>
+	</div>
+</body>
+<footer>
+
+</footer>
+</html>

@@ -692,7 +692,7 @@ body {
   z-index: 2;
   background: #fff;
   border: 1px solid black;
-  width: 500px;
+  width: 35%;
   padding: 0 20px 20px 20px;
 }
 #drawing {
@@ -812,6 +812,76 @@ body {
 #projectBody .project .text .subheadline {
   font-size: 15px;
   font-family: 'GlacialInd', serif;
+}
+.code-body h1 {
+  margin-top: 100px;
+  font-size: 40px;
+  font-family: 'GlacialInd', serif;
+  font-weight: 500;
+}
+.code-body .exp {
+  width: 50%;
+  font-size: 16px;
+}
+.code-body img {
+  width: 100%;
+}
+.code-body .border-top {
+  border-top: 1px solid #c2c2c2;
+  padding-top: 60px;
+  margin-top: 20px;
+}
+.code-body .code-title {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+}
+.empty-spc {
+  padding: 25px 0;
+}
+.snp-banner {
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #516B8C;
+  border-bottom: 1px solid #516B8C;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.snp-banner.full {
+  background: #516B8C;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 0;
+  margin-top: 40px;
+}
+.snp-banner:before {
+  background: #516B8C;
+}
+.snp-banner a {
+  color: #000;
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  padding: 5px 0 8px 0;
+}
+.snp-banner a span {
+  float: right;
+  display: none;
+}
+pre[class*="language-"] {
+  border: 1px solid #c2c2c2;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+pre[class*="language-"] code {
+  font-size: 12px;
+  line-height: 1.1;
+}
+footer {
+  margin-top: 70px;
 }
 @media only screen and (max-width: 1120px) {
   .container {

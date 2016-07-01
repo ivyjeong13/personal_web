@@ -1,0 +1,190 @@
+<div class="empty-spc"></div>
+<div class="row">
+    <div class="col-md-8">
+        <p>
+            One of the most recent things I've done was implement ElasticSearch to National Journal's default and almanac search. It increased our default search from 3 seconds to 110 milliseconds. Our almanac was reduced from an average of 15 seconds to 130 milliseconds.
+        </p>
+
+        <img src="/static/images/elastic_impl.png">
+
+        <p>
+            (Ex. Graph showing the average time of the default search. When the mountains become a flat line is when ElasticSearch was pushed to production.)
+        </p>
+
+        <p class="border-top">
+
+            <span class="code-title">Create ElasticSearch Index</span>
+
+            These code snippets were stripped to barest minimum as a way to teach other developers in the Atlantic how I implemented ElasticSearch through Django/Python. (Note: I used the elasticsearch and elasticutils module libraries.)
+        </p>
+<pre><code class="language-python">
+def create_index(name, mappings):
+es = get_es(urls=[ELASTIC_SEARCH_URL])
+settings = {} #analyzer settings, etc. can be added here
+mappings = {
+        "item":{ #doc_type
+            "properties":{
+                "headline":{ 
+                    "type": "string",
+                    "analyzer": "english",
+                }
+            }
+        }
+    }
+body = {
+    "settings": settings,
+    "mappings": mappings
+}
+try: 
+    es.indices.create(index=name, body=body)
+except:
+    es.indices.delete(index=name)
+    es.indices.create(index=name, body=body)
+</code></pre>
+
+<p>
+    You can pass mappings and settings into the body when you create an ElasticSearch index. Here I added an analyzer and wanted a specific variable to use the analyzer when parsing tokens. This in particular was a stemmer, breaking down words into their root form so that variations would yield similar results. For example, if a query had the word 'jumping' in it, it'd strip it to 'jump' and look for object variables that contain any variation of 'jump' such as 'jumps', 'jumped', etc.
+</p>
+
+<p class="border-top">
+    <span class="code-title">Add object into ElasticSearch</span>
+</p>
+
+<pre><code class="language-python">
+def create_es_obj(obj, type_obj, index, doc_type):
+    json = build_es_bento(obj, type_obj)
+    if json:
+        es = get_es(urls=[ELASTIC_SEARCH_URL])
+        resp = es.index(index=index, doc_type=doc_type, id=obj['id'], body=json)
+        return resp
+    return None
+</code></pre>
+
+<p>
+    This adds an object into the given ElasticSearch index. You need to make sure the index exists or else the method will error out. You don't have to have a variable set in the settings, it'll add it to the settings once it's passed through and seen that it doesn't already exist. The parameters and data are set in the body parameter.
+</p>
+
+<p class="border-top">
+    <span class="code-title">Searching ElasticSearch</span>
+</p>
+
+<pre><code class="language-python">
+def search_es(index, doc_type, filters, include_source, size, offset):
+    es = get_es(urls=[ELASTIC_SEARCH_URL])
+    if include_source:
+        results = es.search(index=index, doc_type=doc_type, body=filters, \
+            size=size, analyzer='english', _source_include=include_source, from_=offset)
+    else:
+        results = es.search(index=index, doc_type=doc_type, body=filters, \
+            size=size, analyzer='english', from_=offset)    
+    return results
+</code></pre>
+
+<p>
+    The baredowns method of searching in ElasticSearch. If you don't specify a doc_type, it will look through the entire index. If you set an analyzer on a variable, you need to make sure to set the analyzer when you search as well so that it can parse the given query. _source_include is the parameter for what variables you wanted returned -- it'll exclude any that are not listed. 
+</p>
+
+<p class="border-top">
+    <span class="code-title">Querying Elastic Search</span>
+    The following code snippets are renditions of how to create a query in ElasticSearch. The ['query_string']['query'] is a string that adheres to Lucene syntax (using AND OR NOT to refine search results).
+</p>
+
+<pre><code class="language-python">
+{
+    'query':
+        {
+        "query_string": { 
+            "query": query,
+            "fields": ['headline^5', 'subheadline^3', ...]
+        }
+   }
+   'sort': [ {"publication_date": {"order": "desc"}},{"_score": "desc"} ]
+}
+</code></pre>
+
+<p class="border-top">
+    <span class="code-title">Adding filters to query</span>
+    Adding filters to the query. Ex. The pulled objects have to have a pub_chan variable that matches 'hotline' AND fulfill 'query' in ['query_string']['string'] in any of the searchable variables.
+</p>
+
+
+<pre><code class="language-python">
+{
+    'query':{
+        'bool':{
+            'must':[
+                {
+                    'query_string':{
+                        'query': query,
+                        'fields': [...],
+                    }
+                },
+                {
+                    'match': {
+                        'pub_chan': 'hotline'    
+                    }
+                },
+                ... # more filters
+            ]
+        }
+    }
+}
+</code></pre>
+
+<p class="border-top">
+    <span class="code-title">Nesting bool filter queries</span>
+    Can nest bools within bools. This is an example of:<br>
+    ... AND (pub_chan: 'hotline' OR pub_chan: 'daily') AND ...
+</p>
+<pre><code class="language-python">
+{'bool':
+    'must':[
+        {'bool':
+            'should':[
+                {'match':
+                    { 'pub_chan': 'hotline' }
+                },
+                {'match':
+                    { 'pub_chan': 'daily' }
+                },
+                ...
+            ]
+        },
+        ... # more
+    ]
+}
+</code></pre>
+
+<p class="border-top">
+    <span class="code-title">Adding unscored filters</span>
+    This is an example of adding filters that are not part of the bool list. Filters added in the ['filter']['and'] array don't contribute to the score of how much of a match the object is to the search query whereas those in the ['filtered']['query']['bool'] do.
+</p>
+
+<pre><code class="language-python">
+"query":{
+    "filtered":{
+        "query": {
+            'bool':{
+                'must':[
+                    {
+                        'query_string':...
+                    }
+                ]
+            }
+        },
+        "filter": {
+            "and": [
+                {
+                    "range":{
+                        "publication_date":{
+                            "gte" : start_date
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+</code></pre>
+    </div>
+</div>

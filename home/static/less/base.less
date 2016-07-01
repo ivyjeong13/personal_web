@@ -704,7 +704,7 @@ body{
 		z-index:2;
 		background:#fff;
 		border:1px solid black;
-		width:500px;
+		width:35%;
 		padding:0 20px 20px 20px;	
 	}
 }
@@ -830,5 +830,86 @@ body{
 		}
 	}
 }
+.code-body{
+	h1{
+		margin-top:100px;
+		font-size:40px;
+		.glacial;
+		font-weight:500;
+	}
+
+	.exp{
+		width:50%;
+		font-size:16px;
+	}
+
+	img{
+		width:100%;
+	}
+
+	.border-top{
+		border-top:1px solid #c2c2c2;
+		padding-top:60px;
+		margin-top:20px;
+	}
+
+	.code-title{
+		font-size:20px;
+		font-weight:bold;
+		display:block;
+	}
+}
+.empty-spc{
+	padding:25px 0;
+}
+.snp-banner{
+	width:100%;
+	background:#fff;
+	border-top:1px solid #516B8C;
+	border-bottom:1px solid #516B8C;
+	color:#000;
+	font-size:12px;
+	font-weight:bold;
+	text-transform: uppercase;
+
+	&.full{
+		background:#516B8C;
+		color:#fff;
+		font-size:18px;
+		font-weight:500;
+		padding:8px 0;
+		margin-top:40px;
+	}
+
+	&:before{
+		background:#516B8C;
+	}
+	a{
+		color:#000;
+		display:inline-block;
+		width:100%;
+		text-decoration:none;
+		padding:5px 0 8px 0;
+		span{
+			float:right;
+			display:none;
+		}
+	}
+}
+
+pre[class*="language-"]{
+	border:1px solid #c2c2c2;
+	padding-top:0;
+	padding-bottom:0;
+	code{
+		font-size:12px;
+		line-height:1.1;
+	}
+}
+
+footer{
+	margin-top:70px;
+}
+
 @media only screen and (max-width: @desktopW){ @import 'tablet'; }
 @media only screen and (max-width: @tabletW){ @import 'phone'; }
