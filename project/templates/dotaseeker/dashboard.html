@@ -33,7 +33,11 @@
 					<div class="row">
 						<div class="col-md-4">	
 							<div class="picture">	
+								{% if picture %}
 								<img src="{{ picture }}"/>
+								{% else %}
+								<img src="/static/images/PersonPlaceholder-01.png">
+								{% endif %}
 								<div class="pos-type">{{ pref_position }}</div>
 								<div class="mmr">{{ mmr }}</div>
 							</div>
@@ -64,7 +68,10 @@
 								</div>
 								<div class="row other-pos">
 									<div class="col-md-6">Other Playable Position(s):</div>
-									<div class="col-md-6">{{ other_positions|joinby:", "}}</div>
+									<div class="col-md-6">
+									{% if other_positions %}
+									{{ other_positions|joinby:", "}}
+									{% endif %}</div>
 								</div>
 							</div>
 							<div class="fav-heroes">

@@ -104,6 +104,8 @@ class DSDashboardView(TemplateView):
 				profile = Player.objects.get(user=user)
 				self.linked_steam = False
 				self.matches = None
+				self.st_id = None
+				self.top_played = None
 			except:
 				response = HttpResponseRedirect('/dotaseeker/login?e=true')
 				return response
@@ -192,7 +194,8 @@ class DSDashboardView(TemplateView):
 			self.s_support = profile.selected_support
 			self.s_support2 = profile.selected_support2
 
-			self.top_played = profile.top_played.split(",")
+			if profile.top_played:
+				self.top_played = profile.top_played.split(",")
 		else:
 			response = HttpResponseRedirect('/dotaseeker/login?e=true')
 			return response 
