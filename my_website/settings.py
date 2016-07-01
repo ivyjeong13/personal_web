@@ -138,6 +138,9 @@ import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
+SOCIAL_AUTH_STEAM_API_KEY = os.environ.get('STEAM_API_KEY')
+STEAM_API_KEY = os.environ.get('STEAM_API_KEY')
+
 #########################
 # IMPORT LOCAL SETTINGS #
 #########################
