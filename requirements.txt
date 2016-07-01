@@ -3,4 +3,5 @@ gunicorn
 dj-database-url
 whitenoise
 python-social-auth
+requests
 dota2api
