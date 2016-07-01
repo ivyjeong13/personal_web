@@ -98,6 +98,7 @@ class DSLoginView(TemplateView):
 class DSDashboardView(TemplateView):
 	def dispatch(self, request, *args, **kwargs):
 		username = request.COOKIES.get('ds_usr')
+		
 		if username:
 			try:
 				user = User.objects.get(username=username)
