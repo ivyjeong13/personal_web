@@ -34,11 +34,14 @@
 				<div class="h1">Edit Settings</div>
 				<form class="edit-form" action="/dotaseeker/settings/edit" method="post">
 					<div class="edit-container">Name</div>
-					<input type="text" name="name">
+					<input type="text" name="name" value="{{ real_name }}">
 					<div class="edit-container">MMR</div>
-					<input type="text" name="mmr">
+					<input type="text" name="mmr" value="{{ mmr }}">
 					<div class="edit-container">Preferred Region</div>
-					<input type="text" name="pref_region">
+					<select type="radio" name="pref_region">
+						<option value="US East">US East</option>
+						<option value="US West">US West</option>
+					</select>
 					<div class="edit-container">Preferred Position</div>
 					<select type="radio" name="pref_pos">
 						<option value="Carry">Carry</option>
@@ -49,16 +52,16 @@
 					<div class="edit-container">Other Positions</div>
 					<div class="multi-select edit-container">
 						<span>
-							<input name="other_pos" type="radio" value="Carry"> Carry
+							<input name="other_pos" type="checkbox" value="Carry"> Carry
 						</span>
 						<span>
-							<input name="other_pos" type="radio" value="Mid"> Mid 
+							<input name="other_pos" type="checkbox" value="Mid"> Mid 
 						</span>
 						<span>
-							<input name="other_pos" type="radio" value="Offlaner"> Offlaner
+							<input name="other_pos" type="checkbox" value="Offlaner"> Offlaner
 						</span>
 						<span>
-							<input name="other_pos" type="radio" value="Support"> 
+							<input name="other_pos" type="checkbox" value="Support"> 
 							Support
 						</span>
 					</div>
@@ -72,7 +75,7 @@
 					<input type="hidden" name="star_support2">
 					<input type="hidden" name="star_off">
 
-					<div class="save btn hvr-sweep-to-bottom">Save</div>
+					<div class="save btn btn-submit hvr-sweep-to-bottom">Save</div>
 					<div class="cancel btn hvr-sweep-to-bottom">Cancel</div>
 				</form>
 			</div>

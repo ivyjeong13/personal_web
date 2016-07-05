@@ -1,0 +1,72 @@
+{% load tt_base %}
+<div class="main-team divider">
+	<div class="row">
+		<div class="col-md-12 col-xs-12 title">
+			Added Teammates
+		</div>
+	</div>
+</div>
+<div class="other-carry">
+	<div class="row">
+		<div class="col-md-12 col-xs-12 pos">
+			<div class="bg-title">
+				Carry
+			</div>
+		</div>
+	</div>
+	<div class="row list-players">
+		{% for p in carries.all %}
+			<div class="col-md-3 col-xs-4">
+				{% include "dotaseeker/snippets/player.html"%}
+			</div>
+		{% endfor %}
+	</div>
+</div>
+<div class="other-mid divider pos">
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<div class="bg-title">
+				MidLaner
+			</div>
+		</div>
+	</div>
+	<div class="row list-players">
+		{% for p in mids.all %}
+			<div class="col-md-3 col-xs-4">
+				{% include "dotaseeker/snippets/player.html"%}
+			</div>
+		{% endfor %}
+	</div>
+</div>
+<div class="other-support divider pos">
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<div class="bg-title">
+				Support
+			</div>
+		</div>
+	</div>
+	<div class="row list-players">
+		{% for p in supports.all %}
+			<div class="col-md-3 col-xs-4">
+				{% include "dotaseeker/snippets/player.html"%}
+			</div>
+		{% endfor %}
+	</div>
+</div>
+<div class="other-offlane divider pos">
+	<div class="row">
+		<div class="col-md-12 col-xs-12">
+			<div class="bg-title">
+				Offlane
+			</div>
+		</div>
+	</div>
+	<div class="row list-players">
+		{% for p in offlaners.all %}
+			<div class="col-md-3 col-xs-4">
+				{% include "dotaseeker/snippets/player.html"%}
+			</div>
+		{% endfor %}
+	</div>
+</div>

@@ -38,7 +38,7 @@
 			<div class="left-div border-right">
 				<div class="main-info">
 					<div class="row">
-						<div class="col-md-4">	
+						<div class="col-md-4 col-xs-4">	
 							<div class="picture">	
 								{% if picture %}
 									<img src="{{ picture }}"/>
@@ -56,20 +56,20 @@
 								<a class="steam-login" href="{% url 'social:begin' 'steam' %}?next={{ request.path }}"><img src="/static/images/sits_01.png"/></a>
 							{% endif %}
 						</div>
-						<div class="col-md-8">
+						<div class="col-md-8 col-xs-8">
 							<div class="info-wrapper">
 								<div class="row username">
-									<div class="col-md-12">
+									<div class="col-md-12 col-xs-12">
 										{{ personaname }}
 									</div>
 								</div>
 								<div class="row name">
-									<div class="col-md-6">Name:</div>
-									<div class="col-md-6">{{realname}}</div>
+									<div class="col-md-6 col-xs-6">Name:</div>
+									<div class="col-md-6 col-xs-6">{{realname}}</div>
 								</div>
 								<div class="row region">
-									<div class="col-md-6">Preferred Region:</div>
-									<div class="col-md-6">
+									<div class="col-md-6 col-xs-6">Preferred Region:</div>
+									<div class="col-md-6 col-xs-6">
 										{% if pref_region %}
 											{{ pref_region }}
 										{% else %}
@@ -78,23 +78,76 @@
 									</div>
 								</div>
 								<div class="row other-pos">
-									<div class="col-md-6">Other Playable Position(s):</div>
-									<div class="col-md-6">
+									<div class="col-md-6 col-xs-6">Other Playable Position(s):</div>
+									<div class="col-md-6 col-xs-6">
 									{% if other_positions %}
 									{{ other_positions|joinby:", "}}
 									{% endif %}</div>
 								</div>
 							</div>
-							<div class="fav-heroes">
+							<div class="fav-heroes no-mobile">
 								<div class="row">
-									<div class="col-md-12">
+									<div class="col-md-12 col-xs-12">
 										<div class="bg-title">
 											Top Played Heroes
 										</div>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-md-12">
+									<div class="col-md-12 col-xs-12">
+										<ul>
+											{% for t in top_played %}
+											<li>
+												<img src="{{ t|get_hero_img:"large" }}"/>
+											</li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<div class="fav-heroes no-mobile">
+								<div class="row">
+									<div class="col-md-12 col-xs-12">
+										<div class="bg-title">
+											Preferred Heroes
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12 col-xs-12">
+										<ul>
+											<li>
+												<div class="x"><div class="icon_blocked"></div></div>
+											</li>
+											<li>
+												<div class="x"><div class="icon_blocked"></div></div>
+											</li>
+											<li>
+												<div class="x"><div class="icon_blocked"></div></div>
+											</li>
+											<li>
+												<div class="x"><div class="icon_blocked"></div></div>
+											</li>
+											<li>
+												<div class="x"><div class="icon_blocked"></div></div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mobile-only col-xs-12">
+							<div class="fav-heroes">
+								<div class="row">
+									<div class="col-md-12 col-xs-12">
+										<div class="bg-title">
+											Top Played Heroes
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12 col-xs-12">
 										<ul>
 											{% for t in top_played %}
 											<li>
@@ -108,14 +161,14 @@
 
 							<div class="fav-heroes">
 								<div class="row">
-									<div class="col-md-12">
+									<div class="col-md-12 col-xs-12">
 										<div class="bg-title">
 											Preferred Heroes
 										</div>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-md-12">
+									<div class="col-md-12 col-xs-12">
 										<ul>
 											<li>
 												<div class="x"><div class="icon_blocked"></div></div>
@@ -139,82 +192,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="main-info-options">
-				</div>
-				<div class="main-team divider">
-					<div class="row">
-						<div class="col-md-12 title">
-							Added Teammates
-						</div>
-					</div>
-				</div>
-				<div class="other-carry">
-					<div class="row">
-						<div class="col-md-12 pos">
-							<div class="bg-title">
-								Carry
-							</div>
-						</div>
-					</div>
-					<div class="row list-players">
-						{% for p in carries.all %}
-							<div class="col-md-3">
-								{% include "dotaseeker/snippets/player.html"%}
-							</div>
-						{% endfor %}
-					</div>
-				</div>
-				<div class="other-mid divider pos">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="bg-title">
-								MidLaner
-							</div>
-						</div>
-					</div>
-					<div class="row list-players">
-						{% for p in mids.all %}
-							<div class="col-md-3">
-								{% include "dotaseeker/snippets/player.html"%}
-							</div>
-						{% endfor %}
-					</div>
-				</div>
-				<div class="other-support divider pos">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="bg-title">
-								Support
-							</div>
-						</div>
-					</div>
-					<div class="row list-players">
-						{% for p in supports.all %}
-							<div class="col-md-3">
-								{% include "dotaseeker/snippets/player.html"%}
-							</div>
-						{% endfor %}
-					</div>
-				</div>
-				<div class="other-offlane divider pos">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="bg-title">
-								Offlane
-							</div>
-						</div>
-					</div>
-					<div class="row list-players">
-						{% for p in offlaners.all %}
-							<div class="col-md-3">
-								{% include "dotaseeker/snippets/player.html"%}
-							</div>
-						{% endfor %}
-					</div>
+				<div class="no-mobile">
+					{% include "dotaseeker/snippets/teammates.html" %}
 				</div>
 			</div>
 			<div class="right-div">
 				<div class="bg-title">Last 10 Matches</div>
+				<div class="mobile-only show-matches btn">Show Matches</div>
 				<div class="matches">
 					{% if matches %} 
 						{% for match in matches %}
@@ -225,6 +209,10 @@
 						Match data could not be retrieved. (User did not link their Steam account.)
 					</div>
 					{% endif %}
+				</div>
+
+				<div class="mobile-only">
+					{% include "dotaseeker/snippets/teammates.html" %}
 				</div>
 			</div>
 		</div>

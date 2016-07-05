@@ -15,3 +15,15 @@ $(document).on('keypress', 'input[type="text"]', function(e){
 		$(this).parents('form:first').find('.btn-submit').click();
 	}
 });
+
+$(document).on('click', '.show-matches', function(){
+	if($(this).hasClass('shown')){
+		$('.matches').slideUp();
+		$(this).text('Show matches');
+	}
+	else{
+		$('.matches').slideDown();
+		$(this).text('Hide Matches');
+	}
+	$(this).toggleClass('shown');
+});

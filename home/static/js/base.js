@@ -43,8 +43,11 @@ $(document).ready(function(){
 		}
 	});
 
+	var tolerance = 300;
+	if($(window).width() < 500)
+		tolerance = 0;
 	$('#footer').onScreen({
-		tolerance:300,
+		tolerance:tolerance,
 		doIn:function(){
 			$('.f_1').show().addClass('animated rotateInDownLeft');
 			setTimeout(function(){

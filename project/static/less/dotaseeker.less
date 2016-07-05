@@ -722,6 +722,8 @@
 				font-weight:500;
 			}
 			input{
+				position:relative;
+				top:-2px;
 				margin-right:5px;
 			}
 		}
@@ -923,6 +925,19 @@
 			outline-width: 0;
 		}
 	}
+
+	.show-matches.btn{
+		margin-top:10px;
+		width:100%;
+		margin-bottom:10px;
+		&:hover{
+			background:#000;
+		}
+	}
+}
+
+.mobile-only{
+	display:none;
 }
 
 @media only screen and (max-width: @desktopW){ @import 'tablet'; }

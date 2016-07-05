@@ -10,6 +10,12 @@ $(document).on('mouseout', '.ds-heroes li:not(.hide)', function(){
 $(document).on('click', '.ds-heroes .hero-container li', function(){
 	if($(this).hasClass('hide'))
 		return;
+
+	if($('.edit-ds-heroes').length > 0 && 
+		$('.ds-heroes .hero-container li.selected').length == 5){
+		return;
+	}
+
 	$(this).toggleClass('selected');
 
 	var ids = [];

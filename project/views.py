@@ -38,15 +38,73 @@ class DotaseekerView(TemplateView):
 class DSEditView(TemplateView):
 	def dispatch(self, request, *args, **kwargs):
 		self.heroes = Hero.objects.all()
+		username = request.COOKIES.get('ds_usr')
+		
+		if username:
+			try:
+				user = User.objects.get(username=username)
+				profile = Player.objects.get(user=user)
+			except:
+				return HttpResponseRedirect('/dotaseeker/login?e=true')
+
+			self.profile = profile
+		else:
+			return HttpResponseRedirect('/dotaseeker/login?e=true')
 		return super(DSEditView, self).dispatch(request, *args, **kwargs)
 
 	def get(self, request, *args, **kwargs):
 		context = self.get_context_data()
 		return render(request, 'dotaseeker/edit.html', context)
 
+	def post(self, request, *args, **kwargs):
+		# changes made to profile, make them and save
+		# before grabbing context data
+		profile = self.profile
+		profile.real_name = request.POST.get('name')
+		profile.mmr = request.POST.get('mmr')
+		profile.pref_region = request.POST.get('pref_region')
+		profile.pref_position = request.POST.get('pref_pos')
+		profile.other_positions = request.POST.getlist('other_pos')
+		profile.pref_heroes = request.POST.get('sel_heroes')
+
+		profile.carries = request.POST.getlist('carries')
+		profile.supports = request.POST.getlist('supports')
+		profile.offlaners = request.POST.getlist('offlaners')
+		profile.mids = request.POST.getlist('mids')
+
+		profile.selected_carry = request.POST.get('c')
+		profile.selected_support = request.POST.get('s')
+		profile.selected_support2 = request.POST.get('s2')
+		profile.selected_offlaner = request.POST.get('o')
+		profile.selected_mid = request.POST.get('m')
+		profile.save()
+
+		self.profile = profile
+
+		context = self.get_context_data()
+		return render(request, 'dotaseeker/edit.html', context)
+
 	def get_context_data(self, **kwargs):
 		context = super(DSEditView, self).get_context_data(**kwargs)
 		context['heroes'] = self.heroes
+
+		context['real_name'] = self.profile.real_name
+		context['mmr'] = self.profile.mmr
+		context['pref_region'] = self.profile.pref_region
+		context['pref_position'] = self.profile.pref_position
+		context['other_positions'] = self.profile.other_positions
+		context['pref_heroes'] = self.profile.pref_heroes
+
+		context['carries'] = self.profile.carries
+		context['supports'] = self.profile.supports
+		context['offlaners'] = self.profile.offlaners
+		context['mids'] = self.profile.mids
+
+		context['selected_carry'] = self.profile.selected_carry
+		context['selected_support'] = self.profile.selected_support
+		context['selected_support2'] = self.profile.selected_support2
+		context['selected_offlaner'] = self.profile.selected_offlaner
+		context['selected_mid'] = self.profile.selected_mid
 		return context
 
 class DSSettingsView(TemplateView):
@@ -81,6 +139,8 @@ class DSLoginView(TemplateView):
 			self.error = 'Sorry, this user isn\'t in our database. Please try again.'
 		elif request.GET.get('p'):
 			self.error = 'Sorry, your password was incorrect. Please try again.'
+		elif request.GET.get('e'):
+			self.error = 'Sorry, there was a problem grabbing your user information. Please login again.'
 		else:
 			self.error = None
 

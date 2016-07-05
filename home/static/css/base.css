@@ -157,6 +157,7 @@ body {
   z-index: 2;
   bottom: -1px;
   background: #fff;
+  overflow: hidden;
 }
 #nav.fixed {
   position: fixed;
@@ -167,6 +168,7 @@ body {
   height: 35px;
   z-index: 9999;
   box-shadow: 0px 1px 20px #000;
+  width: 100%;
 }
 #nav.fixed a {
   color: #fff;
@@ -193,7 +195,7 @@ body {
 #nav .left {
   display: none;
 }
-#nav .col-xs-12 {
+#nav .r {
   border-top: 1px solid #516B8C;
 }
 #nav ul {
@@ -329,13 +331,13 @@ body {
   top: 185px;
 }
 #footer .foreground .f_1 {
-  margin-left: 50px;
+  padding-left: 50px;
 }
 #footer .foreground .f_3 {
-  margin-left: 70px;
+  padding-left: 70px;
 }
 #footer .foreground .f_4 {
-  margin-left: 180px;
+  padding-left: 180px;
 }
 #hobbyHeader {
   position: relative;
@@ -891,5 +893,86 @@ footer {
 @media only screen and (max-width: 740px) {
   .container {
     width: 100%;
+  }
+  #header {
+    max-height: 215px;
+  }
+  #header .foreground {
+    top: 0;
+    padding-right: 0;
+  }
+  #header .foreground span {
+    font-size: 28px;
+  }
+  #header .foreground p {
+    padding-bottom: 5px;
+  }
+  #title {
+    font-size: 50px;
+    margin-top: -48px;
+  }
+  #nav ul {
+    font-size: 15px;
+  }
+  #nav.fixed {
+    height: 29px;
+  }
+  .nav-wrapper {
+    padding-bottom: 0;
+    min-height: 30px;
+  }
+  .row {
+    margin: 0;
+  }
+  #main {
+    padding-top: 0;
+    border: 0;
+    box-shadow: none;
+    margin-bottom: 0;
+  }
+  #main .col-xs-12 {
+    padding: 0;
+  }
+  #main .col-xs-12 .details {
+    padding: 0 20px;
+  }
+  #main .header {
+    margin-top: 40px;
+  }
+  #main .pad-top-large {
+    margin-top: 40px;
+  }
+  #footer .foreground {
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  #footer .foreground span {
+    font-size: 28px;
+  }
+  #footer .foreground .f_1 {
+    padding-left: 0;
+  }
+  #footer .foreground p {
+    margin-bottom: 5px;
+  }
+  .code-body .exp {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .empty-spc {
+    padding: 15px 0;
+  }
+  #projectBody {
+    min-height: 100vh;
+    height: auto;
+  }
+  #projectBody .project {
+    width: 50%;
+    height: 100vh;
+    border-top: 1px dashed #fff;
+  }
+  #projectBody .project .text .headline {
+    font-size: 28px;
   }
 }
