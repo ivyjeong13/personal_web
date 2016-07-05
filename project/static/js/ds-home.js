@@ -13,6 +13,27 @@ function onYouTubePlayerAPIReady(){
   tv = new YT.Player('tv', {events: {'onReady': onPlayerReady, 'onStateChange': onPlayerStateChange}, playerVars: playerDefaults});
 }
 
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
 function onPlayerReady(){
 	var height = $('.img-wrapper').height();
 	var width = $('.img-wrapper').width();
@@ -22,6 +43,10 @@ function onPlayerReady(){
 		setTimeout(function(){
 			$('.top').width(width).height(height);
 			$('.tv-wrapper').css('max-height', height).fadeIn(1000);
+
+      if(isMobile.any()){
+        $('.tv-wrapper iframe').attr('width', width).attr('height', height).css('left', 0).css('opacity', '1');
+      }
 			tv.loadVideoById(vid[randomvid]);
 		},500);
 	},2000);

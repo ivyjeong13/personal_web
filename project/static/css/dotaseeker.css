@@ -1037,102 +1037,236 @@ footer {
   /* line 7, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #header .foreground {
     top: 0;
-    padding-right: 0;
+    padding-right: 10px;
   }
   /* line 11, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #header .foreground span {
     font-size: 28px;
+    line-height: 32px;
   }
-  /* line 15, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 16, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #header .foreground p {
     padding-bottom: 5px;
   }
   /* line 21, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #header .third {
+    padding-right: 50px;
+  }
+  /* line 26, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #title {
     font-size: 50px;
-    margin-top: -48px;
+    margin-top: -40px;
   }
-  /* line 27, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 32, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #nav ul {
     font-size: 15px;
   }
-  /* line 31, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 36, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #nav.fixed {
     height: 29px;
   }
-  /* line 36, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 41, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   .nav-wrapper {
     padding-bottom: 0;
     min-height: 30px;
   }
-  /* line 41, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 46, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   .row {
     margin: 0;
   }
-  /* line 45, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 50, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #main {
     padding-top: 0;
     border: 0;
     box-shadow: none;
     margin-bottom: 0;
   }
-  /* line 51, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 56, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #main .col-xs-12 {
     padding: 0;
   }
-  /* line 54, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 59, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #main .col-xs-12 .details {
     padding: 0 20px;
   }
-  /* line 59, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 64, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #main .header {
     margin-top: 40px;
   }
-  /* line 63, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 68, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #main .pad-top-large {
     margin-top: 40px;
   }
-  /* line 69, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 74, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #footer .foreground {
     top: 0;
     left: 0;
     overflow: hidden;
+    padding-left: 10px;
   }
-  /* line 74, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 80, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #footer .foreground span {
     font-size: 28px;
   }
-  /* line 78, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 84, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #footer .foreground .f_1 {
     padding-left: 0;
   }
-  /* line 82, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 88, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #footer .foreground p {
     margin-bottom: 5px;
   }
-  /* line 89, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 95, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   .code-body .exp {
     width: 100%;
     padding: 0 20px;
   }
-  /* line 95, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 101, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   .empty-spc {
     padding: 15px 0;
   }
-  /* line 99, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 105, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #projectBody {
     min-height: 100vh;
     height: auto;
   }
-  /* line 102, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 108, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #projectBody .project {
     width: 50%;
     height: 100vh;
     border-top: 1px dashed #fff;
   }
-  /* line 108, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  /* line 114, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
   #projectBody .project .text .headline {
     font-size: 28px;
+  }
+  /* line 122, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #clayModel .text-container {
+    top: 0px;
+    left: 20px;
+    transform: none;
+    -webkit-transform: none;
+    -ms-transform: none;
+    z-index: 2;
+  }
+  /* line 129, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #clayModel .text-container p {
+    width: 100%;
+  }
+  /* line 134, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #clayModel .header {
+    font-size: 50px;
+  }
+  /* line 139, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #muayThai {
+    min-height: 100vh;
+  }
+  /* line 141, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #muayThai .bg-wrapper {
+    height: initial;
+    min-height: initial;
+  }
+  /* line 145, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #muayThai .bg-wrapper img {
+    padding-top: 30px;
+  }
+  /* line 149, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #muayThai .text-container {
+    width: 95%;
+    margin: 2.5%;
+    top: 42vh;
+    left: 0;
+    bottom: initial;
+    z-index: 2;
+    background: #fff;
+    border-radius: 0;
+    border: 1px dashed #000;
+  }
+  /* line 160, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #muayThai .text-container .header {
+    font-size: 40px;
+  }
+  /* line 168, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #videoGaming .bg-wrapper img {
+    width: initial;
+    height: 100vh;
+  }
+  /* line 174, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #videoGaming .text-container {
+    right: 20px;
+    bottom: 20px;
+  }
+  /* line 177, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #videoGaming .text-container .header {
+    font-size: 50px;
+  }
+  /* line 183, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #videoGaming .games img {
+    max-height: 35px;
+  }
+  /* line 189, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #videoGaming .list_sp_games .lightbox {
+    width: 220px;
+  }
+  /* line 197, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #guitar .bg-wrapper img {
+    height: 100vh;
+    width: initial;
+  }
+  /* line 203, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #guitar .video {
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+    height: 290px;
+    z-index: 3;
+  }
+  /* line 213, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #guitar .video video {
+    width: 100%;
+    height: 290px;
+  }
+  /* line 219, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #guitar .text-container {
+    width: 100%;
+    top: 50vh;
+    border: none;
+    left: 0;
+    transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+  }
+  /* line 227, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #guitar .text-container .header {
+    font-size: 50px;
+  }
+  /* line 235, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #drawing .bg-wrapper img {
+    height: 100vh;
+    width: initial;
+  }
+  /* line 240, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #drawing .text-container {
+    width: 90%;
+  }
+  /* line 242, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #drawing .text-container .header {
+    font-size: 50px;
+  }
+  /* line 249, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  .snp-banner .snp-title {
+    padding-left: 20px;
+  }
+  /* line 252, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  .snp-banner a {
+    padding: 5px 10px;
+  }
+  /* line 258, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  .code-body h1 {
+    margin-left: 20px;
   }
 }
 /* line 2, dotaseeker.less */

@@ -899,17 +899,21 @@ footer {
   }
   #header .foreground {
     top: 0;
-    padding-right: 0;
+    padding-right: 10px;
   }
   #header .foreground span {
     font-size: 28px;
+    line-height: 32px;
   }
   #header .foreground p {
     padding-bottom: 5px;
   }
+  #header .third {
+    padding-right: 50px;
+  }
   #title {
     font-size: 50px;
-    margin-top: -48px;
+    margin-top: -40px;
   }
   #nav ul {
     font-size: 15px;
@@ -946,6 +950,7 @@ footer {
     top: 0;
     left: 0;
     overflow: hidden;
+    padding-left: 10px;
   }
   #footer .foreground span {
     font-size: 28px;
@@ -974,5 +979,109 @@ footer {
   }
   #projectBody .project .text .headline {
     font-size: 28px;
+  }
+  #clayModel .text-container {
+    top: 0px;
+    left: 20px;
+    transform: none;
+    -webkit-transform: none;
+    -ms-transform: none;
+    z-index: 2;
+  }
+  #clayModel .text-container p {
+    width: 100%;
+  }
+  #clayModel .header {
+    font-size: 50px;
+  }
+  #muayThai {
+    min-height: 100vh;
+  }
+  #muayThai .bg-wrapper {
+    height: initial;
+    min-height: initial;
+  }
+  #muayThai .bg-wrapper img {
+    padding-top: 30px;
+  }
+  #muayThai .text-container {
+    width: 95%;
+    margin: 2.5%;
+    top: 42vh;
+    left: 0;
+    bottom: initial;
+    z-index: 2;
+    background: #fff;
+    border-radius: 0;
+    border: 1px dashed #000;
+  }
+  #muayThai .text-container .header {
+    font-size: 40px;
+  }
+  #videoGaming .bg-wrapper img {
+    width: initial;
+    height: 100vh;
+  }
+  #videoGaming .text-container {
+    right: 20px;
+    bottom: 20px;
+  }
+  #videoGaming .text-container .header {
+    font-size: 50px;
+  }
+  #videoGaming .games img {
+    max-height: 35px;
+  }
+  #videoGaming .list_sp_games .lightbox {
+    width: 220px;
+  }
+  #guitar .bg-wrapper img {
+    height: 100vh;
+    width: initial;
+  }
+  #guitar .video {
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+    height: 290px;
+    z-index: 3;
+  }
+  #guitar .video video {
+    width: 100%;
+    height: 290px;
+  }
+  #guitar .text-container {
+    width: 100%;
+    top: 50vh;
+    border: none;
+    left: 0;
+    transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+  }
+  #guitar .text-container .header {
+    font-size: 50px;
+  }
+  #drawing .bg-wrapper img {
+    height: 100vh;
+    width: initial;
+  }
+  #drawing .text-container {
+    width: 90%;
+  }
+  #drawing .text-container .header {
+    font-size: 50px;
+  }
+  .snp-banner .snp-title {
+    padding-left: 20px;
+  }
+  .snp-banner a {
+    padding: 5px 10px;
+  }
+  .code-body h1 {
+    margin-left: 20px;
   }
 }
