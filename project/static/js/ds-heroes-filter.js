@@ -12,7 +12,7 @@ $(document).on('click', '.ds-heroes .hero-container li', function(){
 		return;
 
 	if($('.edit-ds-heroes').length > 0 && 
-		$('.ds-heroes .hero-container li.selected').length == 5){
+		$('.ds-heroes .hero-container li.selected').length == 5 && !$(this).hasClass('selected')){
 		return;
 	}
 
@@ -22,7 +22,7 @@ $(document).on('click', '.ds-heroes .hero-container li', function(){
 	$('.hero-container li.selected').each(function(){
 		ids.push($(this).attr('data-id'));
 	});
-	$('#sel_heroes').val(ids.join(','));
+	$('#sel_heroes').attr('value', ids.join(','));
 });
 
 $(document).on('click', '.hero-refine .option', function(){

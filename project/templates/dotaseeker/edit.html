@@ -32,38 +32,31 @@
 		<div class="content-wrapper container">
 			<div class="content">
 				<div class="h1">Edit Settings</div>
-				<form class="edit-form" action="/dotaseeker/settings/edit" method="post">
+				<form class="edit-form" action="/dotaseeker/dashboard/edit" method="post">
+					{% csrf_token %}
 					<div class="edit-container">Name</div>
 					<input type="text" name="name" value="{{ real_name }}">
 					<div class="edit-container">MMR</div>
 					<input type="text" name="mmr" value="{{ mmr }}">
 					<div class="edit-container">Preferred Region</div>
 					<select type="radio" name="pref_region">
-						<option value="US East">US East</option>
-						<option value="US West">US West</option>
+						{% for r in regions %}
+						<option value="{{ r }}" {% if r == pref_region %}selected {% endif %}>{{ r }}</option>
+						{% endfor %}
 					</select>
 					<div class="edit-container">Preferred Position</div>
 					<select type="radio" name="pref_pos">
-						<option value="Carry">Carry</option>
-						<option value="Mid">Mid</option>
-						<option value="Offlaner">Offlaner</option>
-						<option value="Support">Support</option>
+						{% for p in positions %}
+						<option value="{{ p }}" {% if p == pref_position %}selected{% endif %}>{{ p }}</option>
+						{% endfor %}
 					</select>
 					<div class="edit-container">Other Positions</div>
 					<div class="multi-select edit-container">
+						{% for p in positions %}
 						<span>
-							<input name="other_pos" type="checkbox" value="Carry"> Carry
+							<input name="other_pos" type="checkbox" value="{{ p }}" {% if p in other_positions %}checked{% endif %}> {{ p }}
 						</span>
-						<span>
-							<input name="other_pos" type="checkbox" value="Mid"> Mid 
-						</span>
-						<span>
-							<input name="other_pos" type="checkbox" value="Offlaner"> Offlaner
-						</span>
-						<span>
-							<input name="other_pos" type="checkbox" value="Support"> 
-							Support
-						</span>
+						{% endfor %}
 					</div>
 					<div class="edit-ds-heroes">
 						<div class="edit-container">Select Preferred Heroes</div>

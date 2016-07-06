@@ -2188,6 +2188,11 @@ footer {
   font-weight: 500;
 }
 /* line 750, dotaseeker.less */
+.dotaseeker .h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+/* line 755, dotaseeker.less */
 .dotaseeker .btn {
   margin-top: 50px;
   width: 100px;
@@ -2203,81 +2208,82 @@ footer {
   cursor: pointer;
   text-decoration: none;
 }
-/* line 764, dotaseeker.less */
+/* line 769, dotaseeker.less */
 .dotaseeker .btn:before {
   background: #000;
   color: #fff;
 }
-/* line 769, dotaseeker.less */
+/* line 774, dotaseeker.less */
 .dotaseeker .btn:hover {
   color: #fff;
 }
-/* line 773, dotaseeker.less */
+/* line 778, dotaseeker.less */
 .dotaseeker .btn + .btn {
   margin-left: 25px;
 }
-/* line 777, dotaseeker.less */
+/* line 782, dotaseeker.less */
 .dotaseeker .btn.inline {
   float: none;
   display: inline-block;
 }
-/* line 782, dotaseeker.less */
+/* line 787, dotaseeker.less */
 .dotaseeker .btn.black {
   background: #000;
   color: #fff;
 }
-/* line 786, dotaseeker.less */
+/* line 791, dotaseeker.less */
 .dotaseeker .btn.black:before {
   background: #fff;
   color: #000;
 }
-/* line 791, dotaseeker.less */
+/* line 796, dotaseeker.less */
 .dotaseeker .btn.black:hover {
   color: #000;
 }
-/* line 796, dotaseeker.less */
+/* line 801, dotaseeker.less */
 .dotaseeker .btn.no-margin {
   margin: 0;
 }
-/* line 800, dotaseeker.less */
+/* line 805, dotaseeker.less */
 .dotaseeker .bg-container {
   position: relative;
   overflow: hidden;
 }
-/* line 805, dotaseeker.less */
+/* line 810, dotaseeker.less */
 .dotaseeker .ds-search-filters {
   clear: both;
   width: 100%;
   float: left;
+  display: none;
 }
-/* line 809, dotaseeker.less */
+/* line 815, dotaseeker.less */
 .dotaseeker .filter-title {
   font-size: 16px;
   text-transform: uppercase;
 }
-/* line 813, dotaseeker.less */
+/* line 819, dotaseeker.less */
 .dotaseeker .filter-title .hero-name-display {
   font-weight: bold;
   float: right;
   display: inline-block;
 }
-/* line 820, dotaseeker.less */
+/* line 826, dotaseeker.less */
 .dotaseeker .ds-heroes {
   margin-top: 20px;
   width: 590px;
 }
-/* line 823, dotaseeker.less */
+/* line 829, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-container {
   width: 488px;
   float: left;
 }
-/* line 826, dotaseeker.less */
+/* line 832, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-container ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 831, dotaseeker.less */
+/* line 837, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-container ul li {
   float: left;
   cursor: pointer;
@@ -2296,25 +2302,24 @@ footer {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#535353', endColorstr='#090909', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
 }
-/* line 844, dotaseeker.less */
+/* line 850, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-container ul li img {
   border: 1px solid #000;
 }
-/* line 848, dotaseeker.less */
+/* line 854, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-container ul li.hide img {
   position: relative;
   visibility: hidden;
 }
-/* line 854, dotaseeker.less */
+/* line 860, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-container ul li:nth-child(8n+1) {
   clear: left;
 }
-/* line 859, dotaseeker.less */
-.dotaseeker .ds-heroes .hero-container ul li:hover img,
+/* line 865, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-container ul li.selected img {
   border: 1px solid #FFD000;
 }
-/* line 866, dotaseeker.less */
+/* line 872, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-refine {
   font-size: 12px;
   margin-left: 2px;
@@ -2325,31 +2330,31 @@ footer {
   float: left;
   text-align: center;
 }
-/* line 875, dotaseeker.less */
+/* line 881, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-refine ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 879, dotaseeker.less */
+/* line 885, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-refine ul li {
   padding: 4px 0;
 }
-/* line 881, dotaseeker.less */
+/* line 887, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-refine ul li:not(.option) {
   background: #000;
   color: #fff;
   text-transform: uppercase;
 }
-/* line 887, dotaseeker.less */
+/* line 893, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-refine ul li.option {
   cursor: pointer;
 }
-/* line 889, dotaseeker.less */
+/* line 895, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-refine ul li.option.selected {
   background: #c2c2c2;
 }
-/* line 898, dotaseeker.less */
+/* line 904, dotaseeker.less */
 .dotaseeker .search-bar {
   position: relative;
   margin: 30px 0 60px 0;
@@ -2357,7 +2362,7 @@ footer {
   width: 100%;
   float: left;
 }
-/* line 902, dotaseeker.less */
+/* line 908, dotaseeker.less */
 .dotaseeker .search-bar .icon_search {
   position: absolute;
   top: 0;
@@ -2372,7 +2377,7 @@ footer {
   cursor: pointer;
   border-radius: 4px;
 }
-/* line 916, dotaseeker.less */
+/* line 922, dotaseeker.less */
 .dotaseeker .search-bar input {
   clear: both;
   width: 100%;
@@ -2386,17 +2391,84 @@ footer {
   font-family: 'GlacialInd', serif;
   outline-width: 0;
 }
-/* line 929, dotaseeker.less */
+/* line 935, dotaseeker.less */
 .dotaseeker .show-matches.btn {
   margin-top: 10px;
   width: 100%;
   margin-bottom: 10px;
 }
-/* line 933, dotaseeker.less */
+/* line 939, dotaseeker.less */
 .dotaseeker .show-matches.btn:hover {
   background: #000;
 }
-/* line 939, dotaseeker.less */
+/* line 944, dotaseeker.less */
+.dotaseeker .player-filter {
+  float: left;
+  padding-left: 20px;
+  width: 450px;
+  margin-top: -20px;
+}
+/* line 950, dotaseeker.less */
+.dotaseeker .player-filter input,
+.dotaseeker .player-filter select {
+  clear: both;
+  width: 100%;
+  float: left;
+  border: 1px solid #c2c2c2;
+  font-family: 'GlacialInd', serif;
+  font-size: 18px;
+  margin-top: 15px;
+}
+/* line 959, dotaseeker.less */
+.dotaseeker .search-results {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-top: 50px;
+}
+/* line 963, dotaseeker.less */
+.dotaseeker .search-results .ds-person-result {
+  border: 1px solid #000;
+  clear: both;
+  width: 100%;
+  float: left;
+}
+/* line 966, dotaseeker.less */
+.dotaseeker .search-results .ds-person-result .pill {
+  clear: both;
+  width: 100%;
+  float: left;
+  padding: 5px 0;
+  text-align: center;
+  margin: 0;
+}
+/* line 972, dotaseeker.less */
+.dotaseeker .search-results .ds-person-result .pill.name {
+  background: #000;
+  color: #fff;
+}
+/* line 977, dotaseeker.less */
+.dotaseeker .search-results .ds-person-result .pill.role {
+  background: #c2c2c2;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+/* line 983, dotaseeker.less */
+.dotaseeker .search-results .ds-person-result .pill.mmr {
+  background: #f3f3f3;
+  font-size: 11px;
+}
+/* line 991, dotaseeker.less */
+.dotaseeker .filters-btn {
+  font-size: 15px;
+  width: 250px;
+  margin-top: 10px;
+}
+/* line 995, dotaseeker.less */
+.dotaseeker .filters-btn:hover {
+  background: #000;
+}
+/* line 1001, dotaseeker.less */
 .mobile-only {
   display: none;
 }

@@ -21,6 +21,6 @@ urlpatterns = [
     url(r'^dotaseeker/', DotaseekerView.as_view()),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^ijeong/2016/admin/', include(admin.site.urls)),
     url('', include('social.apps.django_app.urls', namespace='social'))
 ]

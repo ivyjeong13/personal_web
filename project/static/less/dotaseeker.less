@@ -747,6 +747,11 @@
 		font-weight:500;
 	}
 
+	.h2{
+		font-size:28px;
+		font-weight:500;
+	}
+
 	.btn{
 		margin-top:50px;
 		width:100px;
@@ -804,6 +809,7 @@
 
 	.ds-search-filters{
 		.fullWidth;
+		display:none;
 	}
 
 	.filter-title{
@@ -855,7 +861,7 @@
 						clear:left;
 					}
 
-					&:hover, &.selected{
+					&.selected{
 						img{
 							border:1px solid #FFD000;
 						}
@@ -930,6 +936,62 @@
 		margin-top:10px;
 		width:100%;
 		margin-bottom:10px;
+		&:hover{
+			background:#000;
+		}
+	}
+
+	.player-filter{
+		float:left;
+		padding-left:20px;
+		width:450px;
+		margin-top:-20px;
+
+		input, select{
+			.fullWidth;
+			border:1px solid #c2c2c2;
+			.glacial;
+			font-size:18px;
+			margin-top:15px;
+		}
+	}
+
+	.search-results{
+		.fullWidth;
+		margin-top:50px;
+
+		.ds-person-result{
+			border:1px solid #000;
+			.fullWidth;
+			.pill{
+				.fullWidth;
+				padding:5px 0;
+				text-align:center;
+				margin:0;
+
+				&.name{
+					background:#000;
+					color:#fff;
+				}
+
+				&.role{
+					background:#c2c2c2;
+					text-transform:uppercase;
+					font-size:11px;
+				}
+
+				&.mmr{
+					background:#f3f3f3;
+					font-size:11px;
+				}
+			}
+		}
+	}
+
+	.filters-btn{
+		font-size:15px;
+		width: 250px;
+		margin-top:10px;
 		&:hover{
 			background:#000;
 		}

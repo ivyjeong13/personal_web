@@ -10,8 +10,9 @@ $(document).on('click', '.btn-submit', function(){
 	$(this).parents('form:first').submit();
 });
 
-$(document).on('keypress', 'input[type="text"]', function(e){
+$(document).on('keypress', 'input', function(e){
 	if ( e.which == 13 ) {
+		console.log('enter');
 		$(this).parents('form:first').find('.btn-submit').click();
 	}
 });

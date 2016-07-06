@@ -30,12 +30,18 @@
 		</div>
 		<div class="content-wrapper container">
 			<div class="content">
-				<div class="h1">Search</div>
+				<div class="h1">Search For Players</div>
+				{% include "dotaseeker/snippets/searchbar.html" %}
+				<div class="h2">Filter Results</div>
+				<div class="btn filters-btn">Show Filters</div>
 				<form action="/dotaseeker/search" method="post">
 					<div class="ds-search-filters">
 						{% include "dotaseeker/snippets/hero_filter.html" %}
 
 						<div class="player-filter">
+							<div class="filter-title">
+								Filter By Player Attributes
+							</div>
 							<select name="pref_role">
 								<option value="">Select preferred role</option>
 								<option value="Carry">Carry</option>
@@ -62,6 +68,47 @@
 						</div>
 					</div>
 				</form>
+
+				<div class="search-results">
+					<div class="h1">Results</div>
+					<div class="row">
+						<div class="col-md-2 col-xs-4">
+							<div class="ds-person-result">
+								<img src="/static/images/PersonPlaceholder-01.png"/>
+								<div class="pill name">Player</div>
+								<div class="pill role">Carry</div>
+								<div class="pill mmr">2000</div>
+							</div>
+						</div>
+
+						<div class="col-md-2 col-xs-4">
+							<div class="ds-person-result">
+								<img src="/static/images/PersonPlaceholder-01.png"/>
+								<div class="pill name">Player 2</div>
+								<div class="pill role">Carry</div>
+								<div class="pill mmr">2000</div>
+							</div>
+						</div>
+
+						<div class="col-md-2 col-xs-4">
+							<div class="ds-person-result">
+								<img src="/static/images/PersonPlaceholder-01.png"/>
+								<div class="pill name">Player 3</div>
+								<div class="pill role">Carry</div>
+								<div class="pill mmr">2000</div>
+							</div>
+						</div>
+
+						<div class="col-md-2 col-xs-4">
+							<div class="ds-person-result">
+								<img src="/static/images/PersonPlaceholder-01.png"/>
+								<div class="pill name">Player 4</div>
+								<div class="pill role">Carry</div>
+								<div class="pill mmr">2000</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

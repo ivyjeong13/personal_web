@@ -39,7 +39,16 @@ class DSEditView(TemplateView):
 	def dispatch(self, request, *args, **kwargs):
 		self.heroes = Hero.objects.all()
 		username = request.COOKIES.get('ds_usr')
-		
+
+		REGIONS = ['Australia', 'Chile', 'China', 'Europe East', \
+		'Europe West', 'India', 'Japan', 'Peru', 'Russia', \
+		'South Africa', 'South America', 'South Korea', 'Southeast Asia', \
+		'US East', 'US West']
+		self.regions = REGIONS 
+
+		POSITIONS = ['Carry', 'Mid', 'Offlaner', 'Support']
+		self.positions = POSITIONS
+
 		if username:
 			try:
 				user = User.objects.get(username=username)
@@ -54,6 +63,7 @@ class DSEditView(TemplateView):
 
 	def get(self, request, *args, **kwargs):
 		context = self.get_context_data()
+		print('GET')
 		return render(request, 'dotaseeker/edit.html', context)
 
 	def post(self, request, *args, **kwargs):
@@ -64,7 +74,7 @@ class DSEditView(TemplateView):
 		profile.mmr = request.POST.get('mmr')
 		profile.pref_region = request.POST.get('pref_region')
 		profile.pref_position = request.POST.get('pref_pos')
-		profile.other_positions = request.POST.getlist('other_pos')
+		profile.other_positions = ",".join(request.POST.getlist('other_pos'))
 		profile.pref_heroes = request.POST.get('sel_heroes')
 
 		profile.carries = request.POST.getlist('carries')
@@ -92,8 +102,10 @@ class DSEditView(TemplateView):
 		context['mmr'] = self.profile.mmr
 		context['pref_region'] = self.profile.pref_region
 		context['pref_position'] = self.profile.pref_position
-		context['other_positions'] = self.profile.other_positions
-		context['pref_heroes'] = self.profile.pref_heroes
+		if self.profile.other_positions:
+			context['other_positions'] = self.profile.other_positions.split(',')
+		if self.profile.pref_heroes:
+			context['pref_heroes']=self.profile.pref_heroes
 
 		context['carries'] = self.profile.carries
 		context['supports'] = self.profile.supports
@@ -105,6 +117,8 @@ class DSEditView(TemplateView):
 		context['selected_support2'] = self.profile.selected_support2
 		context['selected_offlaner'] = self.profile.selected_offlaner
 		context['selected_mid'] = self.profile.selected_mid
+		context['regions'] = self.regions
+		context['positions'] = self.positions
 		return context
 
 class DSSettingsView(TemplateView):

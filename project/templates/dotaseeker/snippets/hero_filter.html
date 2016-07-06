@@ -1,5 +1,6 @@
 {% load tt_base %}
 <div class="ds-heroes">
+	{{ pref_heroes }}
 	<div class="filter-title">
 		Filter by heroes <span class="hero-name-display">Antimage</span>
 	</div>
@@ -75,5 +76,5 @@
 			</li>
 		</ul>
 	</div>
-	<input type="hidden" id="sel_heroes" name="sel_heroes" value="">
+	<input type="hidden" id="sel_heroes" name="sel_heroes" value="{% if pref_heroes %}{{ pref_heroes }}{% endif %}">
 </div>
