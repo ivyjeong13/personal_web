@@ -1553,19 +1553,21 @@ footer {
 }
 /* line 248, dotaseeker.less */
 .dotaseeker .ds-nav .nav-title {
+  color: #fff;
+  text-decoration: none;
   float: left;
 }
-/* line 250, dotaseeker.less */
+/* line 252, dotaseeker.less */
 .dotaseeker .ds-nav .nav-title > * {
   float: left;
 }
-/* line 253, dotaseeker.less */
+/* line 255, dotaseeker.less */
 .dotaseeker .ds-nav .nav-title img {
   margin-top: 8px;
   height: 25px;
   width: 25px;
 }
-/* line 258, dotaseeker.less */
+/* line 260, dotaseeker.less */
 .dotaseeker .ds-nav .nav-title span {
   display: inline-block;
   padding: 12px 0;
@@ -1573,24 +1575,24 @@ footer {
   font-family: 'Griffos', serif;
   margin-left: 10px;
 }
-/* line 267, dotaseeker.less */
+/* line 269, dotaseeker.less */
 .dotaseeker .ds-nav ul {
   float: right;
   list-style: none;
   padding: 8px 0px;
   margin: 0;
 }
-/* line 272, dotaseeker.less */
+/* line 274, dotaseeker.less */
 .dotaseeker .ds-nav ul li {
   float: left;
 }
-/* line 274, dotaseeker.less */
+/* line 276, dotaseeker.less */
 .dotaseeker .ds-nav ul li div,
 .dotaseeker .ds-nav ul li input {
   display: inline-block;
   float: left;
 }
-/* line 278, dotaseeker.less */
+/* line 280, dotaseeker.less */
 .dotaseeker .ds-nav ul li div {
   border: 1px solid #fff;
   font-weight: bold;
@@ -1602,12 +1604,12 @@ footer {
   background: #fff;
   color: #000;
 }
-/* line 288, dotaseeker.less */
+/* line 290, dotaseeker.less */
 .dotaseeker .ds-nav ul li div:hover {
   background: #000;
   color: #fff;
 }
-/* line 293, dotaseeker.less */
+/* line 295, dotaseeker.less */
 .dotaseeker .ds-nav ul li input {
   width: 150px;
   border-top: 1px solid #000;
@@ -1619,7 +1621,7 @@ footer {
   font-size: 16px;
   padding: 1px 5px 2px 5px;
 }
-/* line 308, dotaseeker.less */
+/* line 310, dotaseeker.less */
 .dotaseeker .content-wrapper {
   position: relative;
   background: #ffffff;
@@ -1630,20 +1632,20 @@ footer {
   clear: both;
   overflow: hidden;
 }
-/* line 319, dotaseeker.less */
+/* line 321, dotaseeker.less */
 .dotaseeker .main-info {
   clear: both;
   width: 100%;
   float: left;
 }
-/* line 322, dotaseeker.less */
+/* line 324, dotaseeker.less */
 .dotaseeker .main-info .username {
   font-size: 30px;
   font-weight: bold;
   font-family: 'Griffos', serif;
   margin-bottom: 20px;
 }
-/* line 330, dotaseeker.less */
+/* line 332, dotaseeker.less */
 .dotaseeker .picture {
   border: 1px solid #ccc;
   position: relative;
@@ -1651,13 +1653,13 @@ footer {
   width: 100%;
   float: left;
 }
-/* line 335, dotaseeker.less */
+/* line 337, dotaseeker.less */
 .dotaseeker .picture img {
   clear: both;
   width: 100%;
   float: left;
 }
-/* line 338, dotaseeker.less */
+/* line 340, dotaseeker.less */
 .dotaseeker .picture .mmr,
 .dotaseeker .picture .pos-type {
   clear: both;
@@ -1669,11 +1671,11 @@ footer {
   text-transform: uppercase;
   font-size: 12px;
 }
-/* line 346, dotaseeker.less */
+/* line 348, dotaseeker.less */
 .dotaseeker .picture .pos-type {
   background: #000;
 }
-/* line 349, dotaseeker.less */
+/* line 351, dotaseeker.less */
 .dotaseeker .picture .mmr {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f1f1f1+50,e1e1e1+51,f6f6f6+100;White+Gloss+%231 */
   background: #ffffff;
@@ -1688,34 +1690,34 @@ footer {
   /* IE6-9 */
   color: #000;
 }
-/* line 360, dotaseeker.less */
+/* line 362, dotaseeker.less */
 .dotaseeker img {
   clear: both;
   width: 100%;
   float: left;
 }
-/* line 365, dotaseeker.less */
+/* line 367, dotaseeker.less */
 .dotaseeker .steam-login img {
   width: 180px;
   height: 35px;
   display: block;
   margin: 10px auto;
 }
-/* line 373, dotaseeker.less */
+/* line 375, dotaseeker.less */
 .dotaseeker .name,
 .dotaseeker .pos,
 .dotaseeker .other-pos,
 .dotaseeker .region {
   margin-bottom: 5px;
 }
-/* line 375, dotaseeker.less */
+/* line 377, dotaseeker.less */
 .dotaseeker .name .col-md-6,
 .dotaseeker .pos .col-md-6,
 .dotaseeker .other-pos .col-md-6,
 .dotaseeker .region .col-md-6 {
   font-weight: 500;
 }
-/* line 377, dotaseeker.less */
+/* line 379, dotaseeker.less */
 .dotaseeker .name .col-md-6:first-child,
 .dotaseeker .pos .col-md-6:first-child,
 .dotaseeker .other-pos .col-md-6:first-child,
@@ -1725,29 +1727,29 @@ footer {
   text-align: left;
   font-size: 14px;
 }
-/* line 386, dotaseeker.less */
+/* line 388, dotaseeker.less */
 .dotaseeker .divider {
   clear: both;
   width: 100%;
   float: left;
   margin-top: 40px;
 }
-/* line 389, dotaseeker.less */
+/* line 391, dotaseeker.less */
 .dotaseeker .divider.main-team {
   margin-top: 60px;
 }
-/* line 392, dotaseeker.less */
+/* line 394, dotaseeker.less */
 .dotaseeker .divider .title {
   font-size: 25px;
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 10px;
 }
-/* line 401, dotaseeker.less */
+/* line 403, dotaseeker.less */
 .dotaseeker .pos .bg-title {
   font-size: 16px;
 }
-/* line 406, dotaseeker.less */
+/* line 408, dotaseeker.less */
 .dotaseeker .bg-title {
   font-size: 12px;
   text-transform: uppercase;
@@ -1758,19 +1760,22 @@ footer {
   width: 100%;
   float: left;
 }
-/* line 415, dotaseeker.less */
+/* line 417, dotaseeker.less */
 .dotaseeker .fav-heroes {
+  clear: both;
+  width: 100%;
+  float: left;
   margin-top: 10px;
 }
-/* line 417, dotaseeker.less */
+/* line 420, dotaseeker.less */
 .dotaseeker .fav-heroes .row {
   margin: 0;
 }
-/* line 419, dotaseeker.less */
+/* line 422, dotaseeker.less */
 .dotaseeker .fav-heroes .row .col-md-12 {
   padding: 0;
 }
-/* line 423, dotaseeker.less */
+/* line 426, dotaseeker.less */
 .dotaseeker .fav-heroes ul {
   list-style: none;
   padding: 0;
@@ -1780,21 +1785,21 @@ footer {
   width: 100%;
   float: left;
 }
-/* line 430, dotaseeker.less */
+/* line 433, dotaseeker.less */
 .dotaseeker .fav-heroes ul li {
   width: 20%;
   float: left;
   border-right: 1px solid #000;
   border-bottom: 1px solid #000;
 }
-/* line 435, dotaseeker.less */
+/* line 438, dotaseeker.less */
 .dotaseeker .fav-heroes ul li img {
   float: left;
   clear: both;
 }
-/* line 440, dotaseeker.less */
+/* line 443, dotaseeker.less */
 .dotaseeker .fav-heroes ul li .x {
-  height: 45px;
+  height: 46px;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+0,0e0e0e+100;Black+3D */
   background: #7d7e7d;
   /* Old browsers */
@@ -1809,19 +1814,19 @@ footer {
   color: #fff;
   text-align: center;
 }
-/* line 449, dotaseeker.less */
+/* line 452, dotaseeker.less */
 .dotaseeker .fav-heroes ul li .x .icon_blocked {
   font-size: 25px;
   padding: 10px 0;
   color: rgba(255, 255, 255, 0.6);
 }
-/* line 459, dotaseeker.less */
+/* line 462, dotaseeker.less */
 .dotaseeker .matches {
   clear: both;
   width: 100%;
   float: left;
 }
-/* line 461, dotaseeker.less */
+/* line 464, dotaseeker.less */
 .dotaseeker .matches .match {
   clear: both;
   width: 100%;
@@ -1829,11 +1834,11 @@ footer {
   border-top: 1px solid #fff;
   margin-top: 15px;
 }
-/* line 465, dotaseeker.less */
+/* line 468, dotaseeker.less */
 .dotaseeker .matches .match:first-child {
   margin-top: 0;
 }
-/* line 468, dotaseeker.less */
+/* line 471, dotaseeker.less */
 .dotaseeker .matches .match .header {
   clear: both;
   width: 100%;
@@ -1844,16 +1849,16 @@ footer {
   color: #fff;
   padding: 2px 5px;
 }
-/* line 475, dotaseeker.less */
+/* line 478, dotaseeker.less */
 .dotaseeker .matches .match .header span {
   display: inline-block;
   float: right;
 }
-/* line 477, dotaseeker.less */
+/* line 480, dotaseeker.less */
 .dotaseeker .matches .match .header span:first-child {
   float: left;
 }
-/* line 483, dotaseeker.less */
+/* line 486, dotaseeker.less */
 .dotaseeker .matches .match .hero {
   overflow: hidden;
   width: 40%;
@@ -1861,12 +1866,12 @@ footer {
   border: 1px solid #000;
   border-top: 2px solid #000;
 }
-/* line 490, dotaseeker.less */
+/* line 493, dotaseeker.less */
 .dotaseeker .matches .match .hero .hero-name {
   background: #000;
   color: #fff;
 }
-/* line 495, dotaseeker.less */
+/* line 498, dotaseeker.less */
 .dotaseeker .matches .match .hero .hero-name,
 .dotaseeker .matches .match .hero .status {
   clear: both;
@@ -1877,7 +1882,7 @@ footer {
   text-transform: uppercase;
   font-size: 10px;
 }
-/* line 504, dotaseeker.less */
+/* line 507, dotaseeker.less */
 .dotaseeker .matches .match .hero .status.win {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,004900+96 */
   background: #006e2e;
@@ -1892,7 +1897,7 @@ footer {
   /* IE6-9 */
   color: #fff;
 }
-/* line 513, dotaseeker.less */
+/* line 516, dotaseeker.less */
 .dotaseeker .matches .match .hero .status.lose {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
   background: #a90329;
@@ -1907,7 +1912,7 @@ footer {
   /* IE6-9 */
   color: #fff;
 }
-/* line 524, dotaseeker.less */
+/* line 527, dotaseeker.less */
 .dotaseeker .matches .match .stats {
   width: 60%;
   float: left;
@@ -1915,23 +1920,23 @@ footer {
   border-left: 1px solid #000;
   border-bottom: 1px solid #000;
 }
-/* line 531, dotaseeker.less */
+/* line 534, dotaseeker.less */
 .dotaseeker .matches .match .kda {
   clear: both;
   width: 100%;
   float: left;
   border-bottom: 1px solid #000;
 }
-/* line 535, dotaseeker.less */
+/* line 538, dotaseeker.less */
 .dotaseeker .matches .match .kda > div {
   width: 33.333%;
   float: left;
 }
-/* line 538, dotaseeker.less */
+/* line 541, dotaseeker.less */
 .dotaseeker .matches .match .kda > div:last-child {
   margin-right: 0;
 }
-/* line 541, dotaseeker.less */
+/* line 544, dotaseeker.less */
 .dotaseeker .matches .match .kda > div > span {
   font-size: 10px;
   display: inline-block;
@@ -1956,7 +1961,7 @@ footer {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
   /* IE6-9 */
 }
-/* line 560, dotaseeker.less */
+/* line 563, dotaseeker.less */
 .dotaseeker .matches .match .kda > div > span:first-child {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c4c4c+0,595959+12,666666+25,474747+39,2c2c2c+50,000000+51,111111+60,2b2b2b+76,1c1c1c+91,131313+100;Black+Gloss+%231 */
   background: #4c4c4c;
@@ -1976,26 +1981,26 @@ footer {
   border: 0;
   border-right: 1px solid #999;
 }
-/* line 577, dotaseeker.less */
+/* line 580, dotaseeker.less */
 .dotaseeker .matches .match .items {
   clear: both;
   width: 100%;
   float: left;
 }
-/* line 579, dotaseeker.less */
+/* line 582, dotaseeker.less */
 .dotaseeker .matches .match .items ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 584, dotaseeker.less */
+/* line 587, dotaseeker.less */
 .dotaseeker .matches .match .items ul li {
   width: 33.333%;
   float: left;
   height: 51.5px;
   background: #000;
 }
-/* line 589, dotaseeker.less */
+/* line 592, dotaseeker.less */
 .dotaseeker .matches .match .items ul li .x {
   width: 100%;
   height: 51.5px;
@@ -2012,7 +2017,7 @@ footer {
   /* IE6-9 */
   border: 1px solid #000;
 }
-/* line 599, dotaseeker.less */
+/* line 602, dotaseeker.less */
 .dotaseeker .matches .match .items ul li .x .icon_blocked {
   height: 100%;
   width: 100%;
@@ -2021,29 +2026,29 @@ footer {
   color: rgba(255, 255, 255, 0.2);
   text-align: center;
 }
-/* line 614, dotaseeker.less */
+/* line 617, dotaseeker.less */
 .dotaseeker .player {
   clear: both;
   width: 100%;
   float: left;
   border: 1px solid #ccc;
 }
-/* line 617, dotaseeker.less */
+/* line 620, dotaseeker.less */
 .dotaseeker .player.starred {
   border: 2px solid #FFD900;
 }
-/* line 620, dotaseeker.less */
+/* line 623, dotaseeker.less */
 .dotaseeker .player.starred .player-wrapper .icon_star {
   display: block;
 }
-/* line 625, dotaseeker.less */
+/* line 628, dotaseeker.less */
 .dotaseeker .player .player-wrapper {
   position: relative;
   clear: both;
   width: 100%;
   float: left;
 }
-/* line 628, dotaseeker.less */
+/* line 631, dotaseeker.less */
 .dotaseeker .player .player-wrapper .icon_star {
   display: none;
   position: absolute;
@@ -2053,7 +2058,7 @@ footer {
   color: #FFD900;
   text-shadow: 1px 1px 10px #000;
 }
-/* line 639, dotaseeker.less */
+/* line 642, dotaseeker.less */
 .dotaseeker .player .mmr,
 .dotaseeker .player .name {
   clear: both;
@@ -2067,7 +2072,7 @@ footer {
   font-size: 12px;
   margin-bottom: 0;
 }
-/* line 649, dotaseeker.less */
+/* line 652, dotaseeker.less */
 .dotaseeker .player .mmr {
   background: #ffffff;
   /* Old browsers */
@@ -2081,11 +2086,11 @@ footer {
   /* IE6-9 */
   color: #000;
 }
-/* line 659, dotaseeker.less */
+/* line 662, dotaseeker.less */
 .dotaseeker .list-players {
   margin-top: 10px;
 }
-/* line 663, dotaseeker.less */
+/* line 666, dotaseeker.less */
 .dotaseeker #ds-footer {
   clear: both;
   width: 100%;
@@ -2096,17 +2101,17 @@ footer {
   position: relative;
   z-index: 5;
 }
-/* line 670, dotaseeker.less */
+/* line 673, dotaseeker.less */
 .dotaseeker #ds-footer .container {
   margin: 10px auto;
 }
-/* line 673, dotaseeker.less */
+/* line 676, dotaseeker.less */
 .dotaseeker #ds-footer ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 681, dotaseeker.less */
+/* line 684, dotaseeker.less */
 .dotaseeker .edit-form .edit-container {
   margin-top: 20px;
   font-size: 16px;
@@ -2117,11 +2122,11 @@ footer {
   float: left;
   width: 50%;
 }
-/* line 682, dotaseeker.less */
+/* line 685, dotaseeker.less */
 .dotaseeker .edit-form .edit-container + .edit-container {
   margin-top: 0;
 }
-/* line 692, dotaseeker.less */
+/* line 695, dotaseeker.less */
 .dotaseeker .edit-form input[type="text"],
 .dotaseeker .edit-form select {
   clear: both;
@@ -2134,65 +2139,65 @@ footer {
   padding: 4px;
   font-weight: 500;
 }
-/* line 702, dotaseeker.less */
+/* line 705, dotaseeker.less */
 .dotaseeker .edit-form select {
   height: 32px;
 }
-/* line 706, dotaseeker.less */
+/* line 709, dotaseeker.less */
 .dotaseeker .edit-form .multi-select {
   padding: 4px 10px;
   border: 1px solid #c2c2c2;
   width: 50%;
 }
-/* line 710, dotaseeker.less */
+/* line 713, dotaseeker.less */
 .dotaseeker .edit-form .multi-select span {
   margin-left: 20px;
   float: left;
   text-transform: none;
   font-weight: 500;
 }
-/* line 711, dotaseeker.less */
+/* line 714, dotaseeker.less */
 .dotaseeker .edit-form .multi-select span:first-child {
   margin-left: 0;
 }
-/* line 715, dotaseeker.less */
+/* line 718, dotaseeker.less */
 .dotaseeker .edit-form .multi-select span:last-child input {
   margin-right: 4px;
 }
-/* line 724, dotaseeker.less */
+/* line 727, dotaseeker.less */
 .dotaseeker .edit-form .multi-select input {
   position: relative;
   top: -2px;
   margin-right: 5px;
 }
-/* line 731, dotaseeker.less */
+/* line 734, dotaseeker.less */
 .dotaseeker .edit-form .edit-ds-heroes {
   clear: both;
   width: 100%;
   float: left;
   margin-top: 40px;
 }
-/* line 734, dotaseeker.less */
+/* line 737, dotaseeker.less */
 .dotaseeker .edit-form .edit-ds-heroes .edit-container,
 .dotaseeker .edit-form .edit-ds-heroes .ds-heroes {
   margin-top: 0;
 }
-/* line 739, dotaseeker.less */
+/* line 742, dotaseeker.less */
 .dotaseeker .edit-form .ds-heroes {
   clear: both;
   float: left;
 }
-/* line 745, dotaseeker.less */
+/* line 748, dotaseeker.less */
 .dotaseeker .h1 {
   font-size: 40px;
   font-weight: 500;
 }
-/* line 750, dotaseeker.less */
+/* line 753, dotaseeker.less */
 .dotaseeker .h2 {
   font-size: 28px;
   font-weight: 500;
 }
-/* line 755, dotaseeker.less */
+/* line 758, dotaseeker.less */
 .dotaseeker .btn {
   margin-top: 50px;
   width: 100px;
@@ -2208,82 +2213,82 @@ footer {
   cursor: pointer;
   text-decoration: none;
 }
-/* line 769, dotaseeker.less */
+/* line 772, dotaseeker.less */
 .dotaseeker .btn:before {
   background: #000;
   color: #fff;
 }
-/* line 774, dotaseeker.less */
+/* line 777, dotaseeker.less */
 .dotaseeker .btn:hover {
   color: #fff;
 }
-/* line 778, dotaseeker.less */
+/* line 781, dotaseeker.less */
 .dotaseeker .btn + .btn {
   margin-left: 25px;
 }
-/* line 782, dotaseeker.less */
+/* line 785, dotaseeker.less */
 .dotaseeker .btn.inline {
   float: none;
   display: inline-block;
 }
-/* line 787, dotaseeker.less */
+/* line 790, dotaseeker.less */
 .dotaseeker .btn.black {
   background: #000;
   color: #fff;
 }
-/* line 791, dotaseeker.less */
+/* line 794, dotaseeker.less */
 .dotaseeker .btn.black:before {
   background: #fff;
   color: #000;
 }
-/* line 796, dotaseeker.less */
+/* line 799, dotaseeker.less */
 .dotaseeker .btn.black:hover {
   color: #000;
 }
-/* line 801, dotaseeker.less */
+/* line 804, dotaseeker.less */
 .dotaseeker .btn.no-margin {
   margin: 0;
 }
-/* line 805, dotaseeker.less */
+/* line 808, dotaseeker.less */
 .dotaseeker .bg-container {
   position: relative;
   overflow: hidden;
 }
-/* line 810, dotaseeker.less */
+/* line 813, dotaseeker.less */
 .dotaseeker .ds-search-filters {
   clear: both;
   width: 100%;
   float: left;
   display: none;
 }
-/* line 815, dotaseeker.less */
+/* line 818, dotaseeker.less */
 .dotaseeker .filter-title {
   font-size: 16px;
   text-transform: uppercase;
 }
-/* line 819, dotaseeker.less */
+/* line 822, dotaseeker.less */
 .dotaseeker .filter-title .hero-name-display {
   font-weight: bold;
   float: right;
   display: inline-block;
 }
-/* line 826, dotaseeker.less */
+/* line 829, dotaseeker.less */
 .dotaseeker .ds-heroes {
   margin-top: 20px;
   width: 590px;
 }
-/* line 829, dotaseeker.less */
+/* line 832, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-container {
   width: 488px;
   float: left;
 }
-/* line 832, dotaseeker.less */
+/* line 835, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-container ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 837, dotaseeker.less */
+/* line 840, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-container ul li {
   float: left;
   cursor: pointer;
@@ -2302,24 +2307,24 @@ footer {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#535353', endColorstr='#090909', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
 }
-/* line 850, dotaseeker.less */
+/* line 853, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-container ul li img {
   border: 1px solid #000;
 }
-/* line 854, dotaseeker.less */
+/* line 857, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-container ul li.hide img {
   position: relative;
   visibility: hidden;
 }
-/* line 860, dotaseeker.less */
+/* line 863, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-container ul li:nth-child(8n+1) {
   clear: left;
 }
-/* line 865, dotaseeker.less */
+/* line 868, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-container ul li.selected img {
   border: 1px solid #FFD000;
 }
-/* line 872, dotaseeker.less */
+/* line 875, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-refine {
   font-size: 12px;
   margin-left: 2px;
@@ -2330,31 +2335,31 @@ footer {
   float: left;
   text-align: center;
 }
-/* line 881, dotaseeker.less */
+/* line 884, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-refine ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-/* line 885, dotaseeker.less */
+/* line 888, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-refine ul li {
   padding: 4px 0;
 }
-/* line 887, dotaseeker.less */
+/* line 890, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-refine ul li:not(.option) {
   background: #000;
   color: #fff;
   text-transform: uppercase;
 }
-/* line 893, dotaseeker.less */
+/* line 896, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-refine ul li.option {
   cursor: pointer;
 }
-/* line 895, dotaseeker.less */
+/* line 898, dotaseeker.less */
 .dotaseeker .ds-heroes .hero-refine ul li.option.selected {
   background: #c2c2c2;
 }
-/* line 904, dotaseeker.less */
+/* line 907, dotaseeker.less */
 .dotaseeker .search-bar {
   position: relative;
   margin: 30px 0 60px 0;
@@ -2362,7 +2367,7 @@ footer {
   width: 100%;
   float: left;
 }
-/* line 908, dotaseeker.less */
+/* line 911, dotaseeker.less */
 .dotaseeker .search-bar .icon_search {
   position: absolute;
   top: 0;
@@ -2377,7 +2382,7 @@ footer {
   cursor: pointer;
   border-radius: 4px;
 }
-/* line 922, dotaseeker.less */
+/* line 925, dotaseeker.less */
 .dotaseeker .search-bar input {
   clear: both;
   width: 100%;
@@ -2391,24 +2396,24 @@ footer {
   font-family: 'GlacialInd', serif;
   outline-width: 0;
 }
-/* line 935, dotaseeker.less */
+/* line 938, dotaseeker.less */
 .dotaseeker .show-matches.btn {
   margin-top: 10px;
   width: 100%;
   margin-bottom: 10px;
 }
-/* line 939, dotaseeker.less */
+/* line 942, dotaseeker.less */
 .dotaseeker .show-matches.btn:hover {
   background: #000;
 }
-/* line 944, dotaseeker.less */
+/* line 947, dotaseeker.less */
 .dotaseeker .player-filter {
   float: left;
   padding-left: 20px;
   width: 450px;
   margin-top: -20px;
 }
-/* line 950, dotaseeker.less */
+/* line 953, dotaseeker.less */
 .dotaseeker .player-filter input,
 .dotaseeker .player-filter select {
   clear: both;
@@ -2419,21 +2424,21 @@ footer {
   font-size: 18px;
   margin-top: 15px;
 }
-/* line 959, dotaseeker.less */
+/* line 962, dotaseeker.less */
 .dotaseeker .search-results {
   clear: both;
   width: 100%;
   float: left;
   margin-top: 50px;
 }
-/* line 963, dotaseeker.less */
+/* line 966, dotaseeker.less */
 .dotaseeker .search-results .ds-person-result {
   border: 1px solid #000;
   clear: both;
   width: 100%;
   float: left;
 }
-/* line 966, dotaseeker.less */
+/* line 969, dotaseeker.less */
 .dotaseeker .search-results .ds-person-result .pill {
   clear: both;
   width: 100%;
@@ -2442,33 +2447,33 @@ footer {
   text-align: center;
   margin: 0;
 }
-/* line 972, dotaseeker.less */
+/* line 975, dotaseeker.less */
 .dotaseeker .search-results .ds-person-result .pill.name {
   background: #000;
   color: #fff;
 }
-/* line 977, dotaseeker.less */
+/* line 980, dotaseeker.less */
 .dotaseeker .search-results .ds-person-result .pill.role {
   background: #c2c2c2;
   text-transform: uppercase;
   font-size: 11px;
 }
-/* line 983, dotaseeker.less */
+/* line 986, dotaseeker.less */
 .dotaseeker .search-results .ds-person-result .pill.mmr {
   background: #f3f3f3;
   font-size: 11px;
 }
-/* line 991, dotaseeker.less */
+/* line 994, dotaseeker.less */
 .dotaseeker .filters-btn {
   font-size: 15px;
   width: 250px;
   margin-top: 10px;
 }
-/* line 995, dotaseeker.less */
+/* line 998, dotaseeker.less */
 .dotaseeker .filters-btn:hover {
   background: #000;
 }
-/* line 1001, dotaseeker.less */
+/* line 1004, dotaseeker.less */
 .mobile-only {
   display: none;
 }
@@ -2555,46 +2560,59 @@ footer {
   .dotaseeker .matches {
     display: none;
   }
-  /* line 89, phone.less */
-  .dotaseeker .col-xs-12 {
-    padding: 0;
+  /* line 91, phone.less */
+  .dotaseeker .matches .match .items ul li {
+    max-height: 42px;
   }
   /* line 94, phone.less */
+  .dotaseeker .matches .match .items ul li .x {
+    height: 42px;
+  }
+  /* line 96, phone.less */
+  .dotaseeker .matches .match .items ul li .x .icon_blocked {
+    padding: 14px 0;
+  }
+  /* line 106, phone.less */
+  .dotaseeker .col-xs-12 {
+    padding: 0;
+    width: 100%;
+  }
+  /* line 112, phone.less */
   .dotaseeker .edit-form .multi-select {
     width: 100%;
   }
-  /* line 97, phone.less */
+  /* line 115, phone.less */
   .dotaseeker .edit-form .multi-select span {
     display: block;
     width: 50%;
     float: left;
     margin-left: 0;
   }
-  /* line 105, phone.less */
+  /* line 123, phone.less */
   .dotaseeker .edit-form .edit-container {
     width: 100%;
   }
-  /* line 110, phone.less */
+  /* line 128, phone.less */
   .dotaseeker .ds-heroes {
     width: 100%;
   }
-  /* line 113, phone.less */
+  /* line 131, phone.less */
   .dotaseeker .ds-heroes .hero-container {
     width: 244.94px;
   }
-  /* line 116, phone.less */
+  /* line 134, phone.less */
   .dotaseeker .ds-heroes .hero-refine {
     width: 98px;
   }
-  /* line 123, phone.less */
+  /* line 141, phone.less */
   .dotaseeker .ds-nav .nav-title img {
     margin-left: 20px;
   }
-  /* line 130, phone.less */
+  /* line 148, phone.less */
   .no-mobile {
     display: none;
   }
-  /* line 134, phone.less */
+  /* line 152, phone.less */
   .mobile-only {
     display: block;
   }

@@ -1,0 +1,35 @@
+{% load staticfiles %}
+{% load tt_base %}
+
+{% if not pref_heroes %}
+	<li>
+		<div class="x"><div class="icon_blocked"></div></div>
+	</li>
+	<li>
+		<div class="x"><div class="icon_blocked"></div></div>
+	</li>
+	<li>
+		<div class="x"><div class="icon_blocked"></div></div>
+	</li>
+	<li>
+		<div class="x"><div class="icon_blocked"></div></div>
+	</li>
+	<li>
+		<div class="x"><div class="icon_blocked"></div></div>
+	</li>
+	{% else %}
+		{% for p in pref_heroes %}
+			<li>
+				<img src="{{ p|get_hero_img:"large" }}"/>
+			</li>
+		{% endfor %}
+		{% if pref_left > 0 %}
+			{% with ''|center:pref_left as range %}
+				{% for _ in range %}
+					<li>
+						<div class="x"><div class="icon_blocked"></div></div>
+					</li>
+				{% endfor %}
+			{% endwith %}
+		{% endif %}
+	{% endif %}

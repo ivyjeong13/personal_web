@@ -63,7 +63,6 @@ class DSEditView(TemplateView):
 
 	def get(self, request, *args, **kwargs):
 		context = self.get_context_data()
-		print('GET')
 		return render(request, 'dotaseeker/edit.html', context)
 
 	def post(self, request, *args, **kwargs):
@@ -71,7 +70,8 @@ class DSEditView(TemplateView):
 		# before grabbing context data
 		profile = self.profile
 		profile.real_name = request.POST.get('name')
-		profile.mmr = request.POST.get('mmr')
+		if request.GET.get("mmr", None):
+			profile.mmr = request.POST.get('mmr')
 		profile.pref_region = request.POST.get('pref_region')
 		profile.pref_position = request.POST.get('pref_pos')
 		profile.other_positions = ",".join(request.POST.getlist('other_pos'))
@@ -99,7 +99,8 @@ class DSEditView(TemplateView):
 		context['heroes'] = self.heroes
 
 		context['real_name'] = self.profile.real_name
-		context['mmr'] = self.profile.mmr
+		if self.profile.mmr:
+			context['mmr'] = self.profile.mmr
 		context['pref_region'] = self.profile.pref_region
 		context['pref_position'] = self.profile.pref_position
 		if self.profile.other_positions:
@@ -119,18 +120,6 @@ class DSEditView(TemplateView):
 		context['selected_mid'] = self.profile.selected_mid
 		context['regions'] = self.regions
 		context['positions'] = self.positions
-		return context
-
-class DSSettingsView(TemplateView):
-	def dispatch(self, request, *args, **kwargs):
-		return super(DSSettingsView, self).dispatch(request, *args, **kwargs)
-
-	def post(self, request, *args, **kwargs):
-		context = self.get_context_data()
-		return HttpResponseRedirect('/dotaseeker/dashboard/edit')
-
-	def get_context_data(self, **kwargs):
-		context = super(DSSettingsView, self).get_context_data(**kwargs)
 		return context
 
 class DSSearchView(TemplateView):
@@ -257,6 +246,14 @@ class DSDashboardView(TemplateView):
 				self.other_positions = profile.other_positions.split(",")
 			else:
 				self.other_positions = None
+			if profile.pref_heroes:
+				self.pref_heroes = profile.pref_heroes.split(",")
+				if len(self.pref_heroes) != 5:
+					self.pref_left = 5 - len(self.pref_heroes)
+				else:
+					self.pref_left = 0
+			else:
+				self.pref_heroes = None
 			self.pref_region = profile.pref_region
 			self.carries = profile.carries
 			self.supports = profile.supports
@@ -304,7 +301,8 @@ class DSDashboardView(TemplateView):
 		context['s_offlaner'] = self.s_offlaner
 		context['s_support'] = self.s_support
 		context['s_support2'] = self.s_support2
-
+		context['pref_heroes'] = self.pref_heroes
+		context['pref_left'] = self.pref_left
 		context['top_played'] = self.top_played
 
 		return context

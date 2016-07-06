@@ -41,7 +41,8 @@
 	</div>
 	<div class="middle">
 		<div class="overlay">
-			<span>Log In: </span>
+			<span>Log In: </span><br>
+			<span style="font-size:10px">(login: 'product', pw: 'test' for synced Steam User example)</span>
 			<form action="/dotaseeker/signin" method="post" class="login">
 				{% csrf_token %}
 				<input type="text" name="username" placeholder="Username" />
