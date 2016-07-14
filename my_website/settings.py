@@ -20,9 +20,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 TEMPLATE_DEBUG = True
-
-ALLOWED_HOSTS = ['.herokuapp.com','*.herokuapp.com']
-
 SECRET_KEY = ''
 
 # Application definition
@@ -136,6 +133,8 @@ SOCIAL_AUTH_URL_NAMESPACE = 'social'
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+
+ALLOWED_HOSTS = ['*']
 
 SOCIAL_AUTH_STEAM_API_KEY = os.environ.get('STEAM_API_KEY')
 STEAM_API_KEY = os.environ.get('STEAM_API_KEY')
