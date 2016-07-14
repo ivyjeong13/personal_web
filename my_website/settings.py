@@ -17,15 +17,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'g*(8hel&0fr_^iw2+@u7=og*)gge3_l8coyg1ud(gg77zq!_%)'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = ['ivyjeong.herokuapp.com']
-
+SECRET_KEY = ''
 
 # Application definition
 
@@ -141,6 +138,7 @@ DATABASES['default'].update(db_from_env)
 
 SOCIAL_AUTH_STEAM_API_KEY = os.environ.get('STEAM_API_KEY')
 STEAM_API_KEY = os.environ.get('STEAM_API_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 #########################
 # IMPORT LOCAL SETTINGS #
