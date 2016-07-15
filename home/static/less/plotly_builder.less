@@ -1,0 +1,122 @@
+.plotly-block{
+	width:100%;
+	float:left;
+	clear:both;
+	.field{
+		width:100%;
+		float:left;
+		clear:both;
+		border-top:1px solid #fff;
+		border-bottom:1px solid #DDD;
+		padding:10px;
+
+		&.btn{
+			cursor:pointer;
+			&:hover{
+				background:#c2c2c2;
+				border-bottom:1px solid #999;
+			}
+		}
+
+		&.long{
+			input{
+				width:90%;
+			}
+
+			span{
+				width:10%;
+			}
+		}
+
+		input{
+			width:75%;
+			float:left;
+			height:25px;
+		}
+
+		span{
+			width:25%;
+			display:inline-block;
+			float:left;
+
+			&.hide-textarea-btn{
+				background:#999;
+				color:#fff;
+				padding:0 10px;
+				width:initial;
+				float:none;
+				cursor:pointer;
+				font-weight:500;
+				border-radius:2px;
+				&:hover{
+					background:#000;
+				}
+			}
+		}
+
+		.block-subtitle{
+			font-weight:bold;
+
+			&.spc{
+				margin-bottom:5px;
+			}
+		}
+
+		.list_series{
+			li{
+				span{
+					font-weight:bold;
+					font-size:12px;
+					display:block;
+					clear:both;
+					width:initial;
+					float:none;
+				}
+				select[name="series_type"]{
+					height:30px;
+					border:1px solid #999;
+					position:relative;
+					top:2px;
+				}
+			}
+		}
+
+		textarea{
+			width:100%;
+			float:left;
+			clear:both;
+			overflow:auto;
+			max-height:250px;
+		}
+
+		ul{
+			list-style:none;
+			padding:0;
+			margin:0;
+		}
+	}
+
+	.axis-options{
+		width:40%;
+		float:left;
+		border-right:1px solid #c2c2c2;
+	}
+	.graph-display{
+		width:60%;
+		float:left;
+		border-left:1px solid #c2c2c2;
+		border-bottom:1px solid #c2c2c2;
+	}
+	.graph-options{
+		width:100%;
+		clear:both;
+		float:left;
+	}
+}
+
+.plotly-container{
+	border:1px solid #c2c2c2;
+	margin:20px;
+	border-radius:5px;
+	overflow:hidden;
+}

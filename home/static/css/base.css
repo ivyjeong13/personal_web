@@ -873,6 +873,33 @@ body {
   float: right;
   display: none;
 }
+#sub-nav {
+  position: fixed;
+  top: 80px;
+  z-index: 100;
+  right: 0;
+  width: 150px;
+  background: #516B8C;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+#sub-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 1px solid #fff;
+  border-top: 1px solid #fff;
+}
+#sub-nav ul li {
+  border-bottom: 1px solid #fff;
+  padding: 5px 0;
+  text-align: center;
+  cursor: pointer;
+}
+#sub-nav ul li:hover {
+  background: #000;
+}
 pre[class*="language-"] {
   border: 1px solid #c2c2c2;
   padding-top: 0;

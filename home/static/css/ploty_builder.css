@@ -1,0 +1,103 @@
+.plotly-block {
+  width: 100%;
+  float: left;
+  clear: both;
+}
+.plotly-block .field {
+  width: 100%;
+  float: left;
+  clear: both;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #DDD;
+  padding: 10px;
+}
+.plotly-block .field.btn {
+  cursor: pointer;
+}
+.plotly-block .field.btn:hover {
+  background: #c2c2c2;
+  border-bottom: 1px solid #999;
+}
+.plotly-block .field.long input {
+  width: 90%;
+}
+.plotly-block .field.long span {
+  width: 10%;
+}
+.plotly-block .field input {
+  width: 75%;
+  float: left;
+  height: 25px;
+}
+.plotly-block .field span {
+  width: 25%;
+  display: inline-block;
+  float: left;
+}
+.plotly-block .field span.hide-textarea-btn {
+  background: #999;
+  color: #fff;
+  padding: 0 10px;
+  width: initial;
+  float: none;
+  cursor: pointer;
+  font-weight: 500;
+  border-radius: 2px;
+}
+.plotly-block .field span.hide-textarea-btn:hover {
+  background: #000;
+}
+.plotly-block .field .block-subtitle {
+  font-weight: bold;
+}
+.plotly-block .field .block-subtitle.spc {
+  margin-bottom: 5px;
+}
+.plotly-block .field .list_series li span {
+  font-weight: bold;
+  font-size: 12px;
+  display: block;
+  clear: both;
+  width: initial;
+  float: none;
+}
+.plotly-block .field .list_series li select[name="series_type"] {
+  height: 30px;
+  border: 1px solid #999;
+  position: relative;
+  top: 2px;
+}
+.plotly-block .field textarea {
+  width: 100%;
+  float: left;
+  clear: both;
+  overflow: auto;
+  max-height: 250px;
+}
+.plotly-block .field ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.plotly-block .axis-options {
+  width: 40%;
+  float: left;
+  border-right: 1px solid #c2c2c2;
+}
+.plotly-block .graph-display {
+  width: 60%;
+  float: left;
+  border-left: 1px solid #c2c2c2;
+  border-bottom: 1px solid #c2c2c2;
+}
+.plotly-block .graph-options {
+  width: 100%;
+  clear: both;
+  float: left;
+}
+.plotly-container {
+  border: 1px solid #c2c2c2;
+  margin: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}

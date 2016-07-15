@@ -1,0 +1,106 @@
+<script type="text/javascript" src="/static/plugins/plotly.js-1.14.2/dist/plotly.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/static/plugins/bgrins-spectrum-98454b5/spectrum.js" charset="utf-8"></script>
+<script type="text/javascript" src="/static/plugins/js-xlsx/src/xlsx.core.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/static/plugins/faisalman-simple-excel-js-3a2b9be/src/simple-excel.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="/static/plugins/bgrins-spectrum-98454b5/spectrum.css">
+<script type="text/javascript" src="/static/js/plotly_builder.js" charset="utf-8"></script>
+<link rel="stylesheet" href="/static/css/ploty_builder.css">
+<div class="plotly-container">
+	<div class="plotly-block">
+		<div class="graph-options">
+			<div class="field long">
+				<span>Title:</span> <input name="title" type="text">
+			</div>
+			<div class="field long">
+				<span>Source:</span> <input name="source" type="text">
+			</div>
+
+			<div class="field">
+				<input type="file" id="fileInput" name="file" class="import_plotly_data_btn">
+			</div>
+
+			<div class="field">
+				<div class="block-subtitle spc">
+					Data: <span class="hide-textarea-btn">Hide</span>
+				</div>
+				<textarea name="database" rows="1000" cols="1000"></textarea>
+			</div>
+
+			<div class="field">
+				<div class="block-subtitle">
+					Series Options
+				</div>
+			</div>
+			<div class="field">
+				<ul class="list_series">
+					<li>
+						<span>NAME HERE</span>
+						<input name="series_name" type="hidden" value="series_name">
+						<input name="series_color" type="text" id="showPaletteOnly">
+						<select name="series_type">
+							<option value="line">Line</option>
+							<option value="scatter">Scatter</option>
+							<option value="bar">Bar</option>
+							<option value="column">Column</option>
+						</select>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="axis-options">
+			<div class="option">
+				<div class="field btn">
+					<div class="block-subtitle">
+						X-Axis Options
+					</div>
+				</div>
+				<div class="pulldown">
+					<div class="field">
+						<span>Prefix:</span> <input name="prefix" type="text">
+					</div>
+					<div class="field">
+						<span>Suffix:</span> <input name="suffix" type="text">
+					</div>
+					<div class="field">
+						<span>Number of Ticks:</span> <input name="num_ticks" type="text">
+					</div>
+					<div class="field">
+						<span>Max:</span> <input name="max" type="text">
+					</div>
+					<div class="field">
+						<span>Min:</span> <input name="min" type="text">
+					</div>
+				</div>
+			</div>
+			<div class="option">
+				<div class="field btn">
+					<div class="block-subtitle">
+						Y-Axis Options 
+					</div>
+				</div>
+				<div class="pulldown">
+					<div class="field">
+						<span>Prefix:</span> <input name="prefix" type="text">
+					</div>
+					<div class="field">
+						<span>Suffix:</span> <input name="suffix" type="text">
+					</div>
+					<div class="field">
+						<span>Number of Ticks:</span> <input name="num_ticks" type="text">
+					</div>
+					<div class="field">
+						<span>Max:</span> <input name="max" type="text">
+					</div>
+					<div class="field">
+						<span>Min:</span> <input name="min" type="text">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="graph-display">
+			<div id="myDiv" class="dynamic-graph">
+
+			</div>
+		</div>
+</div>
