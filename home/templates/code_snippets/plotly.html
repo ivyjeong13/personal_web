@@ -23,7 +23,7 @@
 				<div class="block-subtitle spc">
 					Data: <span class="hide-textarea-btn">Hide</span>
 				</div>
-				<textarea name="database" rows="1000" cols="1000"></textarea>
+				<textarea name="database"></textarea>
 			</div>
 
 			<div class="field">
@@ -57,19 +57,28 @@
 				</div>
 				<div class="pulldown">
 					<div class="field">
-						<span>Prefix:</span> <input name="prefix" type="text">
+						<span>Title:</span> <input name="x-title" type="text">
 					</div>
 					<div class="field">
-						<span>Suffix:</span> <input name="suffix" type="text">
+						<span>Prefix:</span> <input name="x-prefix" type="text">
+						<div class="sep">
+							<input name="x-prefix-first" type="checkbox"> <span>First One Only</span>
+						</div>
 					</div>
 					<div class="field">
-						<span>Number of Ticks:</span> <input name="num_ticks" type="text">
+						<span>Suffix:</span> <input name="x-suffix" type="text">
+						<div class="sep">
+							<input name="x-suffix-first" type="checkbox"> <span>First One Only</span>
+						</div>
 					</div>
 					<div class="field">
-						<span>Max:</span> <input name="max" type="text">
+						<span>Number of Ticks:</span> <input name="x-num_ticks" type="text">
 					</div>
 					<div class="field">
-						<span>Min:</span> <input name="min" type="text">
+						<span>Min:</span> <input name="x-min" type="text">
+					</div>
+					<div class="field">
+						<span>Max:</span> <input name="x-max" type="text">
 					</div>
 				</div>
 			</div>
@@ -81,19 +90,28 @@
 				</div>
 				<div class="pulldown">
 					<div class="field">
-						<span>Prefix:</span> <input name="prefix" type="text">
+						<span>Title:</span> <input name="y-title" type="text">
 					</div>
 					<div class="field">
-						<span>Suffix:</span> <input name="suffix" type="text">
+						<span>Prefix:</span> <input name="y-prefix" type="text">
+						<div class="sep">
+							<input name="y-prefix-first" type="checkbox"> <span>First One Only</span>
+						</div>
 					</div>
 					<div class="field">
-						<span>Number of Ticks:</span> <input name="num_ticks" type="text">
+						<span>Suffix:</span> <input name="y-suffix" type="text">
+						<div class="sep">
+							<input name="y-suffix-first" type="checkbox"> <span>First One Only</span>
+						</div>
 					</div>
 					<div class="field">
-						<span>Max:</span> <input name="max" type="text">
+						<span>Number of Ticks:</span> <input name="y-num_ticks" type="text">
 					</div>
 					<div class="field">
-						<span>Min:</span> <input name="min" type="text">
+						<span>Min:</span> <input name="y-min" type="text">
+					</div>
+					<div class="field">
+						<span>Max:</span> <input name="y-max" type="text">
 					</div>
 				</div>
 			</div>
@@ -103,4 +121,5 @@
 
 			</div>
 		</div>
+	</div>
 </div>

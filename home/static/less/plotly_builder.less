@@ -19,7 +19,7 @@
 		}
 
 		&.long{
-			input{
+			input:not([type="checkbox"]){
 				width:90%;
 			}
 
@@ -28,7 +28,20 @@
 			}
 		}
 
-		input{
+		.sep{
+			width:100%;
+			clear:both;
+			float:left;
+			margin-top:5px;
+			input[type="checkbox"]+span{
+				width:initial;
+				float:none;
+				position:relative;
+				top:2px;
+			}
+		}
+
+		input:not([type="checkbox"]){
 			width:75%;
 			float:left;
 			height:25px;
@@ -86,7 +99,7 @@
 			float:left;
 			clear:both;
 			overflow:auto;
-			max-height:250px;
+			height:200px;
 		}
 
 		ul{

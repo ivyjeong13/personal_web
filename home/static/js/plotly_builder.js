@@ -52,12 +52,11 @@ $(document).ready(function(){
 
 function buildGraph(){
 	var trace1 = {
-	  z: [[1.5, 1.23469387755, 1.01020408163, 0.826530612245, 0.683673469388, 0.581632653061, 0.520408163265, 0.5, 0.520408163265, 0.581632653061, 0.683673469388, 0.826530612245, 1.01020408163, 1.23469387755, 1.5], [1.36734693878, 1.10204081633, 0.877551020408, 0.69387755102, 0.551020408163, 0.448979591837, 0.387755102041, 0.367346938776, 0.387755102041, 0.448979591837, 0.551020408163, 0.69387755102, 0.877551020408, 1.10204081633, 1.36734693878], [1.25510204082, 0.989795918367, 0.765306122449, 0.581632653061, 0.438775510204, 0.336734693878, 0.275510204082, 0.255102040816, 0.275510204082, 0.336734693878, 0.438775510204, 0.581632653061, 0.765306122449, 0.989795918367, 1.25510204082], [1.16326530612, 0.897959183673, 0.673469387755, 0.489795918367, 0.34693877551, 0.244897959184, 0.183673469388, 0.163265306122, 0.183673469388, 0.244897959184, 0.34693877551, 0.489795918367, 0.673469387755, 0.897959183673, 1.16326530612], [1.09183673469, 0.826530612245, 0.602040816327, 0.418367346939, 0.275510204082, 0.173469387755, 0.112244897959, 0.0918367346939, 0.112244897959, 0.173469387755, 0.275510204082, 0.418367346939, 0.602040816327, 0.826530612245, 1.09183673469], [1.04081632653, 0.775510204082, 0.551020408163, 0.367346938776, 0.224489795918, 0.122448979592, 0.0612244897959, 0.0408163265306, 0.0612244897959, 0.122448979592, 0.224489795918, 0.367346938776, 0.551020408163, 0.775510204082, 1.04081632653], [1.01020408163, 0.744897959184, 0.520408163265, 0.336734693878, 0.19387755102, 0.0918367346939, 0.030612244898, 0.0102040816327, 0.030612244898, 0.0918367346939, 0.19387755102, 0.336734693878, 0.520408163265, 0.744897959184, 1.01020408163], [1.0, 0.734693877551, 0.510204081633, 0.326530612245, 0.183673469388, 0.0816326530612, 0.0204081632653, 0.0, 0.0204081632653, 0.0816326530612, 0.183673469388, 0.326530612245, 0.510204081633, 0.734693877551, 1.0], [1.01020408163, 0.744897959184, 0.520408163265, 0.336734693878, 0.19387755102, 0.0918367346939, 0.030612244898, 0.0102040816327, 0.030612244898, 0.0918367346939, 0.19387755102, 0.336734693878, 0.520408163265, 0.744897959184, 1.01020408163], [1.04081632653, 0.775510204082, 0.551020408163, 0.367346938776, 0.224489795918, 0.122448979592, 0.0612244897959, 0.0408163265306, 0.0612244897959, 0.122448979592, 0.224489795918, 0.367346938776, 0.551020408163, 0.775510204082, 1.04081632653], [1.09183673469, 0.826530612245, 0.602040816327, 0.418367346939, 0.275510204082, 0.173469387755, 0.112244897959, 0.0918367346939, 0.112244897959, 0.173469387755, 0.275510204082, 0.418367346939, 0.602040816327, 0.826530612245, 1.09183673469], [1.16326530612, 0.897959183673, 0.673469387755, 0.489795918367, 0.34693877551, 0.244897959184, 0.183673469388, 0.163265306122, 0.183673469388, 0.244897959184, 0.34693877551, 0.489795918367, 0.673469387755, 0.897959183673, 1.16326530612], [1.25510204082, 0.989795918367, 0.765306122449, 0.581632653061, 0.438775510204, 0.336734693878, 0.275510204082, 0.255102040816, 0.275510204082, 0.336734693878, 0.438775510204, 0.581632653061, 0.765306122449, 0.989795918367, 1.25510204082], [1.36734693878, 1.10204081633, 0.877551020408, 0.69387755102, 0.551020408163, 0.448979591837, 0.387755102041, 0.367346938776, 0.387755102041, 0.448979591837, 0.551020408163, 0.69387755102, 0.877551020408, 1.10204081633, 1.36734693878], [1.5, 1.23469387755, 1.01020408163, 0.826530612245, 0.683673469388, 0.581632653061, 0.520408163265, 0.5, 0.520408163265, 0.581632653061, 0.683673469388, 0.826530612245, 1.01020408163, 1.23469387755, 1.5]],
 	  x: [-1.0, -0.857142857143, -0.714285714286, -0.571428571429, -0.428571428571, -0.285714285714, -0.142857142857, 0.0, 0.142857142857, 0.285714285714, 0.428571428571, 0.571428571429, 0.714285714286, 0.857142857143, 1.0],
 	  y: [-1.0, -0.857142857143, -0.714285714286, -0.571428571429, -0.428571428571, -0.285714285714, -0.142857142857, 0.0, 0.142857142857, 0.285714285714, 0.428571428571, 0.571428571429, 0.714285714286, 0.857142857143, 1.0],
 	  ncontours: 30,
 	  showscale: false,
-	  type: 'contour'
+	  type: 'line'
 	};
 
 	var trace2 = {
@@ -71,9 +70,18 @@ function buildGraph(){
 
 	var data = [trace1, trace2];
 
-	Plotly.newPlot('myDiv', data);
+	var layout = {
+		margin: {
+			b:120
+		}
+	};
+
+	Plotly.newPlot('myDiv', data, layout);
 }
 
+/**
+	Actions for the chart builder. 
+**/
 $(document).on('click', '.plotly-block .option .btn', function(){
 	$(this).parents('.option:first').find('.pulldown').toggle();
 });
@@ -86,3 +94,174 @@ $(document).on('click', '.plotly-block .hide-textarea-btn', function(){
 	$(this).toggleClass('h_field');
 	$(this).parents('.field:first').find('textarea').slideToggle();
 });
+
+$(document).on('change', 'textarea[name="database"]', function(){
+	console.log($(this).val());
+});
+
+$(document).delegate('textarea[name="database"]', 'keydown', function(e) {
+  var keyCode = e.keyCode || e.which;
+
+  if (keyCode == 9) {
+    e.preventDefault();
+    var start = $(this).get(0).selectionStart;
+    var end = $(this).get(0).selectionEnd;
+
+    // set textarea value to: text before caret + tab + text after caret
+    $(this).val($(this).val().substring(0, start)
+                + "\t"
+                + $(this).val().substring(end));
+
+    // put caret at right position again
+    $(this).get(0).selectionStart =
+    $(this).get(0).selectionEnd = start + 1;
+  }
+});
+
+$(document).on('change', 'input[name="title"]', function(){
+	var chart = getChart($(this));
+
+	chart.layout.title = $(this).val();
+	Plotly.redraw(chart);
+});
+
+$(document).on('change', 'input[name="source"]', function(){
+	var chart = getChart($(this));
+	var $chartblock = $(this).parents('.plotly-block:first');
+	var xtitle = $chartblock.find('input[name="x-title"]').val();
+
+	chart.layout.xaxis = {
+		title: xtitle + '<br><br> <i>Source:'+$(this).val() + '</i><br> NationalJournal | Axis: Data & Charts Hub'
+	};
+	Plotly.redraw(chart);
+});
+
+$(document).on('change', 'input[name="x-title"], input[name="y-title"]', function(){
+	var chart = getChart($(this));
+	var $chartblock = $(this).parents('.plotly-block:first');
+	var src = $chartblock.find('input[name="source"]').val() ? '<i>Source: '+$(this).find('input[name="source"]').val()+'</i><br>' : '';
+
+	if($(this).attr('name').indexOf('x-')>-1){
+		chart.layout.xaxis = {
+			title: $(this).val() + '<br><br>'+src+'NationalJournal | Axis: Data & Charts Hub'
+		};
+	}else{
+		chart.layout.yaxis = {
+			title: $(this).val()
+		};
+	}
+
+	Plotly.redraw(chart);
+});
+
+$(document).on('change', 'input[name="x-num_ticks"], input[name="y-num_ticks"]', function(){
+	var chart = getChart($(this));
+	if($(this).attr('name').indexOf('x-')>-1){
+		chart.layout.xaxis = {
+			nticks: isNaN(parseInt($(this).val())) ? 0 : parseInt($(this).val())
+		}
+	}else{
+		chart.layout.yaxis = {
+			nticks: isNaN(parseInt($(this).val())) ? 0 : parseInt($(this).val())
+		}
+	}
+
+	Plotly.redraw(chart);
+});
+
+var ps_classes = ['input[name="x-prefix"]', 'input[name="x-suffix"]', 'input[name="y-prefix"]', 'input[name="y-suffix"]'];
+$(document).on('change', ps_classes.join(','), function(){
+	var chart = getChart($(this));
+	var $chartblock = $(this).parents('.plotly-block:first');
+	var show = $chartblock.find('input[name="x-prefix-first"]').prop('checked') ? 'first' : 'all';
+	var val = $(this).val();
+	
+	var isX = $(this).attr('name').indexOf('x-') > -1 ? true : false;
+	var isPrefix = $(this).attr('name').indexOf('prefix') > -1 ? true: false;
+	
+	chart = changeSuffixPrefix(chart, isX, isPrefix, val, show);
+
+	Plotly.redraw(chart);
+});
+
+var ps_first_classes = ['input[name="x-prefix-first"]', 'input[name="x-suffix-first"], input[name="y-prefix-first"]', 'input[name="y-suffix-first"]']
+$(document).on('change', ps_first_classes.join(','), function(){
+	var chart = getChart($(this));
+	var $chartblock = $(this).parents('.plotly-block:first');
+	var show = $(this).prop('checked') ? 'first' : 'all';
+
+	var isX = $(this).attr('name').indexOf('x-') > -1 ? true : false;
+	var isPrefix = $(this).attr('name').indexOf('prefix') > -1 ? true: false;
+
+	var name = '';
+	if(isX)
+		name += 'x-';
+	else
+		name += 'y-';
+	if(isPrefix)
+		name += 'prefix';
+	else
+		name += 'suffix';
+
+	var val = $chartblock.find('input[name="'+name+'"]').val();
+
+	chart = changeSuffixPrefix(chart, isX, isPrefix, val, show);
+
+	Plotly.redraw(chart);
+});
+
+$(document).on('change', 'input[name="x-max"], input[name="x-min"], input[name="y-max"], input[name="y-min"]', function(){
+	var chart = getChart($(this));
+	var $chartblock = $(this).parents('.plotly-block:first');
+	var min = null;
+	var max = null;
+
+	if($(this).attr('name').indexOf('min')>-1){
+		min = isNaN(parseFloat($(this).val())) ? null : parseFloat($(this).val());
+		var $max = $chartblock.find('input[name="'+$(this).attr('name').replace('min', 'max')+'"]');
+		max = isNaN(parseFloat($max.val())) ? null : parseFloat($max.val());
+	}
+	else{
+		max = isNaN(parseFloat($(this).val())) ? null : parseFloat($(this).val());
+		var $min = $chartblock.find('input[name="'+$(this).attr('name').replace('max', 'min')+'"]');
+		min = isNaN(parseFloat($min.val())) ? null : parseFloat($min.val());
+	}
+	var update = {}
+	if($(this).attr('name').indexOf('x-')>-1){
+		update = {xaxis: { range: [min, max]}};
+	}else{
+		update = {yaxis: { range: [min, max]}};
+	}
+
+	Plotly.relayout(chart, update);
+});
+
+/**
+	Will change the suffix or prefix for the specified axis.
+**/
+function changeSuffixPrefix(chart, isX, isPrefix, val, show){
+	if(isX){
+		if(isPrefix){
+			chart.layout.xaxis.tickprefix = val;
+			chart.layout.xaxis.showtickprefix = show;
+		}else{
+			chart.layout.xaxis.ticksuffix = val;
+			chart.layout.xaxis.showticksuffix= show;
+		}
+	}
+	else{
+		if(isPrefix){
+			chart.layout.yaxis.tickprefix = val;
+			chart.layout.yaxis.showtickprefix = show;
+		}else{
+			chart.layout.yaxis.ticksuffix = val;
+			chart.layout.yaxis.showticksuffix= show;
+		}
+	}
+	return chart;
+}
+
+function getChart($this){
+	var $chartblock = $this.parents('.plotly-block:first');
+	return document.getElementById($chartblock.find('.dynamic-graph').attr('id'));
+}

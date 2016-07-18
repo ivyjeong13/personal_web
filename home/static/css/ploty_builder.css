@@ -18,13 +18,25 @@
   background: #c2c2c2;
   border-bottom: 1px solid #999;
 }
-.plotly-block .field.long input {
+.plotly-block .field.long input:not([type="checkbox"]) {
   width: 90%;
 }
 .plotly-block .field.long span {
   width: 10%;
 }
-.plotly-block .field input {
+.plotly-block .field .sep {
+  width: 100%;
+  clear: both;
+  float: left;
+  margin-top: 5px;
+}
+.plotly-block .field .sep input[type="checkbox"] + span {
+  width: initial;
+  float: none;
+  position: relative;
+  top: 2px;
+}
+.plotly-block .field input:not([type="checkbox"]) {
   width: 75%;
   float: left;
   height: 25px;
@@ -72,7 +84,7 @@
   float: left;
   clear: both;
   overflow: auto;
-  max-height: 250px;
+  height: 200px;
 }
 .plotly-block .field ul {
   list-style: none;
