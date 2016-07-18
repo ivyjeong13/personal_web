@@ -46,7 +46,8 @@
   display: inline-block;
   float: left;
 }
-.plotly-block .field span.hide-textarea-btn {
+.plotly-block .field span.hide-textarea-btn,
+.plotly-block .field span.example-btn {
   background: #999;
   color: #fff;
   padding: 0 10px;
@@ -56,7 +57,8 @@
   font-weight: 500;
   border-radius: 2px;
 }
-.plotly-block .field span.hide-textarea-btn:hover {
+.plotly-block .field span.hide-textarea-btn:hover,
+.plotly-block .field span.example-btn:hover {
   background: #000;
 }
 .plotly-block .field .block-subtitle {
@@ -64,6 +66,14 @@
 }
 .plotly-block .field .block-subtitle.spc {
   margin-bottom: 5px;
+}
+.plotly-block .field .list_series li {
+  float: left;
+  width: initial;
+  margin-left: 15px;
+}
+.plotly-block .field .list_series li:first-child {
+  margin-left: 0;
 }
 .plotly-block .field .list_series li span {
   font-weight: bold;
@@ -78,6 +88,7 @@
   border: 1px solid #999;
   position: relative;
   top: 2px;
+  margin-left: 5px;
 }
 .plotly-block .field textarea {
   width: 100%;
@@ -85,6 +96,9 @@
   clear: both;
   overflow: auto;
   height: 200px;
+  -moz-tab-size: 20;
+  -o-tab-size: 20;
+  tab-size: 20;
 }
 .plotly-block .field ul {
   list-style: none;

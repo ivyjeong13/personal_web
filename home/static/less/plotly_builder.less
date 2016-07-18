@@ -52,7 +52,7 @@
 			display:inline-block;
 			float:left;
 
-			&.hide-textarea-btn{
+			&.hide-textarea-btn, &.example-btn{
 				background:#999;
 				color:#fff;
 				padding:0 10px;
@@ -77,6 +77,12 @@
 
 		.list_series{
 			li{
+				float:left;
+				width:initial;
+				margin-left:15px;
+				&:first-child{
+					margin-left:0;
+				}
 				span{
 					font-weight:bold;
 					font-size:12px;
@@ -90,6 +96,7 @@
 					border:1px solid #999;
 					position:relative;
 					top:2px;
+					margin-left:5px;
 				}
 			}
 		}
@@ -100,6 +107,10 @@
 			clear:both;
 			overflow:auto;
 			height:200px;
+
+			-moz-tab-size : 20;
+		    -o-tab-size : 20;
+		    tab-size : 20;
 		}
 
 		ul{

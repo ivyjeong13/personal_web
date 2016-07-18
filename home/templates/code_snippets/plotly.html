@@ -1,3 +1,9 @@
+<div>
+	<p>
+		This is a chartbuilder I rebuilt for National Journal's backend. Modifications were made, such as loading with prepopulated data from the CMS, small changes, etc. that are not shown here.
+	</p>
+</div>
+
 <script type="text/javascript" src="/static/plugins/plotly.js-1.14.2/dist/plotly.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="/static/plugins/bgrins-spectrum-98454b5/spectrum.js" charset="utf-8"></script>
 <script type="text/javascript" src="/static/plugins/js-xlsx/src/xlsx.core.min.js" charset="utf-8"></script>
@@ -14,14 +20,18 @@
 			<div class="field long">
 				<span>Source:</span> <input name="source" type="text">
 			</div>
-
+			<!--
 			<div class="field">
 				<input type="file" id="fileInput" name="file" class="import_plotly_data_btn">
 			</div>
+			-->
 
 			<div class="field">
 				<div class="block-subtitle spc">
-					Data: <span class="hide-textarea-btn">Hide</span>
+					Data: <span class="hide-textarea-btn">Hide</span><br>
+				</div>
+				<div class="block-subtitle spc">
+					<span class="example-btn">Render Example</span><br>
 				</div>
 				<textarea name="database"></textarea>
 			</div>
@@ -33,17 +43,7 @@
 			</div>
 			<div class="field">
 				<ul class="list_series">
-					<li>
-						<span>NAME HERE</span>
-						<input name="series_name" type="hidden" value="series_name">
-						<input name="series_color" type="text" id="showPaletteOnly">
-						<select name="series_type">
-							<option value="line">Line</option>
-							<option value="scatter">Scatter</option>
-							<option value="bar">Bar</option>
-							<option value="column">Column</option>
-						</select>
-					</li>
+					<!-- insert dynamically -->
 				</ul>
 			</div>
 		</div>
@@ -118,8 +118,10 @@
 		</div>
 		<div class="graph-display">
 			<div id="myDiv" class="dynamic-graph">
-
+				<!-- render here -->
 			</div>
 		</div>
+		<input type="hidden" name="graph-data">
+		<input type="hidden" name="graph-layout">
 	</div>
 </div>
