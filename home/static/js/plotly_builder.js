@@ -174,7 +174,7 @@ $(document).on('change', 'input[name="source"]', function(){
 $(document).on('change', 'input[name="x-title"], input[name="y-title"]', function(){
 	var chart = getChart($(this));
 	var $chartblock = $(this).parents('.plotly-block:first');
-	var src = $chartblock.find('input[name="source"]').val() ? '<i>Source: '+$(this).find('input[name="source"]').val()+'</i><br>' : '';
+	var src = $chartblock.find('input[name="source"]').val() ? '<i>Source: '+$chartblock.find('input[name="source"]').val()+'</i><br>' : '';
 
 	if($(this).attr('name').indexOf('x-')>-1){
 		chart.layout.xaxis = {
