@@ -245,13 +245,9 @@ $(document).on('change', 'select[name="series_type"]', function(){
 $(document).on('change', 'input[name="x-num_ticks"], input[name="y-num_ticks"]', function(){
 	var chart = getChart($(this));
 	if($(this).attr('name').indexOf('x-')>-1){
-		chart.layout.xaxis = {
-			nticks: isNaN(parseInt($(this).val())) ? 0 : parseInt($(this).val())
-		}
+		chart.layout.xaxis.nticks = isNaN(parseInt($(this).val())) ? 0 : parseInt($(this).val());
 	}else{
-		chart.layout.yaxis = {
-			nticks: isNaN(parseInt($(this).val())) ? 0 : parseInt($(this).val())
-		}
+		chart.layout.yaxis.nticks = isNaN(parseInt($(this).val())) ? 0 : parseInt($(this).val());
 	}
 
 	Plotly.redraw(chart);
@@ -317,11 +313,11 @@ $(document).on('change', 'input[name="x-max"], input[name="x-min"], input[name="
 		var $min = $chartblock.find('input[name="'+$(this).attr('name').replace('max', 'min')+'"]');
 		min = isNaN(parseFloat($min.val())) ? null : parseFloat($min.val());
 	}
-	var update = {}
+	var update = chart.layout;
 	if($(this).attr('name').indexOf('x-')>-1){
-		update = {xaxis: { range: [min, max]}};
+		update.xaxis.range = [min, max];
 	}else{
-		update = {yaxis: { range: [min, max]}};
+		update.yaxis.range = [min, max];
 	}
 
 	Plotly.relayout(chart, update);
