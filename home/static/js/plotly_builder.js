@@ -293,14 +293,14 @@ $(document).on('change', ps_classes.join(','), function(){
     setData($(this), chart);
 });
 
-var ps_first_classes = ['input[name="x-prefix-first"]', 'input[name="x-suffix-first"], input[name="y-prefix-first"]', 'input[name="y-suffix-first"]']
+var ps_first_classes = ['input[name="x-pre-first"]', 'input[name="x-suf-first"], input[name="y-pre-first"]', 'input[name="y-suf-first"]']
 $(document).on('change', ps_first_classes.join(','), function(){
     var chart = getChart($(this));
     var $chartblock = $(this).parents('.plotly-block:first');
     var show = $(this).prop('checked') ? 'first' : 'all';
 
     var isX = $(this).attr('name').indexOf('x-') > -1 ? true : false;
-    var isPrefix = $(this).attr('name').indexOf('prefix') > -1 ? true: false;
+    var isPrefix = $(this).attr('name').indexOf('pre') > -1 ? true: false;
 
     var name = '';
     if(isX)
