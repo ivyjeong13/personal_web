@@ -2,7 +2,8 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from home.views import HomeView, CodeView, HobbyView
 from project.views import ProjectView, DotaseekerView, DSLoginView, \
-DSRegisterView, DSSigninView, DSDashboardView, DSEditView, DSSearchView
+DSRegisterView, DSSigninView, DSDashboardView, DSEditView, DSSearchView, \
+RandomMangaView, TopTrendsView
 
 urlpatterns = [
     # Examples:
@@ -17,6 +18,8 @@ urlpatterns = [
     url(r'^dotaseeker/search', DSSearchView.as_view()),
     url(r'^dotaseeker/signin', DSSigninView.as_view()),
     url(r'^dotaseeker/', DotaseekerView.as_view()),
+    url(r'^randommanga/', RandomMangaView.as_view()),
+    url(r'^toptrends/', TopTrendsView.as_view()),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^ijeong/2016/admin/', include(admin.site.urls)),

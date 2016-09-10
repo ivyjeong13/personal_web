@@ -1,0 +1,17 @@
+<div class="manga-info-view">
+	<div class="left">
+		<div class="go-back">
+			&laquo; Continue Browsing
+		</div>
+
+		<div class="title"><%= info.get('title') %> (<%= info.get('released') %>)</div>
+		<div class="author"><%= info.get('artist') %></div>
+		<div class="description"><%= info.get('description').split('\n').join('<br>') %></div>
+
+		<div class="helpful-tip">
+			Click the image to start reading the first chapter &raquo;
+		</div>
+	</div>
+	<div class="right" id="showChapter">
+	</div>
+</div>

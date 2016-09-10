@@ -1,0 +1,42 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+	<title>Random Manga</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="mxRH-jX1pR5MjoxIjXJOxnDElPR-loQvW49hc6LMh6w" />
+	
+	<link rel="stylesheet" href="{% static "css/flexboxgrid.css" %}">
+	<link rel="stylesheet" href="{% static "css/animate.css" %}">
+	<link rel="stylesheet" href="{% static "css/hover.css" %}">
+	<link rel="stylesheet" href="{% static "css/elegant-icons.css" %}">
+	<link rel="stylesheet" href="{% static "css/base.css" %}">
+	<link rel="stylesheet" href="{% static "css/randommanga/rm.css" %}">
+
+	<script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "js/jquery.onscreen.min.js" %}"></script>
+    <script src="{% static "js/underscore-min.js" %}"></script>
+    <script src="{% static "js/backbone-min.js" %}"></script>
+    <script src="{% static "js/randommanga.js" %}"></script>
+</head>
+<body class="randommanga">
+	<div id="randomList">
+
+	</div>
+	<div class="credit">
+		Powered By <a href="http://www.mangaeden.com/api/">MangaEden</a> API
+	</div>
+
+	<script type="text/template" id="manga-tpl">
+		{% include "randommanga/manga_template.html" %}
+	</script>
+	<script type="text/template" id="manga-info-tpl">
+		{% include "randommanga/manga_info.html" %}
+	</script>
+	<script type="text/template" id="first-chapter-tpl">
+		{% include "randommanga/first_chapter.html" %}
+	</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<ul class="chapter">
+	<% _.each(chapter.get('images'), function(page){ %>
+		<li data-src="<%= MANGA_EDEN_CDN %><%= page[1] %>">
+			<img src="" />
+		</li>
+	<% }); %>
+</ul>

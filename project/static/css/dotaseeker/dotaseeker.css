@@ -6,32 +6,32 @@
 }
 @font-face {
   font-family: 'GlacialInd';
-  src: url('../fonts/GlacialIndifference-Regular.otf');
+  src: url('/static/fonts/GlacialIndifference-Regular.otf');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'GlacialInd';
-  src: url('../fonts/GlacialIndifference-Bold.otf');
+  src: url('/static/fonts/GlacialIndifference-Bold.otf');
   font-weight: 700;
   font-style: bold;
 }
 @font-face {
   font-family: 'GlacialInd';
-  src: url('../fonts/GlacialIndifference-Italic.otf');
+  src: url('/static/fonts/GlacialIndifference-Italic.otf');
   font-weight: 500;
   font-style: italic;
 }
 @font-face {
   font-family: 'Griffos';
-  src: url('../fonts/GriffosFont.ttf');
+  src: url('/static/fonts/GriffosFont.ttf');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'Elegant Icons';
-  src: url('../fonts/ElegantIcons.eot');
-  src: url('../fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'), url('../fonts/ElegantIcons.woff') format('woff'), url('../fonts/ElegantIcons.ttf') format('truetype'), url('../fonts/ElegantIcons.svg#eleganticonsregular') format('svg');
+  src: url('/static/fonts/ElegantIcons.eot');
+  src: url('/static/fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'), url('/static/fonts/ElegantIcons.woff') format('woff'), url('/static/fonts/ElegantIcons.ttf') format('truetype'), url('/static/fonts/ElegantIcons.svg#eleganticonsregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -921,13 +921,23 @@ body {
 #projectBody .project:last-child {
   border-right: 0;
 }
-/* line 818, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 819, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+/* line 828, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #projectBody .project img {
   height: 100%;
   position: relative;
   z-index: -1;
 }
-/* line 823, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 833, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #projectBody .project .text {
   position: absolute;
   top: 50%;
@@ -939,50 +949,51 @@ body {
   width: 100%;
   text-align: center;
   z-index: 5;
+  text-shadow: 1px 1px #000;
 }
-/* line 835, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 846, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #projectBody .project .text .headline {
   font-size: 50px;
   font-family: 'Griffos', serif;
 }
-/* line 839, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 850, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #projectBody .project .text .subheadline {
   font-size: 15px;
   font-family: 'GlacialInd', serif;
 }
-/* line 847, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 858, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .code-body h1 {
   margin-top: 100px;
   font-size: 40px;
   font-family: 'GlacialInd', serif;
   font-weight: 500;
 }
-/* line 854, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 865, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .code-body .exp {
   width: 50%;
   font-size: 16px;
 }
-/* line 859, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 870, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .code-body img {
   width: 100%;
 }
-/* line 863, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 874, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .code-body .border-top {
   border-top: 1px solid #c2c2c2;
   padding-top: 60px;
   margin-top: 20px;
 }
-/* line 869, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 880, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .code-body .code-title {
   font-size: 20px;
   font-weight: bold;
   display: block;
 }
-/* line 875, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 886, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .empty-spc {
   padding: 25px 0;
 }
-/* line 878, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 889, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .snp-banner {
   width: 100%;
   background: #fff;
@@ -993,7 +1004,7 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 888, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 899, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .snp-banner.full {
   background: #516B8C;
   color: #fff;
@@ -1002,11 +1013,11 @@ body {
   padding: 8px 0;
   margin-top: 40px;
 }
-/* line 897, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 908, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .snp-banner:before {
   background: #516B8C;
 }
-/* line 900, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 911, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .snp-banner a {
   color: #000;
   display: inline-block;
@@ -1014,12 +1025,12 @@ body {
   text-decoration: none;
   padding: 5px 0 8px 0;
 }
-/* line 906, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 917, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .snp-banner a span {
   float: right;
   display: none;
 }
-/* line 913, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 924, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #sub-nav {
   position: fixed;
   top: 80px;
@@ -1031,7 +1042,7 @@ body {
   font-size: 12px;
   text-transform: uppercase;
 }
-/* line 924, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 935, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #sub-nav ul {
   list-style: none;
   padding: 0;
@@ -1039,29 +1050,29 @@ body {
   border-left: 1px solid #fff;
   border-top: 1px solid #fff;
 }
-/* line 930, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 941, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #sub-nav ul li {
   border-bottom: 1px solid #fff;
   padding: 5px 0;
   text-align: center;
   cursor: pointer;
 }
-/* line 935, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 946, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #sub-nav ul li:hover {
   background: #000;
 }
-/* line 942, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 953, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 pre[class*="language-"] {
   border: 1px solid #c2c2c2;
   padding-top: 0;
   padding-bottom: 0;
 }
-/* line 946, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 957, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 pre[class*="language-"] code {
   font-size: 12px;
   line-height: 1.1;
 }
-/* line 952, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 963, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 footer {
   margin-top: 70px;
 }
@@ -2668,4 +2679,3 @@ footer {
     display: block;
   }
 }
-/*# sourceMappingURL=dotaseeker.css.map */

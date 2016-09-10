@@ -1,0 +1,9 @@
+<div class="id_manga" data-id="<%= manga['i'] %>"></div>
+<div class="overlay">
+	<img src="<%= MANGA_EDEN_CDN %><%= manga['im'] %>"/>
+</div>
+<ul class="tags">
+<% _.each(manga['c'], function(tag){ %>
+	<li><%= tag %></li>
+<% }); %>
+</ul>

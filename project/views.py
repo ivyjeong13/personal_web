@@ -23,6 +23,30 @@ class ProjectView(TemplateView):
 		context = super(ProjectView, self).get_context_data(**kwargs)
 		return context
 
+class TopTrendsView(TemplateView):
+	def dispatch(self, request, *args, **kwargs):
+		return super(TopTrendsView, self).dispatch(request, *args, **kwargs)
+
+	def get(self, request, *args, **kwargs):
+		context = self.get_context_data()
+		return render(request, 'toptrends/main.html', context)
+
+	def get_context_data(self, **kwargs):
+		context = super(TopTrendsView, self).get_context_data(**kwargs)
+		return context
+
+class RandomMangaView(TemplateView):
+	def dispatch(self, request, *args, **kwargs):
+		return super(RandomMangaView, self).dispatch(request, *args, **kwargs)
+
+	def get(self, request, *args, **kwargs):
+		context = self.get_context_data()
+		return render(request, 'randommanga/main.html', context)
+
+	def get_context_data(self, **kwargs):
+		context = super(RandomMangaView, self).get_context_data(**kwargs)
+		return context
+
 class DotaseekerView(TemplateView):
 	def dispatch(self, request, *args, **kwargs):
 		return super(DotaseekerView, self).dispatch(request, *args, **kwargs)
@@ -254,6 +278,7 @@ class DSDashboardView(TemplateView):
 					self.pref_left = 0
 			else:
 				self.pref_heroes = None
+				self.pref_left = 0
 			self.pref_region = profile.pref_region
 			self.carries = profile.carries
 			self.supports = profile.supports
