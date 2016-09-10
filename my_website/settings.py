@@ -141,16 +141,10 @@ ALLOWED_HOSTS = ['*']
 SOCIAL_AUTH_STEAM_API_KEY = os.environ.get('STEAM_API_KEY')
 STEAM_API_KEY = os.environ.get('STEAM_API_KEY')
 SECRET_KEY = os.environ.get('SECRET_KEY')
-#GOOGLE_ACCT = os.environ.get('GOOGLE_ACCT')
-#GOOGLE_PW = os.environ.get('GOOGLE_PW')
-#TWITTER_API_KEY = os.environ.get('TWITTER_API_KEY')
-#TWITTER_SECRET_KEY = os.environ.get('TWITTER_SECRET_KEY')
-GOOGLE_ACCT = 'ijeongtestdev@gmail.com'
-GOOGLE_PW = 'AxiahRurouni!1990'
-TWITTER_API_KEY = 'qza1ooEGazo1oQseevtSgqfqI'
-TWITTER_SECRET_KEY = 'imjF0cNc1dNW7VGotrMsEihXGN4a7Oqlx7mByxPYlLsf2WJFKE'
-TWITTER_TOKEN = '2828275968-Q3xOARIeUjlg0vPsTsDDinsYtbX5Hx6GfsAOOHj'
-TWITTER_SECRET_TOKEN = 'MVqvenY9E0naSzb9LX52KEDtHmxvbvcPPSCqWgJUwcyPI'
+GOOGLE_ACCT = os.environ.get('GOOGLE_ACCT')
+GOOGLE_PW = os.environ.get('GOOGLE_PW')
+TWITTER_API_KEY = os.environ.get('TWITTER_API_KEY')
+TWITTER_SECRET_KEY = os.environ.get('TWITTER_SECRET_KEY')
 
 #########################
 # IMPORT LOCAL SETTINGS #
