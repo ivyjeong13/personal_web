@@ -19,9 +19,9 @@ urlpatterns = [
     url(r'^dotaseeker/signin', DSSigninView.as_view()),
     url(r'^dotaseeker/', DotaseekerView.as_view()),
     url(r'^randommanga/', RandomMangaView.as_view()),
-    url(r'^toptrends/', TopTrendsView.as_view()),
+    url(r'^toptrends/api/twitter', 'project.api.search_twitter_tweets'),
+    url(r'^toptrends', TopTrendsView.as_view()),
     # url(r'^blog/', include('blog.urls')),
-
     url(r'^ijeong/2016/admin/', include(admin.site.urls)),
     url('', include('social.apps.django_app.urls', namespace='social'))
 ]

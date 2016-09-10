@@ -1,0 +1,45 @@
+<div class="related-tweets">
+<% if(tweets.get('statuses').length == 0){ %>
+	<div class="nothing">
+		<p>No Twitter Tweets with the trending term "<%= tweets.get('term') %>" were found.</p>
+
+		<div class="go-back-btn">
+			Go Back &raquo;
+		</div>
+	</div>
+<% } else { %>
+	<ul>
+	<% _.each(tweets.get('statuses'), function(tweet){ %>
+	<% console.log(tweet) %>
+		<li class="twitter-user">
+			<div class="bg" style="background:#<%= tweet['user']['profile_background_color'] %>">
+				<% if(tweet['user']['profile_background_image_url']){ %>
+				<img src="<%= tweet['user']['profile_background_image_url'] %>"/>
+				<% } %>
+			</div>
+			<% if(tweet['user']['profile_image_url']){ %>
+			<div class="picture">
+				<img src="<%= tweet['user']['profile_image_url'].replace('_normal.png', '_400x400.png').replace('_normal.jpg', '_400x400.jpg').replace('_normal.jpeg', '_400x400.jpeg') %>"/>
+			</div>
+			<% } %>
+			<div class="tweet">
+				<div class="tweeter">
+					<div class="name">
+						<%= tweet['user']['name'] %>
+						<div class="screenname">
+							<a href="https://twitter.com/<%= tweet['user']['screen_name'] %>">@<%= tweet['user']['screen_name'] %></a>
+						</div>
+					</div>
+					<div class="location">
+						<%= tweet['user']['location'] %>
+					</div>
+					<div class="description">
+						<%= tweet['text'] %>
+					</div>
+				</div>
+			</div>
+		</li>
+	<%	}); %>
+	</ul>
+<% } %>
+</div>

@@ -1,0 +1,6 @@
+<div class="country-name"><%= country.get('name') %></div>
+<ul class="country-trending-list">
+<% _.each(country.get('trending'), function(term){ %>
+	<li><%= term %></li>
+<% }); %>
+</ul>

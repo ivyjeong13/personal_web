@@ -1,0 +1,1519 @@
+@font-face {
+  font-family: 'Saint Andrews';
+  src: url('/static/fonts/Saint-Andrews Queen.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GlacialInd';
+  src: url('/static/fonts/GlacialIndifference-Regular.otf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GlacialInd';
+  src: url('/static/fonts/GlacialIndifference-Bold.otf');
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: 'GlacialInd';
+  src: url('/static/fonts/GlacialIndifference-Italic.otf');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Griffos';
+  src: url('/static/fonts/GriffosFont.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Elegant Icons';
+  src: url('/static/fonts/ElegantIcons.eot');
+  src: url('/static/fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'), url('/static/fonts/ElegantIcons.woff') format('woff'), url('/static/fonts/ElegantIcons.ttf') format('truetype'), url('/static/fonts/ElegantIcons.svg#eleganticonsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 3, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.glacial {
+  font-family: 'GlacialInd', serif;
+}
+/* line 6, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.saint {
+  font-family: 'Saint Andrews', sans-serif;
+}
+/* line 9, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.griffos {
+  font-family: 'Griffos', serif;
+}
+/* line 18, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* line 24, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+body {
+  margin: 0;
+  font-family: 'GlacialInd', serif;
+  font-size: 15px;
+}
+/* line 30, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.container {
+  width: 1120px;
+  margin: 0 auto;
+}
+/* line 35, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.row {
+  width: 100%;
+}
+/* line 39, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.nav-wrapper {
+  min-height: 63px;
+  padding-bottom: 30px;
+  width: 100%;
+  clear: both;
+  float: left;
+}
+/* line 47, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#header {
+  max-height: 500px;
+  overflow: hidden;
+}
+/* line 50, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#header img {
+  width: 100%;
+  z-index: -1;
+  position: relative;
+}
+/* line 56, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#header .foreground {
+  color: #ffffff;
+  right: 0;
+  padding-right: 100px;
+  text-align: right;
+}
+/* line 61, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#header .foreground .second {
+  padding-right: 100px;
+}
+/* line 64, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#header .foreground .third {
+  padding-right: 75px;
+}
+/* line 68, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#header .foreground strong {
+  text-transform: uppercase;
+}
+/* line 73, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#header .img-wrapper {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+39,0.65+100 */
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 39%, rgba(0, 0, 0, 0.65) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 39%, rgba(0, 0, 0, 0.65) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 39%, rgba(0, 0, 0, 0.65) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=1);
+  /* IE6-9 */
+  width: 100%;
+  height: 100%;
+}
+/* line 82, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#header .img-wrapper img {
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+}
+/* line 90, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.foreground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 40px;
+}
+/* line 96, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.foreground span {
+  font-family: 'Saint Andrews', sans-serif;
+  font-size: 55px;
+  display: inline-block;
+  visibility: hidden;
+}
+/* line 102, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.foreground span.smaller {
+  font-size: 40px;
+}
+/* line 107, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.foreground p {
+  display: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: -20px;
+}
+/* line 113, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.foreground p.f_1,
+.foreground p.f_2,
+.foreground p.f_3,
+.foreground p.f_4 {
+  margin-bottom: -10px;
+}
+/* line 117, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.foreground p.more {
+  margin-bottom: -25px;
+}
+/* line 123, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#title {
+  font-size: 125px;
+  font-weight: bold;
+  font-family: 'Saint Andrews', sans-serif;
+  margin-top: -100px;
+  color: #000;
+  text-shadow: 1px 1px 1px #fff;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+58&0+0,1+55 */
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 55%, #ffffff 58%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 55%, #ffffff 58%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 55%, #ffffff 58%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+  /* IE6-9 */
+}
+/* line 138, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav {
+  transition: all ease-in 0.15s;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+  clear: both;
+  float: left;
+  position: relative;
+  z-index: 2;
+  bottom: -1px;
+  background: #fff;
+  overflow: hidden;
+}
+/* line 152, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav.fixed {
+  position: fixed;
+  background: #516B8C;
+  padding: 0;
+  top: 0;
+  left: 0;
+  height: 35px;
+  z-index: 9999;
+  box-shadow: 0px 1px 20px #000;
+  width: 100%;
+}
+/* line 162, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav.fixed a {
+  color: #fff;
+  border-left: 1px solid #fff;
+}
+/* line 165, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav.fixed a:last-child {
+  border-right: 1px solid #fff;
+}
+/* line 168, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav.fixed a:hover {
+  color: #516B8C;
+}
+/* line 172, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav.fixed a.hvr-sweep-to-bottom:before {
+  background: #fff;
+}
+/* line 177, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav.fixed .left {
+  color: #fff;
+  font-family: 'Saint Andrews', sans-serif;
+  text-transform: none;
+  float: left;
+  font-size: 32px;
+  font-weight: 500;
+  text-shadow: -1px -1px 0 #516b8c, 1px -1px 0 #516b8c, -1px 1px 0 #516b8c, 1px 1px 0 #516b8c;
+}
+/* line 192, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav .left {
+  display: none;
+}
+/* line 196, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav .r {
+  border-top: 1px solid #516B8C;
+}
+/* line 199, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav ul {
+  float: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* line 205, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav li {
+  float: left;
+}
+/* line 209, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav a {
+  text-decoration: none;
+  color: #516B8C;
+  cursor: pointer;
+  padding: 5px 20px;
+}
+/* line 214, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav a:hover {
+  color: #fff;
+}
+/* line 218, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#nav a.hvr-sweep-to-bottom:before {
+  background: #516B8C;
+}
+/* line 225, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.gray {
+  -webkit-filter: grayscale(70%);
+  -moz-filter: grayscale(70%);
+  -o-filter: grayscale(70%);
+}
+/* line 231, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main {
+  width: 100%;
+  float: left;
+  clear: both;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -125px;
+  padding-bottom: 40px;
+  padding-top: 10px;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0px 10px 30px #ccc;
+}
+/* line 242, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .header {
+  width: 100%;
+  clear: both;
+  padding: 5px 5px;
+  background: #516B8C;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* line 252, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .header.hvr-ripple-out:before {
+  border-color: #516B8C;
+}
+/* line 258, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main p {
+  margin: 0;
+  width: 100%;
+  clear: both;
+  float: left;
+}
+/* line 264, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .text-right {
+  text-align: right;
+}
+/* line 268, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .left,
+#main .right {
+  display: inline-block;
+  width: 50%;
+}
+/* line 272, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .left {
+  float: left;
+}
+/* line 275, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .right {
+  float: right;
+  text-align: right;
+}
+/* line 279, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .pad {
+  padding-bottom: 10px;
+}
+/* line 282, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .pad-top {
+  margin-top: 20px;
+}
+/* line 285, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .pad-top-large {
+  margin-top: 75px;
+}
+/* line 289, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .subheader {
+  font-family: 'Griffos', serif;
+  font-size: 22px;
+}
+/* line 293, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .subheader + .right {
+  padding-top: 5px;
+}
+/* line 298, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .title {
+  margin-top: 20px;
+  border-bottom: 1px solid #516B8C;
+  width: 100%;
+  float: left;
+  clear: both;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+/* line 308, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .title.border-top {
+  border-top: 1px dashed #ccc;
+  padding-top: 30px;
+}
+/* line 316, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#main .details.list ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+/* line 324, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#footer {
+  width: 100%;
+  max-height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+/* line 329, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#footer .img-wrapper {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+17,ffffff+100&1+19,0+100 */
+  background: -moz-linear-gradient(top, #ffffff 17%, #ffffff 19%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 17%, #ffffff 19%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 17%, #ffffff 19%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+  /* IE6-9 */
+  width: 100%;
+  height: 100%;
+}
+/* line 338, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#footer img {
+  width: 100%;
+  z-index: -1;
+  position: relative;
+}
+/* line 344, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#footer .foreground {
+  left: 40px;
+  top: 185px;
+}
+/* line 348, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#footer .foreground .f_1 {
+  padding-left: 50px;
+}
+/* line 351, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#footer .foreground .f_3 {
+  padding-left: 70px;
+}
+/* line 354, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#footer .foreground .f_4 {
+  padding-left: 180px;
+}
+/* line 360, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#hobbyHeader {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  font-family: 'Saint Andrews', sans-serif;
+  font-size: 120px;
+  border-bottom: 1px dashed #fff;
+}
+/* line 369, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#hobbyHeader .abs_center {
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+/* line 378, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#hobbyHeader .hobby-header-wrapper {
+  min-height: 40px;
+  margin: 20px auto 0 auto;
+  width: 218px;
+}
+/* line 384, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#hobbyHeader ul {
+  list-style: none;
+  width: 218px;
+  padding: 0;
+  margin: 0;
+}
+/* line 389, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#hobbyHeader ul li {
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  font-size: 20px;
+  float: left;
+  padding: 4px 10px;
+  margin-right: 15px;
+}
+/* line 397, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#hobbyHeader ul li:last-child {
+  margin-right: 0;
+}
+/* line 400, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#hobbyHeader ul li:hover {
+  background: #fff;
+  color: #000;
+}
+/* line 407, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#hobbyHeader .answer {
+  font-size: 20px;
+  width: 100%;
+  clear: both;
+  float: left;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Griffos', serif;
+  min-height: 26.88px;
+  min-width: 1px;
+}
+/* line 420, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px dashed #fff;
+  background: #000;
+}
+/* line 427, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+14,000000+14&1+0,0+19 */
+  background: -moz-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=0);
+  /* IE6-9 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/* line 441, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .bg-wrapper {
+  background: #000;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+/* line 446, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .bg-wrapper .img-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: none;
+}
+/* line 451, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .bg-wrapper .img-container:first-child {
+  display: block;
+}
+/* line 454, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .bg-wrapper .img-container:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+40&1+0,0+44,0+44 */
+  background: -moz-linear-gradient(left, #000000 0%, rgba(0, 0, 0, 0.09) 40%, rgba(0, 0, 0, 0) 44%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #000000 0%, rgba(0, 0, 0, 0.09) 40%, rgba(0, 0, 0, 0) 44%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #000000 0%, rgba(0, 0, 0, 0.09) 40%, rgba(0, 0, 0, 0) 44%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=1);
+  /* IE6-9 */
+  position: absolute;
+  z-index: 1;
+  content: '';
+  width: 100%;
+  height: 100%;
+}
+/* line 467, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .bg-wrapper img {
+  height: 100vh;
+}
+/* line 472, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .text-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  color: #fff;
+  left: 50px;
+}
+/* line 481, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .text-container .header {
+  width: 100%;
+}
+/* line 485, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .text-container p {
+  width: 33.333%;
+  margin: 0;
+}
+/* line 488, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#clayModel .text-container p:not(.header) {
+  margin-bottom: 15px;
+}
+/* line 495, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.text-container {
+  display: none;
+}
+/* line 498, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.text-container .header {
+  width: 100%;
+  font-size: 100px;
+  font-family: 'Saint Andrews', sans-serif;
+}
+/* line 504, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.text-container p {
+  margin: 0;
+}
+/* line 509, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#muayThai {
+  position: relative;
+  z-index: -1;
+  min-height: 100vh;
+  width: 100%;
+  background: #000;
+  border-bottom: 1px dashed #fff;
+}
+/* line 516, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#muayThai:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+14,000000+14&1+0,0+19 */
+  background: -moz-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #000000 0%, rgba(0, 0, 0, 0.26) 14%, rgba(0, 0, 0, 0) 19%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=0);
+  /* IE6-9 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/* line 531, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#muayThai .bg-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  opacity: .75;
+}
+/* line 535, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#muayThai .bg-wrapper img {
+  visibility: hidden;
+  width: 100%;
+}
+/* line 541, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#muayThai .text-container {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  background: rgba(255, 255, 255, 0.75);
+  color: #000;
+  border-radius: 25px;
+  width: 60%;
+  padding: 20px;
+}
+/* line 553, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming {
+  position: relative;
+  background: #000;
+  overflow: hidden;
+  border-bottom: 1px dashed #fff;
+}
+/* line 558, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .bg-wrapper {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+/* line 563, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .bg-wrapper img {
+  width: 100%;
+  visibility: hidden;
+}
+/* line 568, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .bg-wrapper .gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: 1;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#606c88+0,3f4c6b+100;Grey+3D+%232 */
+  background: #606c88;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #606c88 0%, #3f4c6b 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #606c88 0%, #3f4c6b 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #606c88 0%, #3f4c6b 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#606c88', endColorstr='#3f4c6b', GradientType=0);
+  /* IE6-9 */
+}
+/* line 585, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .text-container {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  color: #fff;
+  z-index: 5;
+  display: block;
+}
+/* line 594, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .games {
+  position: relative;
+  display: inline-block;
+  padding: 10px 0;
+}
+/* line 598, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .games:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  width: 99999px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 1px 1px 25px rgba(255, 255, 255, 0.85);
+}
+/* line 608, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .games img {
+  float: left;
+  margin-right: 15px;
+  max-height: 70px;
+}
+/* line 615, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .list_sp_games {
+  position: relative;
+}
+/* line 617, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .list_sp_games .btn {
+  display: inline-block;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  color: #fff;
+  font-family: 'GlacialInd', serif;
+  width: 200px;
+  padding: 5px 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: transparent;
+}
+/* line 632, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .list_sp_games .btn:hover:before {
+  background: #516B8C;
+}
+/* line 637, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .list_sp_games .lightbox {
+  display: none;
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  background: rgba(255, 255, 255, 0.95);
+  width: 250px;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #000;
+  color: #000;
+  padding: 0 20px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
+/* line 651, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .list_sp_games .lightbox ul {
+  list-style: none;
+  padding: 0;
+}
+/* line 655, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#videoGaming .list_sp_games .lightbox ul .divide {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+/* line 665, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#guitar {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+/* line 670, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#guitar .bg-wrapper {
+  position: relative;
+}
+/* line 672, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#guitar .bg-wrapper:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+  background: -moz-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+  /* IE6-9 */
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 686, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#guitar .bg-wrapper img {
+  width: 100%;
+  visibility: hidden;
+}
+/* line 691, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#guitar .video {
+  width: 580px;
+  height: 435px;
+  background: #000;
+  overflow: hidden;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  left: 50px;
+  position: absolute;
+  z-index: 2;
+  box-shadow: 0px 2px 40px #000;
+}
+/* line 708, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#guitar .text-container {
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  display: block;
+  right: 40px;
+  position: absolute;
+  z-index: 2;
+  background: #fff;
+  border: 1px solid black;
+  width: 35%;
+  padding: 0 20px 20px 20px;
+}
+/* line 725, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#drawing {
+  border-top: 1px dashed #000;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+/* line 730, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#drawing .bg-wrapper {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  filter: blur(10px);
+  -ms-filter: blur(10px);
+  -webkit-filter: blur(10px);
+  transition: ease-in all 0.35s;
+  -ms-transition: ease-in all 0.35s;
+  -webkit-transition: ease-in all 0.35s;
+}
+/* line 741, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#drawing .bg-wrapper.clean {
+  filter: blur(0);
+  -ms-filter: blur(0);
+  -webkit-filter: blur(0);
+}
+/* line 746, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#drawing .bg-wrapper img {
+  width: 100%;
+}
+/* line 751, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#drawing .text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width: 50%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-bottom: 30px;
+}
+/* line 768, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody {
+  background: #000;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 773, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project {
+  display: block;
+  width: 25%;
+  height: 100%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  border-right: 1px dashed #fff;
+  filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  transition: ease-in all 0.25s;
+  -ms-transition: ease-in all 0.25s;
+  -webkit-transition: ease-in all 0.25s;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* line 790, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project.disabled {
+  cursor: default;
+}
+/* line 793, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project:hover {
+  filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
+/* line 799, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project:first-child:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ad2800+0,ffffff+100&1+0,0+100 */
+  background: -moz-linear-gradient(left, #ad2800 0%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ad2800 0%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ad2800 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ad2800', endColorstr='#00ffffff', GradientType=1);
+  /* IE6-9 */
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  opacity: 0.65;
+}
+/* line 815, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project:last-child {
+  border-right: 0;
+}
+/* line 819, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+/* line 828, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project img {
+  height: 100%;
+  position: relative;
+  z-index: -1;
+}
+/* line 833, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project .text {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  left: 50%;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+  text-shadow: 1px 1px #000;
+}
+/* line 846, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project .text .headline {
+  font-size: 50px;
+  font-family: 'Griffos', serif;
+}
+/* line 850, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project .text .subheadline {
+  font-size: 15px;
+  font-family: 'GlacialInd', serif;
+  padding: 0 20px;
+}
+/* line 859, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.code-body h1 {
+  margin-top: 100px;
+  font-size: 40px;
+  font-family: 'GlacialInd', serif;
+  font-weight: 500;
+}
+/* line 866, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.code-body .exp {
+  width: 50%;
+  font-size: 16px;
+}
+/* line 871, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.code-body img {
+  width: 100%;
+}
+/* line 875, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.code-body .border-top {
+  border-top: 1px solid #c2c2c2;
+  padding-top: 60px;
+  margin-top: 20px;
+}
+/* line 881, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.code-body .code-title {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+}
+/* line 887, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.empty-spc {
+  padding: 25px 0;
+}
+/* line 890, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.snp-banner {
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #516B8C;
+  border-bottom: 1px solid #516B8C;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 900, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.snp-banner.full {
+  background: #516B8C;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 0;
+  margin-top: 40px;
+}
+/* line 909, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.snp-banner:before {
+  background: #516B8C;
+}
+/* line 912, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.snp-banner a {
+  color: #000;
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  padding: 5px 0 8px 0;
+}
+/* line 918, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+.snp-banner a span {
+  float: right;
+  display: none;
+}
+/* line 925, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#sub-nav {
+  position: fixed;
+  top: 80px;
+  z-index: 100;
+  right: 0;
+  width: 150px;
+  background: #516B8C;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+/* line 936, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#sub-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 1px solid #fff;
+  border-top: 1px solid #fff;
+}
+/* line 942, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#sub-nav ul li {
+  border-bottom: 1px solid #fff;
+  padding: 5px 0;
+  text-align: center;
+  cursor: pointer;
+}
+/* line 947, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#sub-nav ul li:hover {
+  background: #000;
+}
+/* line 954, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+pre[class*="language-"] {
+  border: 1px solid #c2c2c2;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/* line 958, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+pre[class*="language-"] code {
+  font-size: 12px;
+  line-height: 1.1;
+}
+/* line 964, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+footer {
+  margin-top: 70px;
+}
+@media only screen and (max-width: 1120px) {
+  /* line 1, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/tablet.less */
+  .container {
+    width: 740px;
+  }
+}
+@media only screen and (max-width: 740px) {
+  /* line 1, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  .container {
+    width: 100%;
+  }
+  /* line 5, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #header {
+    max-height: 215px;
+  }
+  /* line 7, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #header .foreground {
+    top: 0;
+    padding-right: 10px;
+  }
+  /* line 11, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #header .foreground span {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  /* line 16, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #header .foreground p {
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+  }
+  /* line 21, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #header .foreground .second {
+    padding-right: 20px;
+  }
+  /* line 25, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #header .foreground .third {
+    padding-right: 50px;
+  }
+  /* line 31, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #title {
+    font-size: 50px;
+    margin-top: -40px;
+  }
+  /* line 37, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #nav ul {
+    font-size: 15px;
+  }
+  /* line 41, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #nav.fixed {
+    height: 29px;
+  }
+  /* line 46, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  .nav-wrapper {
+    padding-bottom: 0;
+    min-height: 30px;
+  }
+  /* line 51, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  .row {
+    margin: 0;
+  }
+  /* line 55, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #main {
+    padding-top: 0;
+    border: 0;
+    box-shadow: none;
+    margin-bottom: 0;
+  }
+  /* line 61, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #main .col-xs-12 {
+    padding: 0;
+  }
+  /* line 64, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #main .col-xs-12 .details {
+    padding: 0 20px;
+  }
+  /* line 69, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #main .header {
+    margin-top: 40px;
+  }
+  /* line 73, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #main .pad-top-large {
+    margin-top: 40px;
+  }
+  /* line 79, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #footer .foreground {
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    padding-left: 10px;
+  }
+  /* line 85, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #footer .foreground span {
+    font-size: 28px;
+  }
+  /* line 89, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #footer .foreground .f_1 {
+    padding-left: 0;
+  }
+  /* line 93, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #footer .foreground p {
+    margin-bottom: 5px;
+  }
+  /* line 100, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  .code-body .exp {
+    width: 100%;
+    padding: 0 20px;
+  }
+  /* line 106, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  .empty-spc {
+    padding: 15px 0;
+  }
+  /* line 110, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #projectBody {
+    min-height: 100vh;
+    height: auto;
+  }
+  /* line 113, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #projectBody .project {
+    width: 50%;
+    height: 100vh;
+    border-top: 1px dashed #fff;
+  }
+  /* line 119, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #projectBody .project .text .headline {
+    font-size: 28px;
+  }
+  /* line 127, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #clayModel .text-container {
+    top: 0px;
+    left: 20px;
+    transform: none;
+    -webkit-transform: none;
+    -ms-transform: none;
+    z-index: 2;
+  }
+  /* line 134, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #clayModel .text-container p {
+    width: 100%;
+  }
+  /* line 139, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #clayModel .header {
+    font-size: 50px;
+  }
+  /* line 144, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #muayThai {
+    min-height: 100vh;
+  }
+  /* line 146, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #muayThai .bg-wrapper {
+    height: initial;
+    min-height: initial;
+  }
+  /* line 150, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #muayThai .bg-wrapper img {
+    padding-top: 30px;
+  }
+  /* line 154, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #muayThai .text-container {
+    width: 95%;
+    margin: 2.5%;
+    top: 42vh;
+    left: 0;
+    bottom: initial;
+    z-index: 2;
+    background: #fff;
+    border-radius: 0;
+    border: 1px dashed #000;
+  }
+  /* line 165, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #muayThai .text-container .header {
+    font-size: 40px;
+  }
+  /* line 173, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #videoGaming .bg-wrapper img {
+    width: initial;
+    height: 100vh;
+  }
+  /* line 179, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #videoGaming .text-container {
+    right: 20px;
+    bottom: 20px;
+  }
+  /* line 182, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #videoGaming .text-container .header {
+    font-size: 50px;
+  }
+  /* line 188, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #videoGaming .games img {
+    max-height: 35px;
+  }
+  /* line 194, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #videoGaming .list_sp_games .lightbox {
+    width: 220px;
+  }
+  /* line 202, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #guitar .bg-wrapper img {
+    height: 100vh;
+    width: initial;
+  }
+  /* line 208, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #guitar .video {
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+    height: 290px;
+    z-index: 3;
+  }
+  /* line 218, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #guitar .video video {
+    width: 100%;
+    height: 290px;
+  }
+  /* line 224, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #guitar .text-container {
+    width: 100%;
+    top: 50vh;
+    border: none;
+    left: 0;
+    transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+  }
+  /* line 232, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #guitar .text-container .header {
+    font-size: 50px;
+  }
+  /* line 240, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #drawing .bg-wrapper img {
+    height: 100vh;
+    width: initial;
+  }
+  /* line 245, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #drawing .text-container {
+    width: 90%;
+  }
+  /* line 247, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  #drawing .text-container .header {
+    font-size: 50px;
+  }
+  /* line 254, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  .snp-banner .snp-title {
+    padding-left: 20px;
+  }
+  /* line 257, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  .snp-banner a {
+    padding: 5px 10px;
+  }
+  /* line 263, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/phone.less */
+  .code-body h1 {
+    margin-left: 20px;
+  }
+}
+/* line 3, tt.less */
+#trendBackbone {
+  height: 100vh;
+}
+/* line 4, tt.less */
+#trendBackbone canvas,
+#trendBackbone .related-tweets {
+  box-shadow: 2px 2px 20px #b5b5b5;
+  border-bottom: 1px solid #c2c2c2;
+  background: #e6e6e6;
+}
+/* line 13, tt.less */
+.trendtitle {
+  width: 100%;
+  font-size: 70px;
+  font-family: 'Saint Andrews', sans-serif;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+/* line 21, tt.less */
+.trendtitle .title {
+  cursor: pointer;
+}
+/* line 26, tt.less */
+#listTrendingFromCountry {
+  height: 100vh;
+  overflow-y: auto;
+  width: 30%;
+  position: absolute;
+  top: 0;
+  left: -50%;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 2px 2px 10px #999;
+  z-index: 2;
+}
+/* line 37, tt.less */
+#listTrendingFromCountry .country-name {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+/* line 44, tt.less */
+#listTrendingFromCountry ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 49, tt.less */
+#listTrendingFromCountry ul li {
+  padding: 4px 20px;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #e2e2e2;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+}
+/* line 60, tt.less */
+#listTrendingFromCountry ul li:hover {
+  background: #000;
+  color: #fff;
+  border-bottom: 1px solid #000;
+}
+/* line 69, tt.less */
+.related-tweets {
+  height: 85%;
+  overflow-y: auto;
+  width: 100%;
+}
+/* line 74, tt.less */
+.related-tweets ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 79, tt.less */
+.related-tweets ul li {
+  width: 50%;
+  float: left;
+  position: relative;
+  border-bottom: 1px solid #c2c2c2;
+  border-top: 1px solid #eee;
+  border-right: 1px solid #c2c2c2;
+  border-left: 1px solid #eee;
+}
+/* line 89, tt.less */
+.related-tweets ul li:nth-child(2n+1) {
+  clear: left;
+}
+/* line 94, tt.less */
+.related-tweets ul .picture {
+  width: 20%;
+  padding: 20px;
+  float: left;
+  position: relative;
+  z-index: 2;
+}
+/* line 100, tt.less */
+.related-tweets ul .picture img {
+  width: 100%;
+  border: 1px solid #c2c2c2;
+}
+/* line 106, tt.less */
+.related-tweets ul .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 114, tt.less */
+.related-tweets ul .bg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+}
+/* line 124, tt.less */
+.related-tweets ul .bg img {
+  width: 100%;
+}
+/* line 129, tt.less */
+.related-tweets ul .tweet {
+  width: 80%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+/* line 135, tt.less */
+.related-tweets ul .tweet .tweeter {
+  position: relative;
+  z-index: 2;
+  padding: 10px;
+}
+/* line 140, tt.less */
+.related-tweets ul .tweet .tweeter .name {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 145, tt.less */
+.related-tweets ul .tweet .tweeter .name .screenname {
+  font-size: 14px;
+  display: inline;
+  text-transform: none;
+  font-weight: 100;
+}
+/* line 150, tt.less */
+.related-tweets ul .tweet .tweeter .name .screenname a {
+  color: #000;
+}
+/* line 152, tt.less */
+.related-tweets ul .tweet .tweeter .name .screenname a:hover {
+  color: #94c1e4;
+}
+/* line 159, tt.less */
+.related-tweets ul .tweet .tweeter .description {
+  padding: 15px 0;
+}
+/* line 167, tt.less */
+.nothing {
+  padding: 20px;
+}
+/* line 169, tt.less */
+.nothing .go-back-btn {
+  color: #fff;
+  background: #000;
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+/* line 178, tt.less */
+.nothing .go-back-btn:hover {
+  background: #fff;
+  color: #000;
+}
+/*# sourceMappingURL=tt.css.map */

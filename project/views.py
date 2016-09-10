@@ -8,6 +8,7 @@ from django.http import HttpResponseRedirect
 from django.core.context_processors import csrf
 from social.apps.django_app.default.models import UserSocialAuth
 import dota2api
+from pytrends.request import TrendReq
 from django.conf import settings
 
 # Create your views here.
@@ -29,6 +30,205 @@ class TopTrendsView(TemplateView):
 
 	def get(self, request, *args, **kwargs):
 		context = self.get_context_data()
+
+		COUNTRIES = {
+			"40": {
+				"name": "South Africa",
+				"postal": "ZA"
+			},
+			"15": {
+				"name": "Germany",
+				"postal": "DE"
+			},
+			"36": {
+				"name": "Saudi Arabia",
+				"postal": "SA"
+			},
+			"30": {
+				"name": "Argentina",
+				"postal": "AR"
+			},
+			"8": {
+				"name": "Australia",
+				"postal": "AU"
+			},
+			"44": {
+				"name": "Austria",
+				"postal": "AT"
+			},
+			"41": {
+				"name": "Belgium",
+				"postal": "BE"
+			},
+			"18": {
+				"name": "Brazil",
+				"postal": "BR"
+			},
+			"13": {
+				"name": "Canada",
+				"postal": "CA"
+			},
+			"38": {
+				"name": "Chile",
+				"postal": "CL"
+			},
+			"32": {
+				"name": "Colombia",
+				"postal": "CO"
+			},
+			"23": {
+				"name": "South Korea",
+				"postal": "KR"
+			},
+			"49": {
+				"name": "Denmark",
+				"postal": "DK"
+			},
+			"29": {
+				"name": "Egypt",
+				"postal": "EG"
+			},
+			"26": {
+				"name": "Spain",
+				"postal": "ES"
+			},
+			"1": {
+				"name": "United States",
+				"postal": "US"
+			},
+			"50": {
+				"name": "Finland",
+				"postal": "FI"
+			},
+			"16": {
+				"name": "France",
+				"postal": "FR"
+			},
+			"48": {
+				"name": "Greece",
+				"postal": "GR"
+			},
+			"10": {
+				"name": "Hong Kong",
+				"postal": "HK"
+			},
+			"45": {
+				"name": "Hungary",
+				"postal": "HU"
+			},
+			"3": {
+				"name": "India",
+				"postal": "IN"
+			},
+			"19": {
+				"name": "Indonesia",
+				"postal": "ID"
+			},
+			"6": {
+				"name": "Israel",
+				"postal": "IL"
+			},
+			"27": {
+				"name": "Italy",
+				"postal": "IT"
+			},
+			"4": {
+				"name": "Japan",
+				"postal": "JP"
+			},
+			"37": {
+				"name": "Kenya",
+				"postal": "KE"
+			},
+			"34": {
+				"name": "Malaysia",
+				"postal": "MY"
+			},
+			"21": {
+				"name": "Mexico",
+				"postal": "MX"
+			},
+			"52": {
+				"name": "Nigeria",
+				"postal": "NG"
+			},
+			"51": {
+				"name": "Norway",
+				"postal": "NO"
+			},
+			"17": {
+				"name": "Netherlands",
+				"postal": "NL"
+			},
+			"25": {
+				"name": "Philippines",
+				"postal": "PH"
+			},
+			"31": {
+				"name": "Poland",
+				"postal": "PL"
+			},
+			"47": {
+				"name": "Portugal",
+				"postal": "PT"
+			},
+			"43": {
+				"name": "Czech Republic",
+				"postal": "CZ"
+			},
+			"39": {
+				"name": "Romania",
+				"postal": "RO"
+			},
+			"9": {
+				"name": "United Kingdon",
+				"postal": "GB"
+			},
+			"14": {
+				"name": "Russia",
+				"postal": "RU"
+			},
+			"5": {
+				"name": "Singapore",
+				"postal": "SG"
+			},
+			"42": {
+				"name": "Sweden",
+				"postal": "SE"
+			},
+			"46": {
+				"name": "China",
+				"postal": "CH"
+			},
+			"12": {
+				"name": "Taiwan",
+				"postal": "TW"
+			},
+			"33": {
+				"name": "Thailand",
+				"postal": "TH"
+			},
+			"24": {
+				"name": "Turkey",
+				"postal": "TR"
+			},
+			"35": {
+				"name": "Ukraine",
+				"postal": "UA"
+			},
+			"28": {
+				"name": "Vietnam",
+				"postal": "VN"
+			},
+		}
+
+		pytrends = TrendReq(settings.GOOGLE_ACCT, settings.GOOGLE_PW)
+		hottrendslist = pytrends.hottrends({'geo': 'World'})
+		for postal, trend in hottrendslist.items():
+			COUNTRIES[postal]['trending'] = trend
+
+		context['countries'] = COUNTRIES
+
 		return render(request, 'toptrends/main.html', context)
 
 	def get_context_data(self, **kwargs):

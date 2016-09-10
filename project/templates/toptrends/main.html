@@ -1,1 +1,47 @@
-Under construction
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+	<title>Top Trending Twitter</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="mxRH-jX1pR5MjoxIjXJOxnDElPR-loQvW49hc6LMh6w" />
+	
+	<link rel="stylesheet" href="{% static "css/flexboxgrid.css" %}">
+	<link rel="stylesheet" href="{% static "css/animate.css" %}">
+	<link rel="stylesheet" href="{% static "css/hover.css" %}">
+	<link rel="stylesheet" href="{% static "css/elegant-icons.css" %}">
+	<link rel="stylesheet" href="{% static "css/base.css" %}">
+	<link rel="stylesheet" href="{% static "css/toptrends/tt.css" %}">
+
+	<script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "js/jquery.onscreen.min.js" %}"></script>
+    <script src="{% static "js/underscore-min.js" %}"></script>
+    <script src="{% static "js/backbone-min.js" %}"></script>
+    <script src="{% static "js/randomColor.js" %}"></script>
+    <script src="{% static "plugins/TweenJS-0.6.2/_assets/libs/easeljs-NEXT.min.js" %}"></script>
+    <script src="{% static "plugins/TweenJS-0.6.2/lib/tweenjs-NEXT.combined.js" %}"></script>
+    <script>
+    	var countries = {{ countries|safe }};
+    </script>
+    <script src="{% static "js/toptrends.js" %}"></script>
+</head>
+<body class="toptrends">
+	<div id="trendBackbone">
+	</div>
+	<div class="trendtitle">
+		<div class="title">
+			Top Trending Twitter
+		</div>
+	</div>
+	<script type="text/template" id="top-trends-tpl">
+		{% include "toptrends/popup_tpl.html" %}
+	</script>
+	<script type="text/template" id="popular-tweets-tpl">
+		{% include "toptrends/tweets_tpl.html" %}
+	</script>
+
+	{% csrf_token %}
+</body>
+</html>
