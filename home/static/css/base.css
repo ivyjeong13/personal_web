@@ -28,13 +28,6 @@
   font-weight: 500;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Elegant Icons';
-  src: url('/static/fonts/ElegantIcons.eot');
-  src: url('/static/fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'), url('/static/fonts/ElegantIcons.woff') format('woff'), url('/static/fonts/ElegantIcons.ttf') format('truetype'), url('/static/fonts/ElegantIcons.svg#eleganticonsregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 .glacial {
   font-family: 'GlacialInd', serif;
 }
@@ -771,6 +764,9 @@ body {
   -webkit-transition: ease-in all 0.25s;
   cursor: pointer;
   text-decoration: none;
+}
+#projectBody .project.hiddenproject {
+  display: none;
 }
 #projectBody .project.disabled {
   cursor: default;

@@ -28,13 +28,6 @@
   font-weight: 500;
   font-style: normal;
 }
-@font-face {
-  font-family: 'Elegant Icons';
-  src: url('/static/fonts/ElegantIcons.eot');
-  src: url('/static/fonts/ElegantIcons.eot?#iefix') format('embedded-opentype'), url('/static/fonts/ElegantIcons.woff') format('woff'), url('/static/fonts/ElegantIcons.ttf') format('truetype'), url('/static/fonts/ElegantIcons.svg#eleganticonsregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 /* line 3, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .glacial {
   font-family: 'GlacialInd', serif;
@@ -888,16 +881,20 @@ body {
   text-decoration: none;
 }
 /* line 790, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+#projectBody .project.hiddenproject {
+  display: none;
+}
+/* line 793, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #projectBody .project.disabled {
   cursor: default;
 }
-/* line 793, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 796, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #projectBody .project:hover {
   filter: grayscale(0%);
   -ms-filter: grayscale(0%);
   -webkit-filter: grayscale(0%);
 }
-/* line 799, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 802, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #projectBody .project:first-child:before {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ad2800+0,ffffff+100&1+0,0+100 */
   background: -moz-linear-gradient(left, #ad2800 0%, rgba(255, 255, 255, 0) 100%);
@@ -917,11 +914,11 @@ body {
   position: absolute;
   opacity: 0.65;
 }
-/* line 815, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 818, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #projectBody .project:last-child {
   border-right: 0;
 }
-/* line 819, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 822, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #projectBody .project:after {
   content: '';
   position: absolute;
@@ -931,13 +928,13 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
 }
-/* line 828, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 831, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #projectBody .project img {
   height: 100%;
   position: relative;
   z-index: -1;
 }
-/* line 833, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 836, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #projectBody .project .text {
   position: absolute;
   top: 50%;
@@ -951,50 +948,50 @@ body {
   z-index: 5;
   text-shadow: 1px 1px #000;
 }
-/* line 846, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 849, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #projectBody .project .text .headline {
   font-size: 50px;
   font-family: 'Griffos', serif;
 }
-/* line 850, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 853, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #projectBody .project .text .subheadline {
   font-size: 15px;
   font-family: 'GlacialInd', serif;
   padding: 0 20px;
 }
-/* line 859, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 862, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .code-body h1 {
   margin-top: 100px;
   font-size: 40px;
   font-family: 'GlacialInd', serif;
   font-weight: 500;
 }
-/* line 866, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 869, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .code-body .exp {
   width: 50%;
   font-size: 16px;
 }
-/* line 871, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 874, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .code-body img {
   width: 100%;
 }
-/* line 875, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 878, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .code-body .border-top {
   border-top: 1px solid #c2c2c2;
   padding-top: 60px;
   margin-top: 20px;
 }
-/* line 881, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 884, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .code-body .code-title {
   font-size: 20px;
   font-weight: bold;
   display: block;
 }
-/* line 887, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 890, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .empty-spc {
   padding: 25px 0;
 }
-/* line 890, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 893, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .snp-banner {
   width: 100%;
   background: #fff;
@@ -1005,7 +1002,7 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 900, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 903, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .snp-banner.full {
   background: #516B8C;
   color: #fff;
@@ -1014,11 +1011,11 @@ body {
   padding: 8px 0;
   margin-top: 40px;
 }
-/* line 909, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 912, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .snp-banner:before {
   background: #516B8C;
 }
-/* line 912, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 915, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .snp-banner a {
   color: #000;
   display: inline-block;
@@ -1026,12 +1023,12 @@ body {
   text-decoration: none;
   padding: 5px 0 8px 0;
 }
-/* line 918, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 921, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 .snp-banner a span {
   float: right;
   display: none;
 }
-/* line 925, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 928, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #sub-nav {
   position: fixed;
   top: 80px;
@@ -1043,7 +1040,7 @@ body {
   font-size: 12px;
   text-transform: uppercase;
 }
-/* line 936, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 939, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #sub-nav ul {
   list-style: none;
   padding: 0;
@@ -1051,29 +1048,29 @@ body {
   border-left: 1px solid #fff;
   border-top: 1px solid #fff;
 }
-/* line 942, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 945, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #sub-nav ul li {
   border-bottom: 1px solid #fff;
   padding: 5px 0;
   text-align: center;
   cursor: pointer;
 }
-/* line 947, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 950, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 #sub-nav ul li:hover {
   background: #000;
 }
-/* line 954, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 957, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 pre[class*="language-"] {
   border: 1px solid #c2c2c2;
   padding-top: 0;
   padding-bottom: 0;
 }
-/* line 958, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 961, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 pre[class*="language-"] code {
   font-size: 12px;
   line-height: 1.1;
 }
-/* line 964, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
+/* line 967, /Users/ijeong/Documents/Projects/Github/my_website/home/static/less/base.less */
 footer {
   margin-top: 70px;
 }

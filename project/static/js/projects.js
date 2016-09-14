@@ -9,6 +9,25 @@ $(document).on('mouseout', '.project', function(){
 });
 
 $(document).ready(function(){
-	$('#projectBody .project:not(.disabled)').addClass('animated fadeInLeft');
-	$('#projectBody .project.disabled').addClass('animated fadeIn');
+	$('#projectBody .project').addClass('animated fadeInLeft');
 });
+
+function nextProject(){
+	if($('.project.hiddenproject').length == 0){
+		$('.project:first').addClass('hiddenproject');
+	}else{
+		if($('.project:not(.hiddenproject)').length == 0){
+			return;
+		}else{
+			$('.project.hiddenproject:last').next().addClass('hiddenproject');
+		}
+	}
+}
+
+function previousProject(){
+	if($('.project.hiddenproject').length == 0){
+		return;
+	}else{
+		$('.project.hiddenproject:last').removeClass('hiddenproject');
+	}
+}
