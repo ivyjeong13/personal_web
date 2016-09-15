@@ -1,8 +1,20 @@
 <div class="picture">
-	<img src=""/>
+	<img src="http://res.cloudinary.com/dwnebujkh/image/upload/v1473910425/pokemon/<%= results.get('id') %>.png"/>
 </div>
 <div class="info">
-	<div class="name">
-		<div class="id"></div>
+	<div class="headline">
+		<div class="id">#<%= results.get('id') %></div>
+	<% _.each(results.get('names'), function(name){ %>
+		<% if(name['language']['name'] == 'en'){ %>
+			<div class="name"><%= name['name'] %></div>
+		<% } %>
+	<% }); %>
+	</div>
+	<div class="info">
+	<% _.each(results.get('flavor_text_entries'), function(info){ %>
+		<% if(info['language']['name'] == 'en'){ %>
+			<p><%= info['flavor_text'] %></p>
+		<% } %>
+	<% }); %>
 	</div>
 </div>

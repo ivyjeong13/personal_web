@@ -1,0 +1,63 @@
+<div class="type">
+	<h2><%= results.get('name') %></h2>
+	<% var dmg_rel = results.get('damage_relations');
+	if(dmg_rel){ %>
+	<div class="stats">
+		<div class="relations">
+			<h3>Advantages</h3>
+		<% if(dmg_rel['half_damage_from'].length > 0){ 
+			_.each(dmg_rel['half_damage_from'], function(rel){ %>
+			<div>Damage from <span><%= rel['name'] %></span>-type reduced by half.</div>
+		<%	}); 
+		} %>
+
+		<% if(dmg_rel['no_damage_from'].length > 0){ 
+			_.each(dmg_rel['no_damage_from'], function(rel){ %>
+			<div>No damage taken from <span><%= rel['name'] %></span>-type.</div>
+		<%	}); 
+		} %>
+
+		<% if(dmg_rel['double_damage_to'].length > 0){ 
+			_.each(dmg_rel['double_damage_to'], function(rel){ %>
+			<div>Does twice as much damage to <span><%= rel['name'] %></span>-type.</div>
+		<%	}); 
+		} %>
+		</div>
+
+		<div class="relations">
+			<h3>Disadvantages</h3>
+
+		<% if(dmg_rel['half_damage_to'].length > 0){ 
+			_.each(dmg_rel['half_damage_to'], function(rel){ %>
+			<div>Does 50% damage to <span><%= rel['name'] %></span>-type.</div>
+		<%	}); 
+		} %>
+
+		<% if(dmg_rel['double_damage_from'].length > 0){ 
+			_.each(dmg_rel['double_damage_from'], function(rel){ %>
+			<div>Takes twice as much damage from <span><%= rel['name'] %></span>-type.</div>
+		<%	}); 
+		} %>
+
+		<% if(dmg_rel['no_damage_to'].length > 0){ 
+			_.each(dmg_rel['no_damage'], function(rel){ %>
+			<div>Does no damage to <span><%= rel['name'] %></span>-type.</div>
+		<%	}); 
+		} %>
+		</div>
+	</div>
+	<% } %>
+	<div class="pokemon-results">
+		<h3>Pokemon</h3>
+		<ul>
+		<% _.each(results.get('pokemon'), function(result){ 
+			var pokemon = result['pokemon'];
+			var id_num = pokemon['url'].split('/pokemon/')[1].replace('/', '');
+			%>
+			<li data-url="pokemon-species/<%= id_num %>">
+				<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= id_num %>.png"> <span>#<%= id_num %> <%= pokemon['name'] %></span>
+			</li>
+		<% }) %>
+		</ul>
+	</div>
+</div>

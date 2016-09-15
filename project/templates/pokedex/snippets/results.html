@@ -1,3 +1,7 @@
+<% if(results.get('name')){ %>
+	<h2><%= results.get('name') %></h2>
+<% } %>
+
 <div class="pokemon-results">
 	<h3>Pokemon</h3>
 	<ul>
@@ -7,7 +11,7 @@
 		var id_num = result['url'].split('/pokemon-species/')[1].replace('/', '');
 		%>
 		<li data-url="<%= result['url'].split('/v2/')[1] %>">
-			<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= id_num %>.png"> #<%= id_num %> <%= result['name'] %>
+			<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= id_num %>.png"> <span>#<%= id_num %> <%= result['name'] %></span>
 		</li>
 	<% }) %>
 	</ul>

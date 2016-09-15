@@ -17,6 +17,14 @@ var Pokemon = Backbone.Model.extend({
 	}
 });
 
+var PokemonType = Backbone.Model.extend({
+	urlRoot: API_URL + 'type/',
+	url: function(){
+		var url = this.urlRoot + this.get('id') + '/';
+		return url;
+	}
+})
+
 var Generation = Backbone.Model.extend({
 	urlRoot: API_URL + 'generation/',
 	url:function(){
@@ -61,7 +69,7 @@ var PokemonView = Backbone.View.extend({
 	},
 	render:function(){
 		this.template = _.template($('#species-tpl').html());
-		this.$el.html(this.template({}));
+		this.$el.html(this.template({ results: this.model }));
 	}
 });
 
@@ -71,6 +79,16 @@ var ResultsView = Backbone.View.extend({
 	},
 	render:function(){
 		this.template = _.template($('#results-tpl').html());
+		this.$el.html(this.template({ results: this.model }));
+	}
+});
+
+var TypeView = Backbone.View.extend({
+	initialize: function(){
+		_.bindAll(this, 'render');
+	},
+	render:function(){
+		this.template = _.template($('#type-tpl').html());
 		this.$el.html(this.template({ results: this.model }));
 	}
 });
@@ -92,9 +110,10 @@ var MyController = Backbone.Router.extend({
 	routes: {
 		"" : "home",
 		"region/:id": "region",
-		"biome/:id": "biome",
+		"pokemon-habitat/:id": "biome",
 		"pokemon-species/:id": "pokemon",
-		"pokemon-index/:offset": "identify_num"
+		"pokemon-index/:offset": "identify_num",
+		"type/:id": "pokemon_type"
 	},
 
 	home: function(){
@@ -109,7 +128,12 @@ var MyController = Backbone.Router.extend({
 		buildBiome(id);
 	},
 
-	pokemon: function(id){	
+	pokemon_type: function(id){
+		buildType(id);
+	},
+
+	pokemon: function(id){
+	console.log('pass')	
 		buildPokemon(id);	
 	},
 
@@ -120,12 +144,23 @@ var MyController = Backbone.Router.extend({
 
 function buildPokemon(id){
 	var pokemon = new Pokemon({ id: id });
-	console.log(pokemon);
+	pokemon.fetch().done(function(){
+		console.log(pokemon);
+		var pokemonView = new PokemonView({ el: '#pokemonBody', model: pokemon });
+		pokemonView.render();
+
+		$('#pokemonBody').fadeIn();
+	});
 }
 
 function buildBiome(id){
 	var biome = new Biome({ id: id });
-	console.log(biome);
+	biome.fetch().done(function(){	
+		var resultsView = new ResultsView({ el: '#pokemonBody', model: biome });
+		resultsView.render();
+
+		$('#pokemonBody').fadeIn();
+	});
 }
 
 function buildRegion(id){
@@ -141,6 +176,16 @@ function buildRegion(id){
 
 			$('#pokemonBody').fadeIn();
 		});
+	});
+}
+
+function buildType(id){
+	var pokemonType = new PokemonType({id: id});
+	pokemonType.fetch().done(function(){
+		var typeView = new TypeView({ el: '#pokemonBody', model: pokemonType });
+		typeView.render();
+
+		$('#pokemonBody').fadeIn();
 	});
 }
 
@@ -166,6 +211,13 @@ $(document).ready(function(){
 	Backbone.history.start();
 });
 
+$(document).on('click', 'h1', function(){
+	$('#pokemonBody').fadeOut();
+	setTimeout(function(){
+		Backbone.history.navigate("", {trigger:true}); 
+	},500);
+});
+
 $(document).on('click', '.subtopic span', function(){
 	if($(this).parent().find('.more').length > 0){
 		$(this).parent().find('.more').slideToggle();
@@ -177,6 +229,7 @@ $(document).on('click', '.subtopic span', function(){
 
 $(document).on('click', '.subtopic .more-item', function(){
 	var url = $(this).attr('data-type') + '/' + $(this).attr('data-id');
+	$('#pokemonBody').fadeOut();
 	Backbone.history.navigate(url, {trigger:true}); 
 });
 

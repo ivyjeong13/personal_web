@@ -40,6 +40,7 @@
 		padding:25px 20px 20px 20px;
 		background:#000;
 		color:#fff;
+		cursor:pointer;
 	}
 
 	h2{
@@ -170,6 +171,9 @@
 	}
 
 	.pokemon-results{
+		float:left;
+		width:100%;
+		clear:both;
 		ul{
 			list-style:none;
 			margin:0;
@@ -177,13 +181,14 @@
 
 			li{
 				height:96px;
-				line-height:96px;
+				line-height:18px;
 				font-size:14px;
 				float:left;
 				width:50%;
 				.pokemon;
 				border-top:1px dashed #e2e2e2;
 				cursor:pointer;
+				position:relative;
 
 				&:nth-child(odd){
 					border-right:1px dashed #e2e2e2;
@@ -202,6 +207,16 @@
 					margin-right:10px;
 					width:96px;
 					height:96px;
+				}
+
+				span{
+					position:absolute;
+					top:50%;
+					transform:translateY(-50%);
+					-ms-transform:translateY(-50%);
+					-webkit-transform:translateY(-50%);
+					left:105px;
+					padding:20px 0;
 				}
 			}
 		}
@@ -258,6 +273,32 @@
 			width:100%;
 			clear:both;
 			border-top:1px solid #999;
+		}
+	}
+
+	.stats{
+		width:100%;
+		float:left;
+		clear:both;
+		border-bottom:1px solid #999;
+		.relations{
+			width:50%;
+			float:left;
+			overflow:hidden;
+			padding-bottom:20px;
+
+			&:first-child{
+				border-right:1px solid #e2e2e2;
+			}
+
+			& > div{
+				padding:5px 20px;
+
+				& > span{
+					font-weight:bold;
+					text-transform:uppercase;
+				}
+			}
 		}
 	}
 }
