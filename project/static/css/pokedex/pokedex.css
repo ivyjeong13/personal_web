@@ -1339,1351 +1339,294 @@ footer {
     margin-left: 20px;
   }
 }
-/* line 2, dotaseeker.less */
-.fullWidth {
-  clear: both;
-  width: 100%;
-  float: left;
+/* line 3, pokedex.less */
+.pokedex {
+  background: url('/static/images/27893_pixelated_pixel_landscape.jpg');
+  background-size: contain;
 }
-/* line 7, dotaseeker.less */
-.dotaseeker {
+/* line 8, pokedex.less */
+.pokedex .device {
   position: relative;
-  background: #000;
-  min-height: 100vh;
-  clear: both;
-  width: 100%;
-  float: left;
-}
-/* line 13, dotaseeker.less */
-.dotaseeker .border-right {
-  border-right: 1px solid #999;
-}
-/* line 16, dotaseeker.less */
-.dotaseeker .content {
-  clear: both;
-  width: 100%;
-  float: left;
-}
-/* line 19, dotaseeker.less */
-.dotaseeker .left-div {
-  float: left;
-  width: 63.666%;
-  margin-right: 3%;
-}
-/* line 24, dotaseeker.less */
-.dotaseeker .right-div {
-  float: left;
-  width: 33.333%;
-}
-/* line 28, dotaseeker.less */
-.dotaseeker .top {
+  border-radius: 20px;
+  width: 1120px;
+  margin: 0 auto;
+  height: 100vh;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-/* line 33, dotaseeker.less */
-.dotaseeker .top img {
-  width: 100%;
-}
-/* line 36, dotaseeker.less */
-.dotaseeker .top .img-wrapper {
-  position: relative;
-  clear: both;
-  width: 100%;
-  float: left;
-}
-/* line 39, dotaseeker.less */
-.dotaseeker .top .img-wrapper:before {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+49,000000+100&0+92,1+100 */
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 92%, #000000 100%);
+  border-left: 1px solid #a00000;
+  border-right: 1px solid #a00000;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.33);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3a28+0,cf0404+100 */
+  background: #ff3a28;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ff3a28 0%, #cf0404 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 92%, #000000 100%);
+  background: -webkit-linear-gradient(top, #ff3a28 0%, #cf0404 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 49%, rgba(0, 0, 0, 0) 92%, #000000 100%);
+  background: linear-gradient(to bottom, #ff3a28 0%, #cf0404 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0);
-  /* IE6-9 */
-  content: '';
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-/* line 53, dotaseeker.less */
-.dotaseeker .top .tv-wrapper {
-  display: none;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-/* line 59, dotaseeker.less */
-.dotaseeker .top .tv-wrapper .tv {
-  width: 100%;
-  height: 100%;
-}
-/* line 63, dotaseeker.less */
-.dotaseeker .top .tv-wrapper .tv .screen {
-  opacity: 0;
-  transition: opacity .5s;
-}
-/* line 67, dotaseeker.less */
-.dotaseeker .top .tv-wrapper .tv .screen.active {
-  opacity: 1;
-}
-/* line 72, dotaseeker.less */
-.dotaseeker .top .tv-wrapper .icon {
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
-  color: #fff;
-  font-size: 25px;
-  cursor: pointer;
-}
-/* line 81, dotaseeker.less */
-.dotaseeker .top h1 {
-  position: absolute;
-  top: -10px;
-  right: 40px;
-  color: #fff;
-  font-size: 100px;
-  text-shadow: 2px 2px 10px #000;
-  text-transform: uppercase;
-  font-family: 'Griffos', serif;
-  z-index: 1000;
-  font-weight: 100;
-  margin: 0;
-}
-/* line 94, dotaseeker.less */
-.dotaseeker .top h1 span {
-  font-family: 'GlacialInd', serif;
-  font-size: 14px;
-  display: block;
-  font-weight: 100;
-  text-align: right;
-}
-/* line 104, dotaseeker.less */
-.dotaseeker .middle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 45%;
-  height: 100%;
-  padding-bottom: 20px;
-  color: #fff;
-}
-/* line 112, dotaseeker.less */
-.dotaseeker .middle:not(.playing) {
-  background: #000;
-}
-/* line 114, dotaseeker.less */
-.dotaseeker .middle:not(.playing):before {
-  content: '';
-  position: absolute;
-  left: -55%;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100 */
-  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #000000 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #000000 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #000000 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3a28', endColorstr='#cf0404', GradientType=0);
   /* IE6-9 */
 }
-/* line 130, dotaseeker.less */
-.dotaseeker .middle > p {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #fff;
-  margin: 10px 40px 10px 0;
-  padding: 0;
-  position: relative;
-  z-index: 2;
-}
-/* line 140, dotaseeker.less */
-.dotaseeker .middle > p.thin {
-  font-weight: 100;
-  text-transform: none;
-}
-/* line 147, dotaseeker.less */
-.dotaseeker .middle.playing .overlay {
-  background: rgba(255, 255, 255, 0.55);
-}
-/* line 151, dotaseeker.less */
-.dotaseeker .middle .overlay {
-  margin-right: 40px;
-  background: #fff;
-  color: #000;
-  position: relative;
-  z-index: 2;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 1px 1px 10px #fff;
-  transition: ease-in all 0.25s;
-  -ms-transition: ease-in all 0.25s;
-  -webkit-transition: ease-in all 0.25s;
-}
-/* line 152, dotaseeker.less */
-.dotaseeker .middle .overlay:first-child {
-  margin-top: 160px;
-}
-/* line 167, dotaseeker.less */
-.dotaseeker .middle .overlay span {
-  display: inline-block;
-  font-size: 20px;
-}
-/* line 171, dotaseeker.less */
-.dotaseeker .middle .overlay span.error {
-  margin-top: 10px;
-  display: block;
-  font-size: 14px;
-  color: red;
-}
-/* line 180, dotaseeker.less */
-.dotaseeker .middle .overlay form input {
-  border: 1px solid #ccc;
-  padding: 5px 10px;
-  font-size: 20px;
-  font-family: 'GlacialInd', serif;
-  width: 100%;
+/* line 26, pokedex.less */
+.pokedex .device-container {
   border-radius: 4px;
-  margin-top: 10px;
+  margin: 3%;
+  background: #ffffff;
+  height: 88%;
+  width: 80%;
+  box-shadow: 0px 0px 2px #000000;
+  overflow-y: auto;
 }
-/* line 190, dotaseeker.less */
-.dotaseeker .middle .overlay form .btn-submit {
-  margin-top: 20px;
-  width: 100%;
-  padding: 10px;
-  background: #fff;
-  color: #000;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 18px;
-  text-align: center;
-  cursor: pointer;
-  border: 1px solid #000;
-}
-/* line 202, dotaseeker.less */
-.dotaseeker .middle .overlay form .btn-submit:before {
-  background: #fff;
-}
-/* line 205, dotaseeker.less */
-.dotaseeker .middle .overlay form .btn-submit:hover {
-  background: #000;
-  color: #fff;
-  border: 1px solid #000;
-}
-/* line 215, dotaseeker.less */
-.dotaseeker.dashboard {
-  background: #000;
-  margin-top: 40px;
-}
-/* line 216, dotaseeker.less */
-.dotaseeker.dashboard .bg-item {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-/* line 220, dotaseeker.less */
-.dotaseeker.dashboard .bg-item:after {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100 */
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #000000 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=0);
-  /* IE6-9 */
-  content: '';
-  bottom: -20%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-/* line 238, dotaseeker.less */
-.dotaseeker .ds-nav {
-  z-index: 9999;
-  position: fixed;
-  height: 40px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: #000;
-  box-shadow: 1px 1px 10px #000;
-  color: #fff;
-}
-/* line 248, dotaseeker.less */
-.dotaseeker .ds-nav .nav-title {
-  color: #fff;
-  text-decoration: none;
-  float: left;
-}
-/* line 252, dotaseeker.less */
-.dotaseeker .ds-nav .nav-title > * {
-  float: left;
-}
-/* line 255, dotaseeker.less */
-.dotaseeker .ds-nav .nav-title img {
-  margin-top: 8px;
-  height: 25px;
-  width: 25px;
-}
-/* line 260, dotaseeker.less */
-.dotaseeker .ds-nav .nav-title span {
-  display: inline-block;
-  padding: 12px 0;
-  text-transform: uppercase;
-  font-family: 'Griffos', serif;
-  margin-left: 10px;
-}
-/* line 269, dotaseeker.less */
-.dotaseeker .ds-nav ul {
-  float: right;
-  list-style: none;
-  padding: 8px 0px;
+/* line 36, pokedex.less */
+.pokedex h1 {
   margin: 0;
-}
-/* line 274, dotaseeker.less */
-.dotaseeker .ds-nav ul li {
-  float: left;
-}
-/* line 276, dotaseeker.less */
-.dotaseeker .ds-nav ul li div,
-.dotaseeker .ds-nav ul li input {
-  display: inline-block;
-  float: left;
-}
-/* line 280, dotaseeker.less */
-.dotaseeker .ds-nav ul li div {
-  border: 1px solid #fff;
-  font-weight: bold;
-  padding: 2px 4px 2px 2px;
-  margin-top: 1px;
-  border-bottom-left-radius: 2px;
-  border-top-left-radius: 2px;
-  cursor: pointer;
-  background: #fff;
-  color: #000;
-}
-/* line 290, dotaseeker.less */
-.dotaseeker .ds-nav ul li div:hover {
-  background: #000;
-  color: #fff;
-}
-/* line 295, dotaseeker.less */
-.dotaseeker .ds-nav ul li input {
-  width: 150px;
-  border-top: 1px solid #000;
-  border-right: 1px solid #000;
-  border-bottom: 1px solid #000;
-  border-left: 0;
-  background: #fff;
-  color: #000;
-  font-size: 16px;
-  padding: 1px 5px 2px 5px;
-}
-/* line 310, dotaseeker.less */
-.dotaseeker .content-wrapper {
-  position: relative;
-  background: #ffffff;
-  min-height: 100vh;
-  z-index: 1;
-  box-shadow: 2px 0px 50px #fff;
-  padding: 40px;
-  clear: both;
-  overflow: hidden;
-}
-/* line 321, dotaseeker.less */
-.dotaseeker .main-info {
-  clear: both;
-  width: 100%;
-  float: left;
-}
-/* line 324, dotaseeker.less */
-.dotaseeker .main-info .username {
-  font-size: 30px;
-  font-weight: bold;
-  font-family: 'Griffos', serif;
-  margin-bottom: 20px;
-}
-/* line 332, dotaseeker.less */
-.dotaseeker .picture {
-  border: 1px solid #ccc;
-  position: relative;
-  clear: both;
-  width: 100%;
-  float: left;
-}
-/* line 337, dotaseeker.less */
-.dotaseeker .picture img {
-  clear: both;
-  width: 100%;
-  float: left;
-}
-/* line 340, dotaseeker.less */
-.dotaseeker .picture .mmr,
-.dotaseeker .picture .pos-type {
-  clear: both;
-  width: 100%;
-  float: left;
-  color: #fff;
-  text-align: center;
-  padding: 6px 0;
-  text-transform: uppercase;
-  font-size: 12px;
-}
-/* line 348, dotaseeker.less */
-.dotaseeker .picture .pos-type {
-  background: #000;
-}
-/* line 351, dotaseeker.less */
-.dotaseeker .picture .mmr {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f1f1f1+50,e1e1e1+51,f6f6f6+100;White+Gloss+%231 */
-  background: #ffffff;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6', GradientType=0);
-  /* IE6-9 */
-  color: #000;
-}
-/* line 362, dotaseeker.less */
-.dotaseeker img {
-  clear: both;
-  width: 100%;
-  float: left;
-}
-/* line 367, dotaseeker.less */
-.dotaseeker .steam-login img {
-  width: 180px;
-  height: 35px;
-  display: block;
-  margin: 10px auto;
-}
-/* line 375, dotaseeker.less */
-.dotaseeker .name,
-.dotaseeker .pos,
-.dotaseeker .other-pos,
-.dotaseeker .region {
-  margin-bottom: 5px;
-}
-/* line 377, dotaseeker.less */
-.dotaseeker .name .col-md-6,
-.dotaseeker .pos .col-md-6,
-.dotaseeker .other-pos .col-md-6,
-.dotaseeker .region .col-md-6 {
-  font-weight: 500;
-}
-/* line 379, dotaseeker.less */
-.dotaseeker .name .col-md-6:first-child,
-.dotaseeker .pos .col-md-6:first-child,
-.dotaseeker .other-pos .col-md-6:first-child,
-.dotaseeker .region .col-md-6:first-child {
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: left;
-  font-size: 14px;
-}
-/* line 388, dotaseeker.less */
-.dotaseeker .divider {
-  clear: both;
-  width: 100%;
-  float: left;
-  margin-top: 40px;
-}
-/* line 391, dotaseeker.less */
-.dotaseeker .divider.main-team {
-  margin-top: 60px;
-}
-/* line 394, dotaseeker.less */
-.dotaseeker .divider .title {
+  font-family: 'Pokemon', sans-serif;
   font-size: 25px;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-/* line 403, dotaseeker.less */
-.dotaseeker .pos .bg-title {
-  font-size: 16px;
-}
-/* line 408, dotaseeker.less */
-.dotaseeker .bg-title {
-  font-size: 12px;
-  text-transform: uppercase;
+  padding: 25px 20px 20px 20px;
   background: #000;
   color: #fff;
-  padding: 5px;
-  clear: both;
-  width: 100%;
-  float: left;
 }
-/* line 417, dotaseeker.less */
-.dotaseeker .fav-heroes {
-  clear: both;
-  width: 100%;
-  float: left;
-  margin-top: 10px;
-}
-/* line 420, dotaseeker.less */
-.dotaseeker .fav-heroes .row {
+/* line 45, pokedex.less */
+.pokedex h2 {
   margin: 0;
-}
-/* line 422, dotaseeker.less */
-.dotaseeker .fav-heroes .row .col-md-12 {
-  padding: 0;
-}
-/* line 426, dotaseeker.less */
-.dotaseeker .fav-heroes ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  border-left: 1px solid #000;
-  clear: both;
-  width: 100%;
-  float: left;
-}
-/* line 433, dotaseeker.less */
-.dotaseeker .fav-heroes ul li {
-  width: 20%;
-  float: left;
-  border-right: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-/* line 438, dotaseeker.less */
-.dotaseeker .fav-heroes ul li img {
-  float: left;
-  clear: both;
-}
-/* line 443, dotaseeker.less */
-.dotaseeker .fav-heroes ul li .x {
-  height: 46px;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+0,0e0e0e+100;Black+3D */
-  background: #7d7e7d;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #7d7e7d 0%, #0e0e0e 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d7e7d', endColorstr='#0e0e0e', GradientType=0);
-  /* IE6-9 */
-  color: #fff;
-  text-align: center;
-}
-/* line 452, dotaseeker.less */
-.dotaseeker .fav-heroes ul li .x .icon_blocked {
-  font-size: 25px;
-  padding: 10px 0;
-  color: rgba(255, 255, 255, 0.6);
-}
-/* line 462, dotaseeker.less */
-.dotaseeker .matches {
-  clear: both;
-  width: 100%;
-  float: left;
-}
-/* line 464, dotaseeker.less */
-.dotaseeker .matches .match {
-  clear: both;
-  width: 100%;
-  float: left;
-  border-top: 1px solid #fff;
-  margin-top: 15px;
-}
-/* line 468, dotaseeker.less */
-.dotaseeker .matches .match:first-child {
-  margin-top: 0;
-}
-/* line 471, dotaseeker.less */
-.dotaseeker .matches .match .header {
-  clear: both;
-  width: 100%;
-  float: left;
-  text-transform: uppercase;
-  font-size: 10px;
-  background: #000;
-  color: #fff;
-  padding: 2px 5px;
-}
-/* line 478, dotaseeker.less */
-.dotaseeker .matches .match .header span {
-  display: inline-block;
-  float: right;
-}
-/* line 480, dotaseeker.less */
-.dotaseeker .matches .match .header span:first-child {
-  float: left;
-}
-/* line 486, dotaseeker.less */
-.dotaseeker .matches .match .hero {
-  overflow: hidden;
-  width: 40%;
-  float: left;
-  border: 1px solid #000;
-  border-top: 2px solid #000;
-}
-/* line 493, dotaseeker.less */
-.dotaseeker .matches .match .hero .hero-name {
-  background: #000;
-  color: #fff;
-}
-/* line 498, dotaseeker.less */
-.dotaseeker .matches .match .hero .hero-name,
-.dotaseeker .matches .match .hero .status {
-  clear: both;
-  width: 100%;
-  float: left;
-  padding: 4px 0;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 10px;
-}
-/* line 507, dotaseeker.less */
-.dotaseeker .matches .match .hero .status.win {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,004900+96 */
-  background: #006e2e;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #006e2e 0%, #004900 96%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #006e2e 0%, #004900 96%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #006e2e 0%, #004900 96%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#006e2e', endColorstr='#004900', GradientType=0);
-  /* IE6-9 */
-  color: #fff;
-}
-/* line 516, dotaseeker.less */
-.dotaseeker .matches .match .hero .status.lose {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
-  background: #a90329;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #a90329 0%, #8f0222 44%, #6d0019 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a90329', endColorstr='#6d0019', GradientType=0);
-  /* IE6-9 */
-  color: #fff;
-}
-/* line 527, dotaseeker.less */
-.dotaseeker .matches .match .stats {
-  width: 60%;
-  float: left;
-  border-right: 1px solid #000;
-  border-left: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-/* line 534, dotaseeker.less */
-.dotaseeker .matches .match .kda {
-  clear: both;
-  width: 100%;
-  float: left;
-  border-bottom: 1px solid #000;
-}
-/* line 538, dotaseeker.less */
-.dotaseeker .matches .match .kda > div {
-  width: 33.333%;
-  float: left;
-}
-/* line 541, dotaseeker.less */
-.dotaseeker .matches .match .kda > div:last-child {
-  margin-right: 0;
-}
-/* line 544, dotaseeker.less */
-.dotaseeker .matches .match .kda > div > span {
-  font-size: 10px;
-  display: inline-block;
-  height: 17px;
-  float: left;
-  text-align: center;
-  width: 60%;
-  padding: 2px 0;
-  background: #000;
-  color: #000;
-  border: 1px solid #999;
-  border-left: 0;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f3f3f3+50,ededed+51,ffffff+100;White+Gloss+%232 */
-  background: #ffffff;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #ffffff 0%, #f3f3f3 50%, #ededed 51%, #ffffff 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
-  /* IE6-9 */
-}
-/* line 563, dotaseeker.less */
-.dotaseeker .matches .match .kda > div > span:first-child {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c4c4c+0,595959+12,666666+25,474747+39,2c2c2c+50,000000+51,111111+60,2b2b2b+76,1c1c1c+91,131313+100;Black+Gloss+%231 */
-  background: #4c4c4c;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0);
-  /* IE6-9 */
-  text-transform: uppercase;
-  font-weight: bold;
-  width: 40%;
-  color: #fff;
-  border: 0;
-  border-right: 1px solid #999;
-}
-/* line 580, dotaseeker.less */
-.dotaseeker .matches .match .items {
-  clear: both;
-  width: 100%;
-  float: left;
-}
-/* line 582, dotaseeker.less */
-.dotaseeker .matches .match .items ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-/* line 587, dotaseeker.less */
-.dotaseeker .matches .match .items ul li {
-  width: 33.333%;
-  float: left;
-  height: 51.5px;
-  background: #000;
-}
-/* line 592, dotaseeker.less */
-.dotaseeker .matches .match .items ul li .x {
-  width: 100%;
-  height: 51.5px;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#696c75+0,212121+29,000000+53,212121+72,696c75+99 */
-  background: #696c75;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #696c75 0%, #212121 29%, #000000 53%, #212121 72%, #696c75 99%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #696c75 0%, #212121 29%, #000000 53%, #212121 72%, #696c75 99%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #696c75 0%, #212121 29%, #000000 53%, #212121 72%, #696c75 99%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#696c75', endColorstr='#696c75', GradientType=0);
-  /* IE6-9 */
-  border: 1px solid #000;
-}
-/* line 602, dotaseeker.less */
-.dotaseeker .matches .match .items ul li .x .icon_blocked {
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 17px 0;
-  color: rgba(255, 255, 255, 0.2);
-  text-align: center;
-}
-/* line 617, dotaseeker.less */
-.dotaseeker .player {
-  clear: both;
-  width: 100%;
-  float: left;
-  border: 1px solid #ccc;
-}
-/* line 620, dotaseeker.less */
-.dotaseeker .player.starred {
-  border: 2px solid #FFD900;
-}
-/* line 623, dotaseeker.less */
-.dotaseeker .player.starred .player-wrapper .icon_star {
-  display: block;
-}
-/* line 628, dotaseeker.less */
-.dotaseeker .player .player-wrapper {
-  position: relative;
-  clear: both;
-  width: 100%;
-  float: left;
-}
-/* line 631, dotaseeker.less */
-.dotaseeker .player .player-wrapper .icon_star {
-  display: none;
-  position: absolute;
-  bottom: 5px;
-  left: 5px;
+  font-family: 'Pokemon', sans-serif;
   font-size: 20px;
-  color: #FFD900;
-  text-shadow: 1px 1px 10px #000;
-}
-/* line 642, dotaseeker.less */
-.dotaseeker .player .mmr,
-.dotaseeker .player .name {
-  clear: both;
-  width: 100%;
-  float: left;
-  background: #000000;
-  color: #fff;
-  text-align: center;
-  padding: 6px 0;
+  padding: 20px;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
   text-transform: uppercase;
-  font-size: 12px;
-  margin-bottom: 0;
 }
-/* line 652, dotaseeker.less */
-.dotaseeker .player .mmr {
-  background: #ffffff;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6', GradientType=0);
-  /* IE6-9 */
-  color: #000;
+/* line 55, pokedex.less */
+.pokedex h3 {
+  margin: 25px 20px 20px 20px;
+  font-family: 'Pokemon', sans-serif;
+  font-size: 18px;
 }
-/* line 662, dotaseeker.less */
-.dotaseeker .list-players {
-  margin-top: 10px;
+/* line 61, pokedex.less */
+.pokedex .directionalPad {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  right: 1.75%;
+  bottom: 5%;
 }
-/* line 666, dotaseeker.less */
-.dotaseeker #ds-footer {
-  clear: both;
+/* line 67, pokedex.less */
+.pokedex .directionalPad .horizontal {
   width: 100%;
-  float: left;
+  height: 35px;
   background: #000;
-  border-top: 1px solid #fff;
-  color: #fff;
-  position: relative;
-  z-index: 5;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  box-shadow: 1px 1px 2px #000;
 }
-/* line 673, dotaseeker.less */
-.dotaseeker #ds-footer .container {
-  margin: 10px auto;
+/* line 79, pokedex.less */
+.pokedex .directionalPad .horizontal i {
+  padding-top: 6px;
+  padding-left: 10px;
 }
-/* line 676, dotaseeker.less */
-.dotaseeker #ds-footer ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* line 82, pokedex.less */
+.pokedex .directionalPad .horizontal i.fa-chevron-right {
+  float: right;
+  padding-right: 10px;
 }
-/* line 684, dotaseeker.less */
-.dotaseeker .edit-form .edit-container {
-  margin-top: 20px;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: bold;
-  clear: both;
-  width: 100%;
-  float: left;
-  width: 50%;
-}
-/* line 685, dotaseeker.less */
-.dotaseeker .edit-form .edit-container + .edit-container {
-  margin-top: 0;
-}
-/* line 695, dotaseeker.less */
-.dotaseeker .edit-form input[type="text"],
-.dotaseeker .edit-form select {
-  clear: both;
-  width: 100%;
-  float: left;
-  width: 50%;
-  border: 1px solid #999;
-  border-radius: 2px;
-  font-size: 16px;
-  padding: 4px;
-  font-weight: 500;
-}
-/* line 705, dotaseeker.less */
-.dotaseeker .edit-form select {
-  height: 32px;
-}
-/* line 709, dotaseeker.less */
-.dotaseeker .edit-form .multi-select {
-  padding: 4px 10px;
-  border: 1px solid #c2c2c2;
-  width: 50%;
-}
-/* line 713, dotaseeker.less */
-.dotaseeker .edit-form .multi-select span {
-  margin-left: 20px;
-  float: left;
-  text-transform: none;
-  font-weight: 500;
-}
-/* line 714, dotaseeker.less */
-.dotaseeker .edit-form .multi-select span:first-child {
-  margin-left: 0;
-}
-/* line 718, dotaseeker.less */
-.dotaseeker .edit-form .multi-select span:last-child input {
-  margin-right: 4px;
-}
-/* line 727, dotaseeker.less */
-.dotaseeker .edit-form .multi-select input {
-  position: relative;
-  top: -2px;
-  margin-right: 5px;
-}
-/* line 734, dotaseeker.less */
-.dotaseeker .edit-form .edit-ds-heroes {
-  clear: both;
-  width: 100%;
-  float: left;
-  margin-top: 40px;
-}
-/* line 737, dotaseeker.less */
-.dotaseeker .edit-form .edit-ds-heroes .edit-container,
-.dotaseeker .edit-form .edit-ds-heroes .ds-heroes {
-  margin-top: 0;
-}
-/* line 742, dotaseeker.less */
-.dotaseeker .edit-form .ds-heroes {
-  clear: both;
-  float: left;
-}
-/* line 748, dotaseeker.less */
-.dotaseeker .h1 {
-  font-size: 40px;
-  font-weight: 500;
-}
-/* line 753, dotaseeker.less */
-.dotaseeker .h2 {
-  font-size: 28px;
-  font-weight: 500;
-}
-/* line 758, dotaseeker.less */
-.dotaseeker .btn {
-  margin-top: 50px;
-  width: 100px;
-  float: left;
-  border: 1px solid #000;
-  padding: 5px;
-  color: #000;
-  background: #fff;
-  text-transform: uppercase;
-  font-size: 12px;
-  text-align: center;
-  font-weight: 100;
-  cursor: pointer;
-  text-decoration: none;
-}
-/* line 772, dotaseeker.less */
-.dotaseeker .btn:before {
+/* line 89, pokedex.less */
+.pokedex .directionalPad .vertical {
+  width: 35px;
+  height: 100%;
   background: #000;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  box-shadow: 1px 1px 2px #000;
+}
+/* line 102, pokedex.less */
+.pokedex .directionalPad .vertical i.fa-chevron-down {
+  padding-left: 5px;
+  padding-top: 10px;
+}
+/* line 106, pokedex.less */
+.pokedex .directionalPad .vertical i.fa-chevron-up {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+}
+/* line 114, pokedex.less */
+.pokedex .directionalPad i {
   color: #fff;
+  font-size: 25px;
 }
-/* line 777, dotaseeker.less */
-.dotaseeker .btn:hover {
-  color: #fff;
-}
-/* line 781, dotaseeker.less */
-.dotaseeker .btn + .btn {
-  margin-left: 25px;
-}
-/* line 785, dotaseeker.less */
-.dotaseeker .btn.inline {
-  float: none;
-  display: inline-block;
-}
-/* line 790, dotaseeker.less */
-.dotaseeker .btn.black {
-  background: #000;
-  color: #fff;
-}
-/* line 794, dotaseeker.less */
-.dotaseeker .btn.black:before {
-  background: #fff;
-  color: #000;
-}
-/* line 799, dotaseeker.less */
-.dotaseeker .btn.black:hover {
-  color: #000;
-}
-/* line 804, dotaseeker.less */
-.dotaseeker .btn.no-margin {
-  margin: 0;
-}
-/* line 808, dotaseeker.less */
-.dotaseeker .bg-container {
-  position: relative;
+/* line 120, pokedex.less */
+.pokedex .topic {
   overflow: hidden;
 }
-/* line 813, dotaseeker.less */
-.dotaseeker .ds-search-filters {
-  clear: both;
+/* line 122, pokedex.less */
+.pokedex .topic ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   width: 100%;
-  float: left;
+}
+/* line 127, pokedex.less */
+.pokedex .topic ul li {
+  font-size: 18px;
+  font-family: 'Pokemon', sans-serif;
+  border-bottom: 1px solid #e2e2e2;
+  cursor: pointer;
+}
+/* line 133, pokedex.less */
+.pokedex .topic ul li:first-child {
+  border-top: 1px solid #e2e2e2;
+}
+/* line 138, pokedex.less */
+.pokedex .topic ul li:hover span {
+  background: #000;
+  color: #fff;
+}
+/* line 144, pokedex.less */
+.pokedex .topic ul li span {
+  display: block;
+  clear: both;
+  padding: 15px 20px 10px 20px;
+}
+/* line 150, pokedex.less */
+.pokedex .topic ul li .more {
   display: none;
+  width: 100%;
+  font-size: 12px;
 }
-/* line 818, dotaseeker.less */
-.dotaseeker .filter-title {
-  font-size: 16px;
-  text-transform: uppercase;
+/* line 154, pokedex.less */
+.pokedex .topic ul li .more .more-item {
+  padding: 12px 20px 10px 20px;
+  border-bottom: 1px solid #e2e2e2;
 }
-/* line 822, dotaseeker.less */
-.dotaseeker .filter-title .hero-name-display {
-  font-weight: bold;
-  float: right;
-  display: inline-block;
+/* line 158, pokedex.less */
+.pokedex .topic ul li .more .more-item:last-child {
+  border-bottom: 0;
 }
-/* line 829, dotaseeker.less */
-.dotaseeker .ds-heroes {
-  margin-top: 20px;
-  width: 590px;
+/* line 162, pokedex.less */
+.pokedex .topic ul li .more .more-item:hover {
+  background: #000;
+  color: #fff;
 }
-/* line 832, dotaseeker.less */
-.dotaseeker .ds-heroes .hero-container {
-  width: 488px;
-  float: left;
-}
-/* line 835, dotaseeker.less */
-.dotaseeker .ds-heroes .hero-container ul {
+/* line 173, pokedex.less */
+.pokedex .pokemon-results ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 840, dotaseeker.less */
-.dotaseeker .ds-heroes .hero-container ul li {
+/* line 178, pokedex.less */
+.pokedex .pokemon-results ul li {
+  height: 96px;
+  line-height: 96px;
+  font-size: 14px;
   float: left;
+  width: 50%;
+  font-family: 'Pokemon', sans-serif;
+  border-top: 1px dashed #e2e2e2;
   cursor: pointer;
-  filter: grayscale(0);
-  -ms-filter: grayscale(0);
-  -webkit-filter: grayscale(0);
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#535353+0,090909+100 */
-  background: #535353;
-  /* Old browsers */
-  background: -moz-radial-gradient(center, ellipse cover, #535353 0%, #090909 100%);
-  /* FF3.6-15 */
-  background: -webkit-radial-gradient(center, ellipse cover, #535353 0%, #090909 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, #535353 0%, #090909 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#535353', endColorstr='#090909', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
 }
-/* line 853, dotaseeker.less */
-.dotaseeker .ds-heroes .hero-container ul li img {
-  border: 1px solid #000;
+/* line 188, pokedex.less */
+.pokedex .pokemon-results ul li:nth-child(odd) {
+  border-right: 1px dashed #e2e2e2;
 }
-/* line 857, dotaseeker.less */
-.dotaseeker .ds-heroes .hero-container ul li.hide img {
-  position: relative;
-  visibility: hidden;
-}
-/* line 863, dotaseeker.less */
-.dotaseeker .ds-heroes .hero-container ul li:nth-child(8n+1) {
+/* line 191, pokedex.less */
+.pokedex .pokemon-results ul li:nth-child(2n+1) {
   clear: left;
 }
-/* line 868, dotaseeker.less */
-.dotaseeker .ds-heroes .hero-container ul li.selected img {
-  border: 1px solid #FFD000;
+/* line 195, pokedex.less */
+.pokedex .pokemon-results ul li:hover {
+  background: #000;
+  color: #fff;
 }
-/* line 875, dotaseeker.less */
-.dotaseeker .ds-heroes .hero-refine {
-  font-size: 12px;
-  margin-left: 2px;
-  width: 100px;
-  border: 1px solid #000;
-  background: #fff;
-  color: #000;
+/* line 200, pokedex.less */
+.pokedex .pokemon-results ul li img {
   float: left;
-  text-align: center;
+  margin-right: 10px;
+  width: 96px;
+  height: 96px;
 }
-/* line 884, dotaseeker.less */
-.dotaseeker .ds-heroes .hero-refine ul {
+/* line 209, pokedex.less */
+.pokedex .pokemon-results .see-more {
+  width: 50%;
+  float: left;
+  border-top: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2;
+  text-align: center;
+  padding: 15px 0;
+  font-family: 'Pokemon', sans-serif;
+  cursor: pointer;
+}
+/* line 219, pokedex.less */
+.pokedex .pokemon-results .see-more + .see-more {
+  border-right: 0;
+}
+/* line 223, pokedex.less */
+.pokedex .pokemon-results .see-more:hover {
+  background: #000;
+  color: #fff;
+}
+/* line 231, pokedex.less */
+.pokedex .region .locations {
+  float: left;
+  width: 100%;
+  clear: both;
+  padding-bottom: 20px;
+}
+/* line 236, pokedex.less */
+.pokedex .region .locations ul {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
   margin: 0;
 }
-/* line 888, dotaseeker.less */
-.dotaseeker .ds-heroes .hero-refine ul li {
-  padding: 4px 0;
-}
-/* line 890, dotaseeker.less */
-.dotaseeker .ds-heroes .hero-refine ul li:not(.option) {
-  background: #000;
-  color: #fff;
-  text-transform: uppercase;
-}
-/* line 896, dotaseeker.less */
-.dotaseeker .ds-heroes .hero-refine ul li.option {
-  cursor: pointer;
-}
-/* line 898, dotaseeker.less */
-.dotaseeker .ds-heroes .hero-refine ul li.option.selected {
-  background: #c2c2c2;
-}
-/* line 907, dotaseeker.less */
-.dotaseeker .search-bar {
-  position: relative;
-  margin: 30px 0 60px 0;
-  clear: both;
-  width: 100%;
-  float: left;
-}
-/* line 911, dotaseeker.less */
-.dotaseeker .search-bar .icon_search {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 40px;
-  width: 40px;
-  background: #000;
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 8px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-/* line 925, dotaseeker.less */
-.dotaseeker .search-bar input {
-  clear: both;
-  width: 100%;
-  float: left;
-  height: 40px;
-  border: 1px solid #000;
-  color: #999;
-  border-radius: 4px;
-  padding-left: 50px;
-  font-size: 18px;
-  font-family: 'GlacialInd', serif;
-  outline-width: 0;
-}
-/* line 938, dotaseeker.less */
-.dotaseeker .show-matches.btn {
-  margin-top: 10px;
-  width: 100%;
-  margin-bottom: 10px;
-}
-/* line 942, dotaseeker.less */
-.dotaseeker .show-matches.btn:hover {
-  background: #000;
-}
-/* line 947, dotaseeker.less */
-.dotaseeker .player-filter {
-  float: left;
-  padding-left: 20px;
-  width: 450px;
-  margin-top: -20px;
-}
-/* line 953, dotaseeker.less */
-.dotaseeker .player-filter input,
-.dotaseeker .player-filter select {
-  clear: both;
-  width: 100%;
-  float: left;
-  border: 1px solid #c2c2c2;
-  font-family: 'GlacialInd', serif;
-  font-size: 18px;
-  margin-top: 15px;
-}
-/* line 962, dotaseeker.less */
-.dotaseeker .search-results {
-  clear: both;
-  width: 100%;
-  float: left;
-  margin-top: 50px;
-}
-/* line 966, dotaseeker.less */
-.dotaseeker .search-results .ds-person-result {
-  border: 1px solid #000;
-  clear: both;
-  width: 100%;
-  float: left;
-}
-/* line 969, dotaseeker.less */
-.dotaseeker .search-results .ds-person-result .pill {
-  clear: both;
-  width: 100%;
-  float: left;
+/* line 241, pokedex.less */
+.pokedex .region .locations ul li {
   padding: 5px 0;
-  text-align: center;
-  margin: 0;
-}
-/* line 975, dotaseeker.less */
-.dotaseeker .search-results .ds-person-result .pill.name {
-  background: #000;
-  color: #fff;
-}
-/* line 980, dotaseeker.less */
-.dotaseeker .search-results .ds-person-result .pill.role {
-  background: #c2c2c2;
+  width: 33.333%;
+  float: left;
+  font-size: 14px;
   text-transform: uppercase;
-  font-size: 11px;
+  text-align: center;
+  border-right: 1px solid #e2e2e2;
 }
-/* line 986, dotaseeker.less */
-.dotaseeker .search-results .ds-person-result .pill.mmr {
-  background: #f3f3f3;
-  font-size: 11px;
+/* line 249, pokedex.less */
+.pokedex .region .locations ul li:nth-child(3n+1) {
+  clear: left;
 }
-/* line 994, dotaseeker.less */
-.dotaseeker .filters-btn {
-  font-size: 15px;
-  width: 250px;
-  margin-top: 10px;
+/* line 256, pokedex.less */
+.pokedex .region .generation {
+  float: left;
+  width: 100%;
+  clear: both;
+  border-top: 1px solid #999;
 }
-/* line 998, dotaseeker.less */
-.dotaseeker .filters-btn:hover {
-  background: #000;
-}
-/* line 1004, dotaseeker.less */
-.mobile-only {
+/* line 265, pokedex.less */
+#pokemonBody {
   display: none;
 }
-@media only screen and (max-width: 740px) {
-  /* line 3, phone.less */
-  .dotaseeker .top h1 {
-    font-size: 45px;
-    top: 0;
-    right: 10px;
-    text-align: right;
+@media only screen and (max-width: 1120px) {
+  /* line 2, tablet.less */
+  .pokedex .device {
+    width: 740px;
   }
-  /* line 9, phone.less */
-  .dotaseeker .top h1 span {
-    font-size: 10px;
+  /* line 6, tablet.less */
+  .pokedex .directionalPad {
+    width: 100px;
+    height: 100px;
   }
-  /* line 15, phone.less */
-  .dotaseeker .top .tv-wrapper .icon {
-    bottom: 10px;
-    left: 10px;
-    font-size: 15px;
+  /* line 10, tablet.less */
+  .pokedex .directionalPad .vertical {
+    width: 25px;
   }
-  /* line 23, phone.less */
-  .dotaseeker .middle {
-    clear: both;
-    width: 100%;
-    float: left;
-    position: inherit;
-  }
-  /* line 27, phone.less */
-  .dotaseeker .middle > p {
-    margin-right: 0;
-  }
-  /* line 31, phone.less */
-  .dotaseeker .middle .overlay {
-    margin: 20px;
-  }
-  /* line 34, phone.less */
-  .dotaseeker .middle .overlay:first-child {
-    margin-top: 20px;
-  }
-  /* line 40, phone.less */
-  .dotaseeker .search-bar {
-    margin: 20px 0;
-  }
-  /* line 44, phone.less */
-  .dotaseeker .left-div,
-  .dotaseeker .right-div {
-    width: 100%;
-    margin-right: 0;
-  }
-  /* line 49, phone.less */
-  .dotaseeker .right-div {
-    margin-top: 40px;
-  }
-  /* line 53, phone.less */
-  .dotaseeker .border-right {
-    border-right: 0;
-  }
-  /* line 57, phone.less */
-  .dotaseeker .content-wrapper {
-    padding: 20px;
-  }
-  /* line 64, phone.less */
-  .dotaseeker .fav-heroes ul li .x {
-    height: 35px;
-  }
-  /* line 66, phone.less */
-  .dotaseeker .fav-heroes ul li .x .icon_blocked {
-    font-size: 15px;
-  }
-  /* line 74, phone.less */
-  .dotaseeker .divider {
-    margin-top: 25px;
-  }
-  /* line 76, phone.less */
-  .dotaseeker .divider.main-team {
-    margin-top: 30px;
-  }
-  /* line 80, phone.less */
-  .dotaseeker .divider .title {
-    font-size: 20px;
-  }
-  /* line 85, phone.less */
-  .dotaseeker .matches {
-    display: none;
-  }
-  /* line 91, phone.less */
-  .dotaseeker .matches .match .items ul li {
-    max-height: 42px;
-  }
-  /* line 94, phone.less */
-  .dotaseeker .matches .match .items ul li .x {
-    height: 42px;
-  }
-  /* line 96, phone.less */
-  .dotaseeker .matches .match .items ul li .x .icon_blocked {
-    padding: 14px 0;
-  }
-  /* line 106, phone.less */
-  .dotaseeker .col-xs-12 {
-    padding: 0;
-    width: 100%;
-  }
-  /* line 112, phone.less */
-  .dotaseeker .edit-form .multi-select {
-    width: 100%;
-  }
-  /* line 115, phone.less */
-  .dotaseeker .edit-form .multi-select span {
-    display: block;
-    width: 50%;
-    float: left;
-    margin-left: 0;
-  }
-  /* line 123, phone.less */
-  .dotaseeker .edit-form .edit-container {
-    width: 100%;
-  }
-  /* line 128, phone.less */
-  .dotaseeker .ds-heroes {
-    width: 100%;
-  }
-  /* line 131, phone.less */
-  .dotaseeker .ds-heroes .hero-container {
-    width: 244.94px;
-  }
-  /* line 134, phone.less */
-  .dotaseeker .ds-heroes .hero-refine {
-    width: 98px;
-  }
-  /* line 141, phone.less */
-  .dotaseeker .ds-nav .nav-title img {
-    margin-left: 20px;
-  }
-  /* line 148, phone.less */
-  .no-mobile {
-    display: none;
-  }
-  /* line 152, phone.less */
-  .mobile-only {
-    display: block;
+  /* line 13, tablet.less */
+  .pokedex .directionalPad .horizontal {
+    height: 25px;
   }
 }
+/*# sourceMappingURL=pokedex.css.map */

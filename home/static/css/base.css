@@ -28,6 +28,12 @@
   font-weight: 500;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Pokemon';
+  src: url('/static/fonts/Pokemon GB.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
 .glacial {
   font-family: 'GlacialInd', serif;
 }
@@ -36,6 +42,9 @@
 }
 .griffos {
   font-family: 'Griffos', serif;
+}
+.pokemon {
+  font-family: 'Pokemon', sans-serif;
 }
 * {
   box-sizing: border-box;

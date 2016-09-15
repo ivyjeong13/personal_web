@@ -1,0 +1,16 @@
+<div class="region">
+	<h2><%= results.get('name') %></h2>
+	<div class="locations">
+		<h3>Locations</h3>
+		<ul>
+		<% _.each(results.get('locations'), function(location){ %>
+			<li>
+				<%= location['name'] %>
+			</li>
+		<% }) %>
+		</ul>
+	</div>
+
+	<div class="generation" id="regionPokedex">
+	</div>
+</div>

@@ -1,0 +1,28 @@
+<div class="pokemon-results">
+	<h3>Pokemon</h3>
+	<ul>
+	<% var species = results.get('results') ? results.get('results') : results.get('pokemon_species'); %>
+
+	<% _.each(species, function(result){ 
+		var id_num = result['url'].split('/pokemon-species/')[1].replace('/', '');
+		%>
+		<li data-url="<%= result['url'].split('/v2/')[1] %>">
+			<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= id_num %>.png"> #<%= id_num %> <%= result['name'] %>
+		</li>
+	<% }) %>
+	</ul>
+
+	<% if(results.get('previous')){ 
+		var offset = results.get('previous').split('?offset=')[1];
+		if(!offset)
+			offset = 0;
+	%>
+	<div class="see-more" data-url="pokemon-index/<%= offset %>">&laquo; Previous</div>
+	<% } %>
+
+	<% if(results.get('next')){ 
+		var offset = results.get('next').split('?offset=')[1];
+	%>
+	<div class="see-more" data-url="pokemon-index/<%= offset %>">Next &raquo;</div>
+	<% } %>
+</div>

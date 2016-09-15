@@ -24,6 +24,18 @@ class ProjectView(TemplateView):
 		context = super(ProjectView, self).get_context_data(**kwargs)
 		return context
 
+class PokedexView(TemplateView):
+	def dispatch(self, request, *args, **kwargs):
+		return super(PokedexView, self).dispatch(request, *args, **kwargs)
+
+	def get(self, request, *args, **kwargs):
+		context = self.get_context_data()
+		return render(request, 'pokedex/main.html', context)
+
+	def get_context_data(self, **kwargs):
+		context = super(PokedexView, self).get_context_data(**kwargs)
+		return context
+
 class TopTrendsView(TemplateView):
 	def dispatch(self, request, *args, **kwargs):
 		return super(TopTrendsView, self).dispatch(request, *args, **kwargs)
