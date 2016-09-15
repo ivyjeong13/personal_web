@@ -23,15 +23,22 @@
     <script src="{% static "js/jquery.onscreen.min.js" %}"></script>
     <script src="{% static "js/underscore-min.js" %}"></script>
     <script src="{% static "js/backbone-min.js" %}"></script>
+    <script src="{% static "js/template_functions.js" %}"></script>
     <script src="{% static "js/pokedex.js" %}"></script>
 </head>
 <body class="pokedex">
 	<div class="device">
 		<div class="device-container">
-			<h1>Pokédex</h1>
+			<h1>Pokédex 
+			</h1>
 			<div id="pokemonBody">
 
 			</div>
+			<i class="fa fa-cog fa-spin" aria-hidden="true"></i>
+		</div>
+
+		<div class="homeBtn">
+			<i class="fa fa-home" aria-hidden="true"></i>
 		</div>
 
 		<div class="directionalPad">
@@ -51,6 +58,9 @@
 	</script>
 	<script type="text/template" id="species-tpl">
 		{% include "pokedex/snippets/species.html" %}
+	</script>
+	<script type="text/template" id="species-subview-tpl">
+		{% include "pokedex/snippets/species-subview.html" %}
 	</script>
 	<script type="text/template" id="region-tpl">
 		{% include "pokedex/snippets/region.html" %}

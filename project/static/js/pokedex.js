@@ -4,6 +4,20 @@ var API_URL = 'http://pokeapi.co/api/v2/';
 	Models
 */
 var Pokemon = Backbone.Model.extend({
+	urlRoot: API_URL + 'pokemon/',
+	url: function(){
+		var url = this.urlRoot
+		if(this.get('id'))
+			url += this.get('id') + '/';
+
+		if(this.get('offset'))
+			url += "?offset=" + this.get('offset');
+
+		return url;
+	}
+});
+
+var Specie = Backbone.Model.extend({
 	urlRoot: API_URL + 'pokemon-species/',
 	url: function(){
 		var url = this.urlRoot 
@@ -62,16 +76,25 @@ var HomeView = Backbone.View.extend({
 	}
 });
 
-
 var PokemonView = Backbone.View.extend({
 	initialize: function(){
 		_.bindAll(this, 'render');
 	},
 	render:function(){
 		this.template = _.template($('#species-tpl').html());
-		this.$el.html(this.template({ results: this.model }));
+		this.$el.html(this.template({ specie: this.model }));
 	}
 });
+
+var PokemonSubView = Backbone.View.extend({
+	initialize: function(){
+		_.bindAll(this, 'render');
+	},
+	render:function(){
+		this.template = _.template($('#species-subview-tpl').html());
+		this.$el.html(this.template({ specie: this.model }));
+	}
+})
 
 var ResultsView = Backbone.View.extend({
 	initialize: function(){
@@ -133,7 +156,6 @@ var MyController = Backbone.Router.extend({
 	},
 
 	pokemon: function(id){
-	console.log('pass')	
 		buildPokemon(id);	
 	},
 
@@ -143,29 +165,38 @@ var MyController = Backbone.Router.extend({
 });
 
 function buildPokemon(id){
-	var pokemon = new Pokemon({ id: id });
-	pokemon.fetch().done(function(){
-		console.log(pokemon);
-		var pokemonView = new PokemonView({ el: '#pokemonBody', model: pokemon });
-		pokemonView.render();
+	var specie = new Specie({ id: id });
+	specie.fetch().done(function(){
 
-		$('#pokemonBody').fadeIn();
+		var pokemon = new Pokemon({ id: id });
+		pokemon.fetch().done(function(){
+
+			var pokemonView = new PokemonView({ el: '#pokemonBody', model: specie });
+			pokemonView.render();
+
+			var pokemonSubView = new PokemonSubView({ el: '#pokemonSubBody', model: pokemon });
+			pokemonSubView.render();
+
+			showBody();
+		});
 	});
 }
 
 function buildBiome(id){
 	var biome = new Biome({ id: id });
 	biome.fetch().done(function(){	
+
 		var resultsView = new ResultsView({ el: '#pokemonBody', model: biome });
 		resultsView.render();
 
-		$('#pokemonBody').fadeIn();
+		showBody();
 	});
 }
 
 function buildRegion(id){
 	var region = new Region({ id: id });
 	region.fetch().done(function(){
+
 		var regionView = new RegionView({ el: "#pokemonBody", model: region });
 		var pokemon = new Generation({id: region.get('main_generation')['url'].split('/generation/')[1].replace('/', '')});
 		
@@ -174,7 +205,7 @@ function buildRegion(id){
 			var resultsView = new ResultsView({ el: '#regionPokedex', model: pokemon });
 			resultsView.render();
 
-			$('#pokemonBody').fadeIn();
+			showBody();
 		});
 	});
 }
@@ -182,10 +213,11 @@ function buildRegion(id){
 function buildType(id){
 	var pokemonType = new PokemonType({id: id});
 	pokemonType.fetch().done(function(){
+
 		var typeView = new TypeView({ el: '#pokemonBody', model: pokemonType });
 		typeView.render();
 
-		$('#pokemonBody').fadeIn();
+		showBody();
 	});
 }
 
@@ -193,17 +225,28 @@ function buildHome(){
 	var homeView = new HomeView({el: '#pokemonBody'});
 	homeView.render();
 	
-	$('#pokemonBody').fadeIn();
+	showBody();
 }
 
 function buildByNum(offset){
-	var pokemon = new Pokemon({offset: offset});
-	pokemon.fetch().done(function(){
-		var resultsView = new ResultsView({ el: "#pokemonBody", model:pokemon });
+	var specie = new Specie({offset: offset});
+	specie.fetch().done(function(){
+		
+		var resultsView = new ResultsView({ el: "#pokemonBody", model:specie });
 		resultsView.render();
 
-		$('#pokemonBody').fadeIn();
+		showBody();
 	});
+}
+
+function showBody(){
+	$('.fa-spin').hide();
+	$('#pokemonBody').fadeIn();
+}
+
+function hideBody(){
+	$('#pokemonBody').fadeOut();
+	$('.fa-spin').show();
 }
 
 $(document).ready(function(){
@@ -211,8 +254,8 @@ $(document).ready(function(){
 	Backbone.history.start();
 });
 
-$(document).on('click', 'h1', function(){
-	$('#pokemonBody').fadeOut();
+$(document).on('click', 'h1, .homeBtn', function(){
+	hideBody();
 	setTimeout(function(){
 		Backbone.history.navigate("", {trigger:true}); 
 	},500);
@@ -222,18 +265,18 @@ $(document).on('click', '.subtopic span', function(){
 	if($(this).parent().find('.more').length > 0){
 		$(this).parent().find('.more').slideToggle();
 	}else if($(this).attr("data-url")){
-		$('#pokemonBody').fadeOut();
+		hideBody();
 		Backbone.history.navigate($(this).attr("data-url"), {trigger:true}); 
 	}
 });
 
 $(document).on('click', '.subtopic .more-item', function(){
 	var url = $(this).attr('data-type') + '/' + $(this).attr('data-id');
-	$('#pokemonBody').fadeOut();
+	hideBody();
 	Backbone.history.navigate(url, {trigger:true}); 
 });
 
 $(document).on('click', '.pokemon-results li, .pokemon-results .see-more', function(){
-	$('#pokemonBody').fadeOut();
+	hideBody();
 	Backbone.history.navigate($(this).attr("data-url"), {trigger:true}); 
 });

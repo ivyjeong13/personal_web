@@ -10,7 +10,7 @@
 	<% _.each(species, function(result){ 
 		var id_num = result['url'].split('/pokemon-species/')[1].replace('/', '');
 		%>
-		<li data-url="<%= result['url'].split('/v2/')[1] %>">
+		<li data-url="/pokemon-species/<%= result['url'].split('/pokemon-species/')[1].replace('/', '') %>">
 			<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/<%= id_num %>.png"> <span>#<%= id_num %> <%= result['name'] %></span>
 		</li>
 	<% }) %>

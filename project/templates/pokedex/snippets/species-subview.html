@@ -1,0 +1,41 @@
+<div class="sprites">
+	<div class="sprite">
+		<img src="<%= specie.get('sprites')['front_default'] %>">
+	</div>
+	<div class="sprite">
+		<img src="<%= specie.get('sprites')['back_default'] %>">
+	</div>
+</div>
+
+<% if(specie.get('stats')){ 
+	var stats = specie.get('stats'); %>
+<div class="stats">
+	<h4>Base Stats</h4>
+	<div class="table hw">
+		<div class="stat">
+			<div class="stat-name">Weight</div>
+			<div class="value">
+				<%= specie.get('weight')/10 %>kg
+			</div>
+		</div>
+		<div class="stat">
+			<div class="stat-name">Height</div>
+			<div class="value">
+				<%= specie.get('height')/10 %>m
+			</div>
+		</div>
+	</div>
+	<div class="table">
+	<% _.each(stats, function(stat){ %>
+		<div class="stat">
+			<div class="stat-name">
+				<%= stat['stat']['name'] %>
+			</div>
+			<div class="value">
+				<%= stat['base_stat'] %>
+			</div>
+		</div>
+	<% }); %>
+	</div>
+</div>
+<% } %>

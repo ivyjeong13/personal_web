@@ -1376,8 +1376,9 @@ footer {
   width: 80%;
   box-shadow: 0px 0px 2px #000000;
   overflow-y: auto;
+  position: relative;
 }
-/* line 36, pokedex.less */
+/* line 37, pokedex.less */
 .pokedex h1 {
   margin: 0;
   font-family: 'Pokemon', sans-serif;
@@ -1387,7 +1388,7 @@ footer {
   color: #fff;
   cursor: pointer;
 }
-/* line 46, pokedex.less */
+/* line 47, pokedex.less */
 .pokedex h2 {
   margin: 0;
   font-family: 'Pokemon', sans-serif;
@@ -1397,13 +1398,51 @@ footer {
   border-bottom: 1px solid #999;
   text-transform: uppercase;
 }
-/* line 56, pokedex.less */
+/* line 57, pokedex.less */
 .pokedex h3 {
   margin: 25px 20px 20px 20px;
   font-family: 'Pokemon', sans-serif;
   font-size: 18px;
 }
-/* line 62, pokedex.less */
+/* line 63, pokedex.less */
+.pokedex h4 {
+  font-size: 15px;
+  margin-top: 0;
+  font-family: 'Pokemon', sans-serif;
+  background: #000;
+  color: #fff;
+  padding: 15px 0 10px 20px;
+  margin-bottom: 20px;
+}
+/* line 73, pokedex.less */
+.pokedex .homeBtn {
+  width: 65px;
+  height: 65px;
+  right: 4.75%;
+  top: 5%;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  box-shadow: 1px 1px 2px #000;
+  position: absolute;
+  cursor: pointer;
+}
+/* line 85, pokedex.less */
+.pokedex .homeBtn i {
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+/* line 95, pokedex.less */
+.pokedex .homeBtn:hover {
+  background: #fff;
+  color: #000;
+}
+/* line 101, pokedex.less */
 .pokedex .directionalPad {
   width: 150px;
   height: 150px;
@@ -1411,7 +1450,7 @@ footer {
   right: 1.75%;
   bottom: 5%;
 }
-/* line 68, pokedex.less */
+/* line 107, pokedex.less */
 .pokedex .directionalPad .horizontal {
   width: 100%;
   height: 35px;
@@ -1424,17 +1463,17 @@ footer {
   -webkit-transform: translateY(-50%);
   box-shadow: 1px 1px 2px #000;
 }
-/* line 80, pokedex.less */
+/* line 119, pokedex.less */
 .pokedex .directionalPad .horizontal i {
   padding-top: 6px;
   padding-left: 10px;
 }
-/* line 83, pokedex.less */
+/* line 122, pokedex.less */
 .pokedex .directionalPad .horizontal i.fa-chevron-right {
   float: right;
   padding-right: 10px;
 }
-/* line 90, pokedex.less */
+/* line 129, pokedex.less */
 .pokedex .directionalPad .vertical {
   width: 35px;
   height: 100%;
@@ -1447,88 +1486,88 @@ footer {
   -webkit-transform: translateX(-50%);
   box-shadow: 1px 1px 2px #000;
 }
-/* line 103, pokedex.less */
+/* line 142, pokedex.less */
 .pokedex .directionalPad .vertical i.fa-chevron-down {
   padding-left: 5px;
   padding-top: 10px;
 }
-/* line 107, pokedex.less */
+/* line 146, pokedex.less */
 .pokedex .directionalPad .vertical i.fa-chevron-up {
   position: absolute;
   bottom: 10px;
   left: 5px;
 }
-/* line 115, pokedex.less */
+/* line 154, pokedex.less */
 .pokedex .directionalPad i {
   color: #fff;
   font-size: 25px;
 }
-/* line 121, pokedex.less */
+/* line 160, pokedex.less */
 .pokedex .topic {
   overflow: hidden;
 }
-/* line 123, pokedex.less */
+/* line 162, pokedex.less */
 .pokedex .topic ul {
   list-style: none;
   padding: 0;
   margin: 0;
   width: 100%;
 }
-/* line 128, pokedex.less */
+/* line 167, pokedex.less */
 .pokedex .topic ul li {
   font-size: 18px;
   font-family: 'Pokemon', sans-serif;
   border-bottom: 1px solid #e2e2e2;
   cursor: pointer;
 }
-/* line 134, pokedex.less */
+/* line 173, pokedex.less */
 .pokedex .topic ul li:first-child {
   border-top: 1px solid #e2e2e2;
 }
-/* line 139, pokedex.less */
+/* line 178, pokedex.less */
 .pokedex .topic ul li:hover span {
   background: #000;
   color: #fff;
 }
-/* line 145, pokedex.less */
+/* line 184, pokedex.less */
 .pokedex .topic ul li span {
   display: block;
   clear: both;
   padding: 15px 20px 10px 20px;
 }
-/* line 151, pokedex.less */
+/* line 190, pokedex.less */
 .pokedex .topic ul li .more {
   display: none;
   width: 100%;
   font-size: 12px;
 }
-/* line 155, pokedex.less */
+/* line 194, pokedex.less */
 .pokedex .topic ul li .more .more-item {
   padding: 12px 20px 10px 20px;
   border-bottom: 1px solid #e2e2e2;
 }
-/* line 159, pokedex.less */
+/* line 198, pokedex.less */
 .pokedex .topic ul li .more .more-item:last-child {
   border-bottom: 0;
 }
-/* line 163, pokedex.less */
+/* line 202, pokedex.less */
 .pokedex .topic ul li .more .more-item:hover {
   background: #000;
   color: #fff;
 }
-/* line 173, pokedex.less */
+/* line 212, pokedex.less */
 .pokedex .pokemon-results {
   float: left;
   width: 100%;
   clear: both;
 }
-/* line 177, pokedex.less */
+/* line 216, pokedex.less */
 .pokedex .pokemon-results ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 182, pokedex.less */
+/* line 221, pokedex.less */
 .pokedex .pokemon-results ul li {
   height: 96px;
   line-height: 18px;
@@ -1540,27 +1579,27 @@ footer {
   cursor: pointer;
   position: relative;
 }
-/* line 193, pokedex.less */
+/* line 232, pokedex.less */
 .pokedex .pokemon-results ul li:nth-child(odd) {
   border-right: 1px dashed #e2e2e2;
 }
-/* line 196, pokedex.less */
+/* line 235, pokedex.less */
 .pokedex .pokemon-results ul li:nth-child(2n+1) {
   clear: left;
 }
-/* line 200, pokedex.less */
+/* line 239, pokedex.less */
 .pokedex .pokemon-results ul li:hover {
   background: #000;
   color: #fff;
 }
-/* line 205, pokedex.less */
+/* line 244, pokedex.less */
 .pokedex .pokemon-results ul li img {
   float: left;
   margin-right: 10px;
   width: 96px;
   height: 96px;
 }
-/* line 212, pokedex.less */
+/* line 251, pokedex.less */
 .pokedex .pokemon-results ul li span {
   position: absolute;
   top: 50%;
@@ -1570,7 +1609,7 @@ footer {
   left: 105px;
   padding: 20px 0;
 }
-/* line 224, pokedex.less */
+/* line 263, pokedex.less */
 .pokedex .pokemon-results .see-more {
   width: 50%;
   float: left;
@@ -1581,29 +1620,29 @@ footer {
   font-family: 'Pokemon', sans-serif;
   cursor: pointer;
 }
-/* line 234, pokedex.less */
+/* line 273, pokedex.less */
 .pokedex .pokemon-results .see-more + .see-more {
   border-right: 0;
 }
-/* line 238, pokedex.less */
+/* line 277, pokedex.less */
 .pokedex .pokemon-results .see-more:hover {
   background: #000;
   color: #fff;
 }
-/* line 246, pokedex.less */
+/* line 285, pokedex.less */
 .pokedex .region .locations {
   float: left;
   width: 100%;
   clear: both;
   padding-bottom: 20px;
 }
-/* line 251, pokedex.less */
+/* line 290, pokedex.less */
 .pokedex .region .locations ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
 }
-/* line 256, pokedex.less */
+/* line 295, pokedex.less */
 .pokedex .region .locations ul li {
   padding: 5px 0;
   width: 33.333%;
@@ -1613,45 +1652,144 @@ footer {
   text-align: center;
   border-right: 1px solid #e2e2e2;
 }
-/* line 264, pokedex.less */
+/* line 303, pokedex.less */
 .pokedex .region .locations ul li:nth-child(3n+1) {
   clear: left;
 }
-/* line 271, pokedex.less */
+/* line 310, pokedex.less */
 .pokedex .region .generation {
   float: left;
   width: 100%;
   clear: both;
   border-top: 1px solid #999;
 }
-/* line 279, pokedex.less */
+/* line 318, pokedex.less */
 .pokedex .stats {
   width: 100%;
   float: left;
   clear: both;
   border-bottom: 1px solid #999;
 }
-/* line 284, pokedex.less */
+/* line 323, pokedex.less */
 .pokedex .stats .relations {
   width: 50%;
   float: left;
   overflow: hidden;
   padding-bottom: 20px;
 }
-/* line 290, pokedex.less */
+/* line 329, pokedex.less */
 .pokedex .stats .relations:first-child {
   border-right: 1px solid #e2e2e2;
 }
-/* line 294, pokedex.less */
+/* line 333, pokedex.less */
 .pokedex .stats .relations > div {
   padding: 5px 20px;
 }
-/* line 297, pokedex.less */
+/* line 336, pokedex.less */
 .pokedex .stats .relations > div > span {
   font-weight: bold;
   text-transform: uppercase;
 }
-/* line 306, pokedex.less */
+/* line 345, pokedex.less */
+.pokedex .species .picture {
+  width: 30%;
+  float: left;
+  position: relative;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+/* line 352, pokedex.less */
+.pokedex .species .picture .id {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom-right-radius: 5px;
+  font-size: 25px;
+  color: #fff;
+  font-family: 'Pokemon', sans-serif;
+  padding: 10px;
+}
+/* line 364, pokedex.less */
+.pokedex .species .picture img {
+  width: 100%;
+}
+/* line 369, pokedex.less */
+.pokedex .species .basic {
+  font-size: 10px;
+  padding-top: 5px;
+}
+/* line 374, pokedex.less */
+.pokedex .species .info {
+  width: 70%;
+  float: left;
+  padding: 20px 20px 0px 50px;
+  font-family: 'Pokemon', sans-serif;
+}
+/* line 379, pokedex.less */
+.pokedex .species .info .name {
+  font-size: 20px;
+  text-transform: uppercase;
+  width: 100%;
+  border-bottom: 1px solid #e2e2e2;
+}
+/* line 386, pokedex.less */
+.pokedex .species .info .description {
+  width: 100%;
+  float: left;
+  clear: both;
+  font-family: 'Pokemon', sans-serif;
+  font-size: 10px;
+}
+/* line 393, pokedex.less */
+.pokedex .species .info .description p {
+  margin-top: 0;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  line-height: 20px;
+}
+/* line 403, pokedex.less */
+.pokedex .species .sprites .sprite {
+  float: left;
+}
+/* line 408, pokedex.less */
+.pokedex .species .table {
+  font-size: 12px;
+  width: 100%;
+  float: left;
+  clear: both;
+  padding-left: 20px;
+}
+/* line 415, pokedex.less */
+.pokedex .species .table .stat {
+  width: 33.333%;
+  float: left;
+  padding: 10px 0;
+  border-bottom: 1px dashed #e2e2e2;
+}
+/* line 421, pokedex.less */
+.pokedex .species .table .stat .value {
+  padding: 10px 0;
+}
+/* line 427, pokedex.less */
+.pokedex .species .table.hw .stat {
+  width: 50%;
+}
+/* line 434, pokedex.less */
+.pokedex .species .table:not(.hw) .stat:nth-child(3n+1) {
+  clear: left;
+}
+/* line 442, pokedex.less */
+.pokedex .fa-spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  font-size: 25px;
+}
+/* line 453, pokedex.less */
 #pokemonBody {
   display: none;
 }
@@ -1672,6 +1810,10 @@ footer {
   /* line 13, tablet.less */
   .pokedex .directionalPad .horizontal {
     height: 25px;
+  }
+  /* line 17, tablet.less */
+  .pokedex .directionalPad i {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=pokedex.css.map */

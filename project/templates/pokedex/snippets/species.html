@@ -1,20 +1,32 @@
-<div class="picture">
-	<img src="http://res.cloudinary.com/dwnebujkh/image/upload/v1473910425/pokemon/<%= results.get('id') %>.png"/>
-</div>
-<div class="info">
-	<div class="headline">
-		<div class="id">#<%= results.get('id') %></div>
-	<% _.each(results.get('names'), function(name){ %>
-		<% if(name['language']['name'] == 'en'){ %>
-			<div class="name"><%= name['name'] %></div>
-		<% } %>
-	<% }); %>
+<div class="species">
+	<div class="picture">
+		<div class="id">#<%= specie.get('id') %></div>
+		<img src="http://res.cloudinary.com/dwnebujkh/image/upload/v1473910425/pokemon/<%= specie.get('id') %>.png"/>
 	</div>
 	<div class="info">
-	<% _.each(results.get('flavor_text_entries'), function(info){ %>
-		<% if(info['language']['name'] == 'en'){ %>
-			<p><%= info['flavor_text'] %></p>
-		<% } %>
-	<% }); %>
+		<div class="headline">
+		<% _.each(specie.get('names'), function(name){ %>
+			<% if(name['language']['name'] == 'en'){ %>
+				<div class="name"><%= name['name'] %></div>
+			<% } %>
+		<% }); %>
+		</div>
+		<div class="basic">
+			<%= specie.get('habitat')['name'] %> | 
+			<%= specie.get('color')['name'] %> |
+			<%= specie.get('shape')['name'] %> 
+		</div>
+
+		<div class="subview" id="pokemonSubBody">
+
+		</div>
+		
+		<div class="description">
+			<h4>Facts</h4>
+		<% var flavor_texts = removeDuplicates(specie.get('flavor_text_entries')); 
+			for(f in flavor_texts){ %>
+			<p><%= flavor_texts[f] %></p>
+		<% 	} %>
+		</div>
 	</div>
 </div>
